@@ -1,0 +1,30 @@
+﻿name: format
+
+services:
+  frontend:
+    image: node:22-alpine
+    container_name: format-frontend
+    working_dir: /app
+    command: >
+      sh -c "if [ ! -d node_modules/vite ]; then npm install; fi && npm run dev -- --host 0.0.0.0"
+    ports:
+      - "${FRONTEND_PORT:-5173}:5173"
+    environment:
+      VITE_PROXY_TARGET: ${VITE_PROXY_TARGET:-http://web:8081}
+      CHOKIDAR_USEPOLLING: ${CHOKIDAR_USEPOLLING:-true}
+    volumes:
+      - ./frontend:/app
+      - frontend-node-modules:/app/node_modules
+    mem_limit: 512m
+    cpus: 0.75
+    networks:
+      - format-network
+    restart: unless-stopped
+
+networks:
+  format-network:
+    name: format-network
+
+volumes:
+  frontend-node-modules:
+    name: format-frontend-node-modules

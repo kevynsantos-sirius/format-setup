@@ -1,0 +1,39 @@
+﻿# Dependencias/builds do frontend
+node_modules/
+dist/
+.vite/
+
+# Variaveis, credenciais locais e caches
+.env
+.env.*
+!.env.example
+.agents/
+.codex-build/
+.m2-repository/
+output/
+run compose.txt
+maven-settings-local.xml
+*.log
+~$*
+
+# Projetos mantidos em repositorios separados
+frontend/
+format-api/
+format-container/
+format-manager/
+format-web/
+
+# Logs centralizados: manter estrutura, ignorar conteudo gerado
+/logs/*
+!/logs/.gitignore
+!/logs/*/.gitignore
+
+# Arquivos legados soltos fora da orquestracao Docker
+/build format full.bat
+/build format web.bat
+/Defines.h
+/ObjFPS_Old.h
+/Typedefs.h
+/SYSKER.DDL
+/formatweb.docx
+

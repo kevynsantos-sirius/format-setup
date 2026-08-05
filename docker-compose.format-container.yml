@@ -1,0 +1,138 @@
+﻿name: format
+
+services:
+  auth:
+    container_name: format-auth
+    build:
+      context: ./format-container/format-auth
+      dockerfile: Dockerfile
+    ports:
+      - "8090:8090"
+    environment:
+      SERVER_PORT: "8090"
+      JAVA_TOOL_OPTIONS: "-XX:+UseContainerSupport -XX:MaxRAMPercentage=60 -Xms96m -Xmx384m"
+      FORMAT_AUTH_ISSUER: ${FORMAT_AUTH_ISSUER:-http://auth.format.local}
+      FORMAT_AUTH_WEB_CLIENT_SECRET: ${FORMAT_AUTH_WEB_CLIENT_SECRET:-format-web-secret}
+      FORMAT_AUTH_API_CLIENT_SECRET: ${FORMAT_AUTH_API_CLIENT_SECRET:-format-api-secret}
+      FORMAT_AUTH_ADMIN_USERNAME: ${FORMAT_AUTH_ADMIN_USERNAME:-admin@format.local}
+      FORMAT_AUTH_ADMIN_PASSWORD: ${FORMAT_AUTH_ADMIN_PASSWORD:-admin123}
+      FORMAT_AUTH_DEMO_USERNAME: ${FORMAT_AUTH_DEMO_USERNAME:-demo@format.local}
+      FORMAT_AUTH_DEMO_PASSWORD: ${FORMAT_AUTH_DEMO_PASSWORD:-demo123}
+      LOGGING_FILE_NAME: /app/logs/format-auth.log
+    mem_limit: 512m
+    cpus: 0.75
+    volumes:
+      - ./logs/format-auth:/app/logs
+    networks:
+      - format-network
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8090/actuator/health >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 30s
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8.4
+    container_name: format-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root123}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-formatdb}
+      MYSQL_USER: ${MYSQL_USER:-format}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-format123}
+    command: ["mysqld", "--performance-schema=OFF", "--innodb-buffer-pool-size=128M", "--max-connections=40"]
+    mem_limit: 512m
+    cpus: 0.75
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d:ro
+      - ./logs/mysql:/var/log/mysql
+    networks:
+      - format-network
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u$${MYSQL_USER} -p$${MYSQL_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    restart: unless-stopped
+
+  localstack:
+    image: localstack/localstack:3
+    container_name: format-localstack
+    ports:
+      - "4566:4566"
+      - "4570:4570"
+      - "4510-4559:4510-4559"
+    environment:
+      SERVICES: s3
+      DEFAULT_REGION: ${AWS_REGION:-us-east-1}
+      AWS_DEFAULT_REGION: ${AWS_REGION:-us-east-1}
+      LOCALSTACK_HOST: localstack
+      PERSISTENCE: "1"
+      DEBUG: "0"
+    mem_limit: 512m
+    cpus: 0.75
+    volumes:
+      - localstack-data:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./docker/s3/init-s3.sh:/etc/localstack/init/ready.d/init-s3.sh:ro
+      - ./docker/s3/s3-console.py:/opt/format-s3-console/s3-console-src.py:ro
+      - ./docker/s3/s3-console-runtime.py:/opt/format-s3-console/s3-console-runtime.py:ro
+      - ./logs/localstack:/var/log/localstack
+    networks:
+      - format-network
+    healthcheck:
+      test: ["CMD", "awslocal", "s3", "ls"]
+      interval: 10s
+      timeout: 5s
+      retries: 8
+      start_period: 15s
+    restart: unless-stopped
+
+
+  nginx:
+    image: nginx:alpine
+    container_name: format-nginx
+    ports:
+      - "${NGINX_HTTP_PORT:-80}:80"
+      - "${NGINX_HTTPS_PORT:-443}:443"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      NGINX_WEB_UPSTREAM: ${NGINX_WEB_UPSTREAM:-http://web:8081}
+    volumes:
+      - ./docker/nginx/default-dev.conf:/etc/nginx/templates/default.conf:ro
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./docker/ssl:/etc/nginx/ssl:ro
+      - ./frontend/dist:/usr/share/nginx/html:ro
+      - ./logs/nginx:/var/log/nginx
+    mem_limit: 128m
+    cpus: 0.25
+    networks:
+      - format-network
+    depends_on:
+      auth:
+        condition: service_healthy
+    restart: unless-stopped
+networks:
+  format-network:
+    name: format-network
+    driver: bridge
+
+volumes:
+  mysql-data:
+    name: format-mysql-data
+  localstack-data:
+    name: format-localstack-data
+
+
+
+
+
+
+
+

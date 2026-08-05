@@ -1,0 +1,56 @@
+﻿name: format
+
+services:
+  web:
+    image: format-web
+    build:
+      context: ./format-web
+      dockerfile: Dockerfile
+    container_name: format-web
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./logs/format-web:/app/logs
+    extra_hosts:
+      - "auth.format.local:host-gateway"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SERVER_PORT: "8081"
+      JAVA_TOOL_OPTIONS: "-XX:+UseContainerSupport -XX:MaxRAMPercentage=60 -Xms128m -Xmx384m"
+      LOG_DIR: /app/logs
+      FORMAT_FRONTEND_BASE_URL: ${FORMAT_FRONTEND_BASE_URL:-http://192.168.69.225}
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-formatdb}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      SPRING_DATASOURCE_USERNAME: ${MYSQL_USER:-format}
+      SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD:-format123}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://auth.format.local
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://auth:8090/oauth2/jwks
+      SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_AUTHORIZATION_URI: http://auth.format.local/oauth2/authorize
+      SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_TOKEN_URI: http://auth:8090/oauth2/token
+      SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_USER_INFO_URI: http://auth:8090/userinfo
+      SPRING_SECURITY_OAUTH2_CLIENT_PROVIDER_OIDC_JWK_SET_URI: http://auth:8090/oauth2/jwks
+      FORMAT_API_BASE_URL: ${FORMAT_API_BASE_URL:-http://api:8082}
+      FORMAT_API_TOKEN_URI: ${FORMAT_API_TOKEN_URI:-http://auth:8090/oauth2/token}
+      FORMAT_API_CLIENT_ID: ${FORMAT_API_CLIENT_ID:-format-api-client}
+      FORMAT_API_CLIENT_SECRET: ${FORMAT_AUTH_API_CLIENT_SECRET:-format-api-secret}
+      FORMAT_API_CLIENT_SCOPE: ${FORMAT_API_CLIENT_SCOPE:-format.process format.read format.admin}
+      FORMAT_STORAGE_TYPE: ${FORMAT_STORAGE_TYPE:-s3}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-test}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-test}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      AWS_S3_ENDPOINT: ${AWS_S3_ENDPOINT:-http://localstack:4566}
+      AWS_S3_BUCKET: ${FORMAT_WEB_S3_BUCKET:-format-web-bucket}
+      AWS_S3_AUTO_CREATE_BUCKET: ${AWS_S3_AUTO_CREATE_BUCKET:-true}
+      AWS_S3_PATH_STYLE_ACCESS: ${AWS_S3_PATH_STYLE_ACCESS:-true}
+    mem_limit: 768m
+    cpus: 1.00
+    networks:
+      - format-network
+    restart: unless-stopped
+
+networks:
+  format-network:
+    name: format-network
+
+
+
+

@@ -1,0 +1,19 @@
+﻿name: format-manager
+
+services:
+  manager-build:
+    image: maven:3.9-eclipse-temurin-11
+    container_name: format-manager-build
+    working_dir: /workspace
+    command: ["mvn", "-DskipTests", "clean", "install"]
+    environment:
+      MAVEN_OPTS: "-XX:+UseContainerSupport -XX:MaxRAMPercentage=70 -Xmx384m"
+    mem_limit: 512m
+    cpus: 0.75
+    volumes:
+      - ./format-manager:/workspace
+      - maven-repo:/root/.m2
+
+volumes:
+  maven-repo:
+    name: format-maven-repo
