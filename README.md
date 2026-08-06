@@ -1,4 +1,4 @@
-﻿# Format Workspace
+# Format Workspace
 
 Workspace do projeto Format com frontend, backends e infraestrutura separados.
 
@@ -166,11 +166,43 @@ LOG_DIR=/workspace/format/logs/format-web
 ```
 
 Os arquivos de log sao ignorados pelo Git; apenas a estrutura das pastas fica preparada.
+## Alternar ambiente local/Linux
 
+Use os scripts da raiz para gerar o `.env` usado pelo Docker Compose e o `frontend/.env.local` usado pelo Vite.
 
+Para desenvolvimento local com `format-web` no Eclipse e frontend em `localhost:5173`:
 
+```bat
+usar-ambiente-local.bat
+```
 
+Esse modo configura:
 
+```text
+FORMAT_FRONTEND_BASE_URL=http://localhost:5173
+NGINX_WEB_UPSTREAM=http://host.docker.internal:8081
+VITE_PROXY_TARGET=http://host.docker.internal:8081
+```
 
+No Eclipse, configure tambem no `format-web`:
 
+```text
+FORMAT_FRONTEND_BASE_URL=http://localhost:5173
+LOG_DIR=C:\workspace\format\logs\format-web
+```
 
+Para Linux/runtime com acesso pelo Nginx na porta `80`:
+
+```bat
+usar-ambiente-linux.bat 192.168.69.225
+```
+
+Esse modo configura:
+
+```text
+FORMAT_FRONTEND_BASE_URL=http://192.168.69.225
+NGINX_WEB_UPSTREAM=http://web:8081
+VITE_PROXY_TARGET=http://web:8081
+```
+
+O arquivo `.env` e ignorado pelo Git. O arquivo `.env.example` fica versionado como referencia.
