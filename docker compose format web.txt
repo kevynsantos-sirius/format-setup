@@ -12,6 +12,11 @@ docker network prune -f
 docker builder prune -a -f
 
 
+teste local:
+
+docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml up -d --build
+
+
 
 
 
