@@ -1,4 +1,4 @@
-﻿name: format
+name: format
 
 services:
   web:
@@ -11,6 +11,7 @@ services:
       - "8081:8081"
     volumes:
       - ./logs/format-web:/app/logs
+      - ./Sirius32.dll:/app/resources/Sirius32.dll:ro
     extra_hosts:
       - "auth.format.local:host-gateway"
     environment:
@@ -19,6 +20,7 @@ services:
       JAVA_TOOL_OPTIONS: "-XX:+UseContainerSupport -XX:MaxRAMPercentage=60 -Xms128m -Xmx384m"
       LOG_DIR: /app/logs
       FORMAT_FRONTEND_BASE_URL: ${FORMAT_FRONTEND_BASE_URL:-http://192.168.69.225}
+      FORMAT_USER_FUNCTIONS_DEFAULT_DLL_PATH: ${FORMAT_USER_FUNCTIONS_DEFAULT_DLL_PATH:-/app/resources/Sirius32.dll}
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-formatdb}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
       SPRING_DATASOURCE_USERNAME: ${MYSQL_USER:-format}
       SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD:-format123}
@@ -50,7 +52,4 @@ services:
 networks:
   format-network:
     name: format-network
-
-
-
 
