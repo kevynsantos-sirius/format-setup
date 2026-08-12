@@ -1,6 +1,7 @@
 # Manual do Usuario - Format Web
 
 Versao inicial: 12/08/2026  
+Ultima atualizacao: 12/08/2026  
 Aplicacao: Format Web  
 Publico-alvo: usuarios que criam, importam, editam e processam layouts Format.
 
@@ -206,17 +207,17 @@ O documento principal nao deve ser removido.
 
 ### 5.7 Componentes
 
-No painel **Componentes**, arraste itens para o canvas. Os tipos mapeados hoje incluem:
+No painel **Componentes**, arraste itens da paleta principal para o canvas. Campos de entrada cadastrados tambem podem ser arrastados quando aparecem na area correspondente. Os tipos disponiveis ao usuario hoje incluem:
 
 - **Texto**: texto fixo no layout.
 - **Imagem**: imagem ou logo.
 - **Saida**: campo calculado ou preenchido a partir de dados/funcoes.
-- **Entrada**: campo usado para mapear informacoes do arquivo de dados.
+- **Entrada**: campo cadastrado em **Campos de entrada** e arrastado a partir da lista de campos.
 - **Barcode**: codigo de barras.
-- **QRCode/Data Matrix/PDF417**: codigos 2D.
-- **Fio/Linha/Retangulo/Elipse/Moldura**: elementos graficos.
-- **Janela de detalhe**: area repetitiva ou de detalhe.
-- **Bloco de enderecamento**: bloco especializado para dados de endereco.
+- **QRCode**: codigo 2D.
+- **Fio/Linha/Retangulo**: elementos graficos disponiveis na paleta do editor.
+
+Observacao: o parser e o estado interno ainda reconhecem estruturas legadas adicionais importadas de arquivos `.f`, mas elas nao devem ser apresentadas como componentes criaveis pelo usuario enquanto nao estiverem expostas na interface.
 
 ### 5.8 Selecionar e editar componente
 
@@ -476,7 +477,109 @@ Principais APIs usadas pelas telas:
 | Processo falhou | Leia a mensagem na linha do processo, ajuste layout/dados/recursos e use **Reprocessar**. |
 | PDF nao apareceu | Confirme se o status esta `COMPLETED`; se estiver `FAILED`, reprocessar apos corrigir arquivos. |
 
-## 10. Como Atualizar Este Manual
+
+## 10. Recursos Desenvolvidos no Estado Atual
+
+Esta secao complementa o manual apenas com funcionalidades conferidas no codigo atual do `frontend` e do `format-web`. Recursos existentes apenas como estrutura legada ou parse interno nao sao tratados aqui como fluxo de usuario.
+
+### 10.1 Configuracao do formulario/papel
+
+No editor, o usuario pode abrir **Configurar formulario** pela barra superior ou pelo painel **Acoes**.
+
+A tela permite ajustar:
+
+- Tipo de papel: Carta, Oficio, A4, A3 ou personalizado.
+- Largura e altura.
+- Unidade: pixels ou milimetros.
+- Rotacao da pagina: retrato, paisagem, retrato invertido ou paisagem invertida.
+- Modo de impressao: simples, duplex eixo horizontal ou duplex eixo vertical.
+- Dimensoes do documento: largura, altura, margens superior/esquerda, espaco horizontal/vertical entre documentos e opcao para nao usar margens do driver da impressora.
+
+### 10.2 Arquivo de dados e configuracao de registro
+
+No painel **Acoes**, o usuario pode abrir **Arquivo de dados**.
+
+A tela atual possui:
+
+- Tamanho do Registro.
+- Opcao **Usa cabecalho**.
+- Tamanho do cabecalho.
+- Nome do arquivo.
+- Botao **Procurar** para selecionar arquivo.
+- Opcao **Pedir Nome Arq. na Impressao**.
+- Botao **Configurar Reg >>**, que abre a configuracao do registro de entrada.
+
+Na configuracao do registro de entrada, existem opcoes para tamanho fixo, tamanho variavel com delimitador, delimitador de campo, delimitador de registro, limite por quantidade de campos, numero de campos no registro mestre e numero de campos no registro detalhe.
+
+### 10.3 Campos de entrada
+
+No painel **Acoes**, o usuario pode abrir **Campos de entrada**.
+
+A tela exibe uma tabela com grupo, nome, posicao, tamanho e indice. As acoes visiveis sao:
+
+- Navegar entre registros: primeiro, anterior, proximo e ultimo.
+- **Novo**.
+- **Alterar**.
+- **Copiar**.
+- **Colar**.
+- **Excluir**.
+- **Fechar**.
+
+### 10.4 Funcoes, variaveis e DLL
+
+No painel **Acoes**, existem telas para **Funcoes do usuario** e **Variaveis do usuario**.
+
+O desenvolvimento atual tambem possui endpoints para:
+
+- Carregar a DLL padrao de funcoes do usuario: `/api/default-user-function-dll`.
+- Enviar uma DLL do projeto: `/api/upload-user-function-dll`.
+
+No editor de expressao, as funcoes configuradas podem aparecer junto de funcoes comuns como `LTRIM`, `RTRIM`, `TRIM`, `UPPER` e `LOWER`, operadores, constantes e modelos condicionais.
+
+### 10.5 Imagens, logos e assets
+
+O editor possui painel **Envios** para listar, buscar, enviar e excluir assets do projeto usando:
+
+- `/api/project-assets`.
+- `/api/upload-project-asset`.
+- `/api/project-asset`.
+
+Para imagem/logo, o desenvolvimento atual tambem possui envio especifico em `/api/upload-logo`. Esse envio salva a imagem em `logos/{logoId}/{nome-do-arquivo}` e retorna a ocorrencia com o nome do arquivo entre aspas.
+
+Uploads comuns do painel de envios sao salvos em `uploads/{nome-do-arquivo}`.
+
+### 10.6 Linhas e retangulos
+
+A paleta atual do editor permite criar:
+
+- Linha horizontal.
+- Linha vertical.
+- Retangulo.
+
+Ao selecionar esse tipo de componente, o painel **Propriedades** permite ajustar tipo, espessura, cor, posicao e tamanho.
+
+O controlador tambem reconhece elipse em estruturas internas/importadas, mas a paleta visivel do editor nao apresenta elipse como item separado no estado atual.
+
+### 10.7 Download ZIP do projeto
+
+Na tela **Meus Projetos**, o botao de download chama `/api/download-project`.
+
+O backend monta um ZIP com:
+
+- A ultima versao do layout `.f`.
+- Assets do projeto dentro da pasta `assets/` do ZIP.
+
+### 10.8 Compatibilidade com arquivos `.f` legados
+
+O sistema importa arquivos `.f` usando o parser legado e converte o resultado para JSON para exibicao no editor. Como o formato `.f` e binario e pode carregar estruturas que ainda nao possuem tela completa no Format Web, valide sempre o ciclo:
+
+1. Importar ou abrir o projeto.
+2. Conferir visualmente o layout.
+3. Salvar.
+4. Baixar o ZIP.
+5. Reabrir no ambiente que sera usado para validar compatibilidade.
+
+## 11. Como Atualizar Este Manual
 
 Sempre que uma tela mudar:
 
@@ -491,3 +594,4 @@ Sempre que uma tela mudar:
 | Data | Alteracao |
 | --- | --- |
 | 12/08/2026 | Versao inicial criada a partir da estrutura atual do `frontend`, `format-web` e `format-api`. |
+| 12/08/2026 | Corrigida a secao de recursos recentes para refletir somente telas, componentes e endpoints conferidos no desenvolvimento atual. |

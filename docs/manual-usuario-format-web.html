@@ -300,6 +300,7 @@
         <button data-target="ide">Editor IDE</button>
         <button data-target="backend">Back-end e APIs</button>
         <button data-target="erros">Erros comuns</button>
+        <button data-target="recursos-recentes">Recursos recentes</button>
         <button data-target="atualizacao">Como atualizar</button>
       </nav>
     </aside>
@@ -310,6 +311,7 @@
         <p>Guia inicial das telas do Format Web, criado a partir da estrutura atual do front-end React, do back-end format-web e da Format API.</p>
         <div class="meta">
           <span class="pill">Versao inicial: 12/08/2026</span>
+          <span class="pill">Ultima atualizacao: 12/08/2026</span>
           <span class="pill">Fonte editavel: docs/manual-usuario-format-web.md</span>
           <span class="pill">Aplicacao: Format Web</span>
         </div>
@@ -399,22 +401,20 @@
               <li>Teste o layout na tela de processamento com dados reais ou representativos.</li>
             </ol>
             <h3>Componentes disponiveis</h3>
+            <p>A paleta principal mostra os componentes abaixo. Campos de entrada cadastrados tambem podem ser arrastados quando aparecem na area correspondente.</p>
             <div>
               <span class="tag">Texto</span>
               <span class="tag">Imagem</span>
               <span class="tag">Saida</span>
-              <span class="tag">Entrada</span>
+              <span class="tag">Entrada cadastrada</span>
               <span class="tag">Barcode</span>
               <span class="tag">QR Code</span>
-              <span class="tag">PDF417</span>
-              <span class="tag">Data Matrix</span>
               <span class="tag">Fio</span>
-              <span class="tag">Linha</span>
+              <span class="tag">Linha H</span>
+              <span class="tag">Linha V</span>
               <span class="tag">Retangulo</span>
-              <span class="tag">Elipse</span>
-              <span class="tag">Janela de detalhe</span>
-              <span class="tag">Bloco de enderecamento</span>
             </div>
+            <p class="warning">Estruturas legadas reconhecidas apenas pelo parser ou pelo estado interno nao devem ser tratadas como componentes criaveis pelo usuario enquanto nao aparecerem na paleta do editor.</p>
             <h3>Boas praticas</h3>
             <ol class="step-list">
               <li>Salve apos cada bloco de alteracoes.</li>
@@ -486,6 +486,54 @@
                 <tr><td>Processo falhou</td><td>Ler a mensagem de erro, corrigir layout/dados/recursos e reprocessar.</td></tr>
               </tbody>
             </table>
+          </section>
+
+
+          <section id="recursos-recentes" data-keywords="papel formulario dados campos entrada funcoes variaveis logo assets zip fio backend endpoints legado">
+            <h2>Recursos Desenvolvidos no Estado Atual</h2>
+            <p>Esta area lista apenas funcionalidades conferidas no codigo atual do front-end e do format-web.</p>
+
+            <h3>Configuracao do formulario/papel</h3>
+            <p>O editor abre <strong>Configurar formulario</strong> pela barra superior ou pelo painel <strong>Acoes</strong>.</p>
+            <div class="cards">
+              <div class="card"><strong>Papel</strong><span>Carta, Oficio, A4, A3 ou personalizado.</span></div>
+              <div class="card"><strong>Unidade</strong><span>Pixels ou milimetros.</span></div>
+              <div class="card"><strong>Rotacao</strong><span>Retrato, paisagem e opcoes invertidas.</span></div>
+              <div class="card"><strong>Impressao</strong><span>Simples, duplex eixo horizontal ou duplex eixo vertical.</span></div>
+            </div>
+
+            <h3>Arquivo de dados e registro</h3>
+            <p>A tela possui tamanho do registro, uso/tamanho de cabecalho, nome do arquivo, procurar arquivo e opcao para pedir o nome do arquivo na impressao.</p>
+            <p>A configuracao do registro inclui tamanho fixo, tamanho variavel com delimitador, delimitadores, limite por quantidade de campos e contagem de campos mestre/detalhe.</p>
+
+            <h3>Campos de entrada</h3>
+            <p>A tela mostra grupo, nome, posicao, tamanho e indice. As acoes visiveis sao navegar entre registros, novo, alterar, copiar, colar, excluir e fechar.</p>
+
+            <h3>Funcoes, variaveis e DLL</h3>
+            <p>O painel <strong>Acoes</strong> abre funcoes e variaveis do usuario. O backend possui endpoints para carregar a DLL padrao e enviar DLL do projeto.</p>
+            <div>
+              <span class="tag">/api/default-user-function-dll</span>
+              <span class="tag">/api/upload-user-function-dll</span>
+              <span class="tag">LTRIM</span>
+              <span class="tag">RTRIM</span>
+              <span class="tag">TRIM</span>
+              <span class="tag">UPPER</span>
+              <span class="tag">LOWER</span>
+            </div>
+
+            <h3>Imagens, logos e assets</h3>
+            <p>O painel <strong>Envios</strong> lista, busca, envia e exclui assets do projeto. Uploads comuns ficam em <code>uploads/{nome-do-arquivo}</code>.</p>
+            <p>O envio especifico de logo usa <code>/api/upload-logo</code>, salva em <code>logos/{logoId}/{nome-do-arquivo}</code> e retorna a ocorrencia com o nome do arquivo entre aspas.</p>
+
+            <h3>Linhas e retangulos</h3>
+            <p>A paleta atual permite criar linha horizontal, linha vertical e retangulo. O painel de propriedades permite alterar tipo, espessura, cor, posicao e tamanho.</p>
+            <p>Elipse pode existir em estruturas internas/importadas, mas nao aparece como item separado na paleta atual.</p>
+
+            <h3>Download ZIP do projeto</h3>
+            <p>Em <strong>Meus Projetos</strong>, o download chama <code>/api/download-project</code> e gera ZIP com a ultima versao do <code>.f</code> e assets dentro da pasta <code>assets/</code>.</p>
+
+            <h3>Compatibilidade com .f legado</h3>
+            <p>Arquivos <code>.f</code> sao importados pelo parser legado e convertidos para JSON. Como algumas estruturas podem nao ter tela completa no Format Web, valide importar, conferir, salvar, baixar o ZIP e reabrir no ambiente de compatibilidade.</p>
           </section>
 
           <section id="atualizacao" data-keywords="atualizar manual markdown html desenvolvimento historico">
