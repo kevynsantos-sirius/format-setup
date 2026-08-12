@@ -250,9 +250,19 @@ Ao editar um campo de texto:
 1. Abra o modal **Editar Texto**.
 2. Digite ou ajuste o conteudo.
 3. Use as opcoes de fonte, tamanho, cor, negrito, italico e alinhamento.
-4. Clique em **Salvar**.
+4. Para inserir um campo de saida dentro do texto, use o botao **Campo de saida** e monte a expressao no **Editor de expressao**.
+5. Clique em **Salvar**.
 
 Campos de saida podem ser inseridos como tokens no conteudo, preservando a referencia para dados do layout.
+
+Comportamentos atuais do editor de texto:
+
+- O campo de saida inserido no texto aparece como um token visual dentro do conteudo.
+- As teclas de navegacao tratam o token como um elemento unico.
+- `Backspace` e `Delete` removem o token inteiro.
+- Um clique seleciona o token para edicao.
+- Duplo clique no token abre o **Editor de expressao** com a expressao atual.
+- O botao **Campo de saida** tambem abre o **Editor de expressao** para o token selecionado; se nao houver token selecionado, cria um novo no ponto do cursor.
 
 ### 5.12 Campo de saida
 
@@ -266,6 +276,13 @@ O editor possui um **Editor de expressao**, com apoio para:
 - Constantes.
 - Condicionais.
 - Texto vazio.
+
+Comportamentos atuais do componente **Saida**:
+
+- A altura do componente acompanha o tamanho da fonte quando o tamanho da fonte for alterado no modal.
+- Abrir e salvar o modal sem alterar o tamanho da fonte preserva a altura atual do componente.
+- O conteudo do campo de saida e exibido em uma unica linha no documento.
+- Quando o texto ultrapassa a largura do componente, o excedente e truncado visualmente no layout.
 
 ### 5.13 Arquivo de dados e campos de entrada
 

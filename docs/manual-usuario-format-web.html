@@ -179,16 +179,18 @@
 
     .step-list li {
       counter-increment: steps;
-      display: grid;
-      grid-template-columns: 32px minmax(0, 1fr);
-      gap: 10px;
-      align-items: start;
+      position: relative;
+      min-height: 24px;
+      padding-left: 42px;
       color: #2d3a4b;
-      line-height: 1.45;
+      line-height: 1.55;
     }
 
     .step-list li::before {
       content: counter(steps);
+      position: absolute;
+      left: 0;
+      top: 0;
       display: grid;
       place-items: center;
       width: 24px;
@@ -198,6 +200,16 @@
       color: #174ea6;
       font-size: 13px;
       font-weight: 700;
+    }
+
+    .step-list li > * {
+      display: inline;
+      margin: 0;
+    }
+
+    .step-list li code,
+    .step-list li strong {
+      white-space: normal;
     }
 
     .cards {
@@ -415,6 +427,30 @@
               <span class="tag">Retangulo</span>
             </div>
             <p class="warning">Estruturas legadas reconhecidas apenas pelo parser ou pelo estado interno nao devem ser tratadas como componentes criaveis pelo usuario enquanto nao aparecerem na paleta do editor.</p>
+            <h3>Editar texto</h3>
+            <ol class="step-list">
+              <li>Abra o modal <strong>Editar Texto</strong>.</li>
+              <li>Digite ou ajuste o conteudo e use as opcoes de fonte, tamanho, cor, negrito, italico e alinhamento.</li>
+              <li>Para inserir um campo de saida dentro do texto, use o botao <strong>Campo de saida</strong> e monte a expressao no <strong>Editor de expressao</strong>.</li>
+              <li>Clique em <strong>Salvar</strong>.</li>
+            </ol>
+            <ul>
+              <li>O campo de saida inserido no texto aparece como um token visual dentro do conteudo.</li>
+              <li>As teclas de navegacao tratam o token como um elemento unico.</li>
+              <li><code>Backspace</code> e <code>Delete</code> removem o token inteiro.</li>
+              <li>Um clique seleciona o token para edicao.</li>
+              <li>Duplo clique no token abre o <strong>Editor de expressao</strong> com a expressao atual.</li>
+              <li>O botao <strong>Campo de saida</strong> tambem abre o editor para o token selecionado; se nao houver token selecionado, cria um novo no ponto do cursor.</li>
+            </ul>
+            <h3>Campo de saida</h3>
+            <p>Use o componente <strong>Saida</strong> para montar conteudo calculado ou baseado nos dados de entrada.</p>
+            <p>O <strong>Editor de expressao</strong> oferece apoio para campos de entrada, funcoes do usuario, funcoes matematicas, constantes, condicionais e texto vazio.</p>
+            <ul>
+              <li>A altura do componente acompanha o tamanho da fonte quando o tamanho da fonte for alterado no modal.</li>
+              <li>Abrir e salvar o modal sem alterar o tamanho da fonte preserva a altura atual do componente.</li>
+              <li>O conteudo do campo de saida e exibido em uma unica linha no documento.</li>
+              <li>Quando o texto ultrapassa a largura do componente, o excedente e truncado visualmente no layout.</li>
+            </ul>
             <h3>Boas praticas</h3>
             <ol class="step-list">
               <li>Salve apos cada bloco de alteracoes.</li>
