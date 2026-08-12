@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manual do Usuario - Format Web</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --ink: #182333;
+      --muted: #5d6b7c;
+      --line: #d8e0ea;
+      --brand: #1f6feb;
+      --brand-2: #0f766e;
+      --warn: #b45309;
+      --danger: #b42318;
+      --shadow: 0 18px 48px rgba(15, 23, 42, .12);
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    .app {
+      display: grid;
+      grid-template-columns: 292px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+
+    aside {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      padding: 24px 18px;
+      background: #101827;
+      color: #eef4ff;
+      overflow-y: auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 22px;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .brand span {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      background: var(--brand);
+    }
+
+    .search {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 8px;
+      background: rgba(255,255,255,.08);
+      color: #fff;
+      padding: 10px 12px;
+      outline: none;
+      margin-bottom: 16px;
+    }
+
+    .search::placeholder { color: #b7c4d8; }
+
+    nav {
+      display: grid;
+      gap: 6px;
+    }
+
+    nav button {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
+      background: transparent;
+      color: #dbe7f7;
+      text-align: left;
+      padding: 10px 12px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    nav button:hover,
+    nav button.active {
+      background: rgba(255,255,255,.12);
+      color: #fff;
+    }
+
+    main {
+      min-width: 0;
+      padding: 34px;
+    }
+
+    .hero {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      padding: 28px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 22px 0 10px;
+      font-size: 17px;
+      letter-spacing: 0;
+    }
+
+    p { color: var(--muted); line-height: 1.55; }
+    code {
+      background: #eef3f8;
+      border: 1px solid #dce5ef;
+      border-radius: 5px;
+      padding: 1px 5px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 7px 11px;
+      background: #f8fbff;
+      color: #344256;
+      font-size: 13px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 330px;
+      gap: 20px;
+      align-items: start;
+    }
+
+    section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+
+    .step-list {
+      counter-reset: steps;
+      display: grid;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .step-list li {
+      counter-increment: steps;
+      display: grid;
+      grid-template-columns: 32px minmax(0, 1fr);
+      gap: 10px;
+      align-items: start;
+      color: #2d3a4b;
+      line-height: 1.45;
+    }
+
+    .step-list li::before {
+      content: counter(steps);
+      display: grid;
+      place-items: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #dbeafe;
+      color: #174ea6;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 12px;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+      background: #fbfdff;
+    }
+
+    .card strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .card span {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th { background: #f2f6fb; }
+
+    .side-note {
+      position: sticky;
+      top: 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .side-note ul {
+      margin: 10px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .tag {
+      display: inline-block;
+      margin: 4px 4px 0 0;
+      padding: 5px 8px;
+      border-radius: 6px;
+      background: #ecfdf5;
+      color: #05603a;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .warning {
+      border-left: 4px solid var(--warn);
+      background: #fff8eb;
+      padding: 12px 14px;
+      color: #6f3b00;
+      border-radius: 6px;
+    }
+
+    .hidden { display: none !important; }
+
+    @media (max-width: 980px) {
+      .app { grid-template-columns: 1fr; }
+      aside { position: static; height: auto; }
+      main { padding: 20px; }
+      .layout { grid-template-columns: 1fr; }
+      .side-note { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside>
+      <div class="brand"><span>F</span> Manual Format Web</div>
+      <input id="search" class="search" type="search" placeholder="Buscar tela ou acao">
+      <nav id="nav">
+        <button data-target="visao" class="active">Visao geral</button>
+        <button data-target="acesso">Acesso</button>
+        <button data-target="projetos">Meus Projetos</button>
+        <button data-target="editor">Editor de Layout</button>
+        <button data-target="processamento">Processamento</button>
+        <button data-target="ide">Editor IDE</button>
+        <button data-target="backend">Back-end e APIs</button>
+        <button data-target="erros">Erros comuns</button>
+        <button data-target="atualizacao">Como atualizar</button>
+      </nav>
+    </aside>
+
+    <main>
+      <div class="hero">
+        <h1>Manual do Usuario - Format Web</h1>
+        <p>Guia inicial das telas do Format Web, criado a partir da estrutura atual do front-end React, do back-end format-web e da Format API.</p>
+        <div class="meta">
+          <span class="pill">Versao inicial: 12/08/2026</span>
+          <span class="pill">Fonte editavel: docs/manual-usuario-format-web.md</span>
+          <span class="pill">Aplicacao: Format Web</span>
+        </div>
+      </div>
+
+      <div class="layout">
+        <div id="content">
+          <section id="visao" data-keywords="inicio rotas navegacao dashboard editor processamento">
+            <h2>Visao Geral</h2>
+            <p>O Format Web permite criar, importar, editar e processar layouts Format. O usuario trabalha com projetos, documentos, componentes visuais, assets e arquivos de dados.</p>
+            <div class="cards">
+              <div class="card"><strong>/dashboard</strong><span>Gestao de projetos: criar, importar, abrir, baixar, renomear e excluir.</span></div>
+              <div class="card"><strong>/project/editor</strong><span>Editor visual de layouts, paginas, propriedades, camadas, componentes e envios.</span></div>
+              <div class="card"><strong>/processing</strong><span>Processamento de layouts e dados para geracao de PDFs.</span></div>
+              <div class="card"><strong>/login e /register</strong><span>Acesso local, SSO e cadastro de usuarios.</span></div>
+            </div>
+          </section>
+
+          <section id="acesso" data-keywords="login cadastro senha sso sessao expirada sair">
+            <h2>Acesso</h2>
+            <h3>Entrar</h3>
+            <ol class="step-list">
+              <li>Abra <code>/login</code>.</li>
+              <li>Informe email e senha.</li>
+              <li>Clique em <strong>Entrar com conta local</strong>.</li>
+              <li>Quando disponivel, use <strong>Entrar com SSO</strong> para acesso corporativo.</li>
+            </ol>
+            <h3>Criar conta</h3>
+            <ol class="step-list">
+              <li>Abra <code>/register</code>.</li>
+              <li>Preencha nome, email e senha.</li>
+              <li>Clique em <strong>Criar conta</strong>.</li>
+              <li>Volte ao login e acesse com a conta criada.</li>
+            </ol>
+            <p class="warning">Se aparecer a tela <strong>Login expirado</strong>, clique em <strong>Fazer login</strong> e entre novamente.</p>
+          </section>
+
+          <section id="projetos" data-keywords="dashboard projetos criar importar legado zip f abrir baixar renomear excluir">
+            <h2>Meus Projetos</h2>
+            <p>Use <code>/dashboard</code> para administrar projetos.</p>
+            <h3>Criar projeto</h3>
+            <ol class="step-list">
+              <li>Clique em <strong>Criar Projeto</strong>.</li>
+              <li>Informe o nome do projeto.</li>
+              <li>Defina a quantidade de documentos.</li>
+              <li>Ajuste os nomes dos documentos.</li>
+              <li>Clique em <strong>Criar</strong>.</li>
+            </ol>
+            <h3>Importar legado</h3>
+            <ol class="step-list">
+              <li>Clique em <strong>Importar</strong>.</li>
+              <li>Envie um layout <code>.f</code> ou um ZIP contendo um <code>.f</code>.</li>
+              <li>Inclua recursos e dados relacionados ao projeto.</li>
+              <li>Clique em <strong>Visualizar</strong> para conferir paginas e componentes.</li>
+              <li>Clique em <strong>Importar e Abrir</strong>.</li>
+            </ol>
+            <div class="cards">
+              <div class="card"><strong>Abrir</strong><span>Abre o projeto no editor.</span></div>
+              <div class="card"><strong>Baixar ZIP</strong><span>Exporta o conteudo do projeto.</span></div>
+              <div class="card"><strong>Renomear</strong><span>Altera o nome exibido no painel.</span></div>
+              <div class="card"><strong>Excluir</strong><span>Remove o projeto selecionado apos confirmacao.</span></div>
+            </div>
+          </section>
+
+          <section id="editor" data-keywords="editor layout canvas componentes propriedades camadas paginas texto imagem saida entrada barcode qrcode dados assets dll salvar zoom">
+            <h2>Editor de Layout</h2>
+            <p>Use <code>/project/editor</code> para montar e manter layouts.</p>
+            <h3>Areas principais</h3>
+            <table>
+              <thead><tr><th>Area</th><th>Funcao</th></tr></thead>
+              <tbody>
+                <tr><td>Barra superior</td><td>Salvar, zoom e atalhos.</td></tr>
+                <tr><td>Canvas</td><td>Area visual onde os componentes sao posicionados.</td></tr>
+                <tr><td>Painel esquerdo</td><td>Acoes, documento, entrada e dados.</td></tr>
+                <tr><td>Painel direito</td><td>Propriedades, componentes, camadas e paginas.</td></tr>
+                <tr><td>Envios</td><td>Upload, busca e exclusao de arquivos do projeto.</td></tr>
+              </tbody>
+            </table>
+            <h3>Fluxo recomendado</h3>
+            <ol class="step-list">
+              <li>Configure documento, paginas e arquivo de dados.</li>
+              <li>Envie assets necessarios no painel <strong>Envios</strong>.</li>
+              <li>Arraste componentes para o canvas.</li>
+              <li>Selecione cada componente e ajuste propriedades.</li>
+              <li>Configure textos, campos de saida, imagens, barcode e QR Code nos modais especificos.</li>
+              <li>Clique em <strong>Salvar layout</strong>.</li>
+              <li>Teste o layout na tela de processamento com dados reais ou representativos.</li>
+            </ol>
+            <h3>Componentes disponiveis</h3>
+            <div>
+              <span class="tag">Texto</span>
+              <span class="tag">Imagem</span>
+              <span class="tag">Saida</span>
+              <span class="tag">Entrada</span>
+              <span class="tag">Barcode</span>
+              <span class="tag">QR Code</span>
+              <span class="tag">PDF417</span>
+              <span class="tag">Data Matrix</span>
+              <span class="tag">Fio</span>
+              <span class="tag">Linha</span>
+              <span class="tag">Retangulo</span>
+              <span class="tag">Elipse</span>
+              <span class="tag">Janela de detalhe</span>
+              <span class="tag">Bloco de enderecamento</span>
+            </div>
+            <h3>Boas praticas</h3>
+            <ol class="step-list">
+              <li>Salve apos cada bloco de alteracoes.</li>
+              <li>Use nomes claros para documentos e campos.</li>
+              <li>Mantenha os assets dentro do projeto.</li>
+              <li>Use camadas para selecionar itens sobrepostos.</li>
+            </ol>
+          </section>
+
+          <section id="processamento" data-keywords="processamento pdf dados txt csv dat zip projeto salvo novo upload reprocessar excluir status">
+            <h2>Processamento</h2>
+            <p>Use <code>/processing</code> para gerar PDFs e acompanhar execucoes.</p>
+            <h3>Novo processo</h3>
+            <ol class="step-list">
+              <li>Clique em <strong>Novo processo</strong>.</li>
+              <li>Escolha <strong>Projeto salvo</strong> ou <strong>Novo upload</strong>.</li>
+              <li>Informe o projeto ou envie layout ZIP/layout <code>.f</code>.</li>
+              <li>Envie o arquivo de dados.</li>
+              <li>Adicione recursos soltos ou ZIP de recursos, se necessario.</li>
+              <li>Inicie o processamento e acompanhe a lista.</li>
+            </ol>
+            <h3>Status</h3>
+            <table>
+              <thead><tr><th>Status</th><th>Significado</th></tr></thead>
+              <tbody>
+                <tr><td><code>PROCESSING</code></td><td>Processamento em andamento.</td></tr>
+                <tr><td><code>COMPLETED</code></td><td>Processamento concluido.</td></tr>
+                <tr><td><code>FAILED</code> ou <code>ERROR</code></td><td>Falha no processamento; revise a mensagem exibida.</td></tr>
+              </tbody>
+            </table>
+            <h3>PDFs</h3>
+            <ol class="step-list">
+              <li>Em um processo concluido, clique em <strong>Ver PDFs</strong>.</li>
+              <li>Selecione um PDF para visualizar.</li>
+              <li>Use download para salvar o arquivo.</li>
+            </ol>
+          </section>
+
+          <section id="ide" data-keywords="editor ide mock prototipo propriedades uploads camadas documentos">
+            <h2>Editor IDE</h2>
+            <p>A rota <code>/project/editor-ide</code> mostra um prototipo visual de editor em estilo IDE, com painel de acoes, componentes, camadas, paginas, propriedades, uploads e canvas central.</p>
+            <p>Use como referencia de interface ate que o desenvolvimento confirme o uso como fluxo principal.</p>
+          </section>
+
+          <section id="backend" data-keywords="api backend endpoints format-web format-api layout projeto assets processing">
+            <h2>Back-end e APIs</h2>
+            <p>O frontend consome o <code>format-web</code>. Para processamento, o <code>format-web</code> integra com a <code>format-api</code>.</p>
+            <table>
+              <thead><tr><th>Area</th><th>Endpoints principais</th></tr></thead>
+              <tbody>
+                <tr><td>App/Auth</td><td><code>/api/app/config</code>, <code>/api/app/me</code>, <code>/api/auth/register</code></td></tr>
+                <tr><td>Projetos</td><td><code>/api/list-projects</code>, <code>/api/create-project</code>, <code>/api/import-project</code>, <code>/api/download-project</code></td></tr>
+                <tr><td>Layout</td><td><code>/api/save-layout</code>, <code>/api/load-layout</code>, <code>/api/layout-versions</code>, <code>/api/rollback-layout</code></td></tr>
+                <tr><td>Assets</td><td><code>/api/project-assets</code>, <code>/api/upload-project-asset</code>, <code>/api/project-asset</code></td></tr>
+                <tr><td>Processamento</td><td><code>/api/process-format</code>, <code>/api/format/processes</code>, <code>/api/format/download/{id}</code>, <code>/api/format/preview/{id}</code></td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="erros" data-keywords="erro zip login expirado pdf falhou imagem projeto">
+            <h2>Erros Comuns</h2>
+            <table>
+              <thead><tr><th>Situacao</th><th>Acao recomendada</th></tr></thead>
+              <tbody>
+                <tr><td>Login expirou</td><td>Entrar novamente pela tela de login.</td></tr>
+                <tr><td>ZIP nao foi lido</td><td>Conferir se o ZIP nao esta corrompido e se contem um arquivo <code>.f</code>.</td></tr>
+                <tr><td>Projeto nao aparece</td><td>Atualizar a tela e confirmar o usuario logado.</td></tr>
+                <tr><td>Imagem nao aparece</td><td>Conferir se o asset foi enviado para o projeto e se o componente aponta para o arquivo correto.</td></tr>
+                <tr><td>Processo falhou</td><td>Ler a mensagem de erro, corrigir layout/dados/recursos e reprocessar.</td></tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="atualizacao" data-keywords="atualizar manual markdown html desenvolvimento historico">
+            <h2>Como Atualizar</h2>
+            <ol class="step-list">
+              <li>Atualize primeiro <code>docs/manual-usuario-format-web.md</code>.</li>
+              <li>Registre novas rotas, botoes, campos e mensagens.</li>
+              <li>Inclua o passo a passo do fluxo alterado.</li>
+              <li>Depois sincronize esta pagina HTML, se ela continuar sendo usada como manual navegavel.</li>
+            </ol>
+          </section>
+        </div>
+
+        <aside class="side-note">
+          <h2>Resumo Rapido</h2>
+          <p>Fluxo mais comum para usuarios:</p>
+          <ul>
+            <li>Entrar no sistema.</li>
+            <li>Criar ou importar projeto.</li>
+            <li>Abrir no editor.</li>
+            <li>Ajustar componentes e dados.</li>
+            <li>Salvar layout.</li>
+            <li>Processar e baixar PDFs.</li>
+          </ul>
+        </aside>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const buttons = Array.from(document.querySelectorAll('nav button'));
+    const sections = Array.from(document.querySelectorAll('main section'));
+    const search = document.getElementById('search');
+
+    function activate(id) {
+      buttons.forEach((button) => button.classList.toggle('active', button.dataset.target === id));
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => activate(button.dataset.target));
+    });
+
+    search.addEventListener('input', () => {
+      const term = search.value.trim().toLowerCase();
+      sections.forEach((section) => {
+        const text = `${section.textContent} ${section.dataset.keywords || ''}`.toLowerCase();
+        section.classList.toggle('hidden', term && !text.includes(term));
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (!visible) return;
+      buttons.forEach((button) => button.classList.toggle('active', button.dataset.target === visible.target.id));
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: [0.1, 0.3, 0.6] });
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>

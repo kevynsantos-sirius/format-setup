@@ -1,0 +1,7 @@
+-encoding
+UTF-8
+-cp
+format-web\\target\\classes;C:\\workspace\\format\\format-web\\target\\format-web-0.0.1-SNAPSHOT.jar
+-d
+C:\\Users\\Kevyn\\AppData\\Local\\Temp
+format-web\\src\\main\\java\\com\\totaldocs\\format\\web\\dto\\CampoTexto.java
