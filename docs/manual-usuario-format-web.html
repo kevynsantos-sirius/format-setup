@@ -313,6 +313,7 @@
         <button data-target="backend">Back-end e APIs</button>
         <button data-target="erros">Erros comuns</button>
         <button data-target="recursos-recentes">Recursos recentes</button>
+        <button data-target="alteracoes-20260817">Alteracoes 17/08</button>
         <button data-target="atualizacao">Como atualizar</button>
       </nav>
     </aside>
@@ -323,7 +324,7 @@
         <p>Guia inicial das telas do Format Web, criado a partir da estrutura atual do front-end React, do back-end format-web e da Format API.</p>
         <div class="meta">
           <span class="pill">Versao inicial: 12/08/2026</span>
-          <span class="pill">Ultima atualizacao: 12/08/2026</span>
+          <span class="pill">Ultima atualizacao: 17/08/2026</span>
           <span class="pill">Fonte editavel: docs/manual-usuario-format-web.md</span>
           <span class="pill">Aplicacao: Format Web</span>
         </div>
@@ -370,8 +371,13 @@
               <li>Informe o nome do projeto.</li>
               <li>Defina a quantidade de documentos.</li>
               <li>Ajuste os nomes dos documentos.</li>
+              <li>Informe a <strong>expressao do documento</strong> para cada documento.</li>
+              <li>Use <strong>Editor</strong> para abrir o editor auxiliar de expressao, se necessario.</li>
               <li>Clique em <strong>Criar</strong>.</li>
             </ol>
+            <h3>Visao de administrador</h3>
+            <p>Usuarios com perfil <strong>ADMIN</strong> visualizam a tela como <strong>Projetos</strong>, podem listar/acessar projetos de todos os usuarios e veem o campo <strong>Dono</strong> no card quando essa informacao estiver disponivel.</p>
+            <p>Usuarios comuns continuam restritos aos proprios projetos.</p>
             <h3>Importar legado</h3>
             <ol class="step-list">
               <li>Clique em <strong>Importar</strong>.</li>
@@ -404,7 +410,7 @@
             </table>
             <h3>Fluxo recomendado</h3>
             <ol class="step-list">
-              <li>Configure documento, paginas e arquivo de dados.</li>
+              <li>Configure documento, paginas, expressao do documento e arquivo de dados.</li>
               <li>Envie assets necessarios no painel <strong>Envios</strong>.</li>
               <li>Arraste componentes para o canvas.</li>
               <li>Selecione cada componente e ajuste propriedades.</li>
@@ -412,6 +418,9 @@
               <li>Clique em <strong>Salvar layout</strong>.</li>
               <li>Teste o layout na tela de processamento com dados reais ou representativos.</li>
             </ol>
+            <h3>Expressao do documento</h3>
+            <p>A expressao do documento e obrigatoria. Ao configurar, adicionar, duplicar, renomear ou salvar documentos, o sistema avisa se alguma expressao estiver vazia.</p>
+            <p>Os botoes <strong>Editor de expressao</strong> abrem um editor auxiliar com funcoes, operadores, condicionais e constantes simples.</p>
             <h3>Componentes disponiveis</h3>
             <p>A paleta principal mostra os componentes abaixo. Campos de entrada cadastrados tambem podem ser arrastados quando aparecem na area correspondente.</p>
             <div>
@@ -450,6 +459,7 @@
               <li>Abrir e salvar o modal sem alterar o tamanho da fonte preserva a altura atual do componente.</li>
               <li>O conteudo do campo de saida e exibido em uma unica linha no documento.</li>
               <li>Quando o texto ultrapassa a largura do componente, o excedente e truncado visualmente no layout.</li>
+              <li>No campo de saida inserido dentro de texto, o controle manual de largura maxima foi removido; a pre-visualizacao usa limite interno e reticencias para conteudo longo.</li>
             </ul>
             <h3>Boas praticas</h3>
             <ol class="step-list">
@@ -560,6 +570,7 @@
             <h3>Imagens, logos e assets</h3>
             <p>O painel <strong>Envios</strong> lista, busca, envia e exclui assets do projeto. Uploads comuns ficam em <code>uploads/{nome-do-arquivo}</code>.</p>
             <p>O envio especifico de logo usa <code>/api/upload-logo</code>, salva em <code>logos/{logoId}/{nome-do-arquivo}</code> e retorna a ocorrencia com o nome do arquivo entre aspas.</p>
+            <p>Atualizacao de 17/08/2026: logotipos legados dentro de textos sao normalizados com mais cuidado para preservar a ocorrencia correta e evitar gravacao incorreta da letra <code>L</code> como nome de imagem.</p>
 
             <h3>Linhas e retangulos</h3>
             <p>A paleta atual permite criar linha horizontal, linha vertical e retangulo. O painel de propriedades permite alterar tipo, espessura, cor, posicao e tamanho.</p>
@@ -572,6 +583,23 @@
             <p>Arquivos <code>.f</code> sao importados pelo parser legado e convertidos para JSON. Como algumas estruturas podem nao ter tela completa no Format Web, valide importar, conferir, salvar, baixar o ZIP e reabrir no ambiente de compatibilidade.</p>
           </section>
 
+          <section id="alteracoes-20260817" data-keywords="17/08 expressao documento admin campo saida logo legado git">
+            <h2>Alteracoes de 17/08/2026</h2>
+            <p>As ultimas alteracoes conferidas no Git adicionaram e ajustaram os comportamentos abaixo.</p>
+            <div class="cards">
+              <div class="card"><strong>Expressao obrigatoria</strong><span>Todo documento precisa ter uma expressao para criar projeto, configurar documento e salvar layout.</span></div>
+              <div class="card"><strong>Editor de expressao</strong><span>Disponivel na criacao de projeto e nos modais de configuracao/nome de documento.</span></div>
+              <div class="card"><strong>Perfil ADMIN</strong><span>Administradores listam e acessam projetos de todos os usuarios e veem o dono no card.</span></div>
+              <div class="card"><strong>Campo de saida em texto</strong><span>O controle de largura maxima foi removido; tokens longos usam limite interno e reticencias.</span></div>
+              <div class="card"><strong>Logos legados</strong><span>Referencias antigas de logo em textos sao normalizadas para preservar a ocorrencia correta.</span></div>
+            </div>
+            <h3>Mensagens esperadas</h3>
+            <ul>
+              <li><strong>Todos os documentos precisam ter expressao.</strong></li>
+              <li><strong>Informe a expressao do documento.</strong></li>
+              <li><strong>O documento [nome] precisa ter uma expressao.</strong></li>
+            </ul>
+          </section>
           <section id="atualizacao" data-keywords="atualizar manual markdown html desenvolvimento historico">
             <h2>Como Atualizar</h2>
             <ol class="step-list">

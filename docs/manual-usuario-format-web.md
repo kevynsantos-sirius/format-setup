@@ -1,7 +1,7 @@
 # Manual do Usuario - Format Web
 
 Versao inicial: 12/08/2026  
-Ultima atualizacao: 12/08/2026  
+Ultima atualizacao: 17/08/2026
 Aplicacao: Format Web  
 Publico-alvo: usuarios que criam, importam, editam e processam layouts Format.
 
@@ -95,13 +95,28 @@ Essa tela lista os projetos do usuario e concentra as acoes de criacao e importa
 2. Informe o nome do projeto.
 3. Defina a quantidade de documentos que serao criados.
 4. Ajuste os nomes dos documentos, se necessario.
-5. Clique em **Criar**.
+5. Informe a **expressao do documento** para cada documento.
+6. Se preferir, clique em **Editor** ao lado da expressao para abrir o **Editor de Expressao**.
+7. Clique em **Criar**.
 
 Observacoes:
 
 - O primeiro documento normalmente fica como **Principal**.
 - Os nomes nao devem ficar vazios.
 - O sistema evita nomes repetidos para documentos.
+- Cada documento precisa ter uma expressao. O sistema nao cria o projeto se alguma expressao ficar vazia.
+- O editor de expressao do projeto oferece atalhos para funcoes como `LTRIM`, `RTRIM`, `TRIM`, `UPPER` e `LOWER`, operadores, condicionais, texto vazio e zero.
+
+### 4.1.1 Visao de administrador
+
+Usuarios com perfil **ADMIN** visualizam a tela como **Projetos**, em vez de **Meus Projetos**.
+
+Nesse perfil:
+
+- A lista pode exibir projetos de todos os usuarios.
+- Cada card mostra o campo **Dono** quando a informacao estiver disponivel.
+- O administrador pode abrir, baixar, renomear, excluir e manipular assets dos projetos acessiveis.
+- Usuarios comuns continuam visualizando somente os proprios projetos.
 
 ### 4.2 Importar projeto legado
 
@@ -192,8 +207,11 @@ O painel de documento permite ajustar propriedades gerais, como:
 - Dimensoes de documentos.
 - Espacos entre documentos.
 - Nome, ordem e configuracoes das paginas/documentos.
+- Expressao do documento.
 
 Recomendacao: configure as dimensoes e a rotacao antes de posicionar muitos componentes, para evitar ajustes manuais depois.
+
+Atencao: a **expressao do documento** e obrigatoria. Ao aplicar a configuracao do documento ou salvar o layout, o sistema avisa se algum documento estiver sem expressao.
 
 ### 5.6 Paginas
 
@@ -204,6 +222,8 @@ No painel **Paginas**, use:
 - **Remover pagina**: remove a pagina selecionada, quando permitido.
 
 O documento principal nao deve ser removido.
+
+Ao adicionar, duplicar ou renomear documento, informe tambem a **expressao do documento**. O botao **Editor de expressao** abre o editor auxiliar sem perder o modal de nome do documento; ao fechar o editor de expressao, o sistema retorna para o modal anterior.
 
 ### 5.7 Componentes
 
@@ -283,6 +303,7 @@ Comportamentos atuais do componente **Saida**:
 - Abrir e salvar o modal sem alterar o tamanho da fonte preserva a altura atual do componente.
 - O conteudo do campo de saida e exibido em uma unica linha no documento.
 - Quando o texto ultrapassa a largura do componente, o excedente e truncado visualmente no layout.
+- No campo de saida inserido dentro de texto, o controle manual de largura maxima foi removido. A pre-visualizacao agora usa limite interno e reticencias quando o conteudo fica longo.
 
 ### 5.13 Arquivo de dados e campos de entrada
 
@@ -565,6 +586,8 @@ Para imagem/logo, o desenvolvimento atual tambem possui envio especifico em `/ap
 
 Uploads comuns do painel de envios sao salvos em `uploads/{nome-do-arquivo}`.
 
+Atualizacao de 17/08/2026: logotipos legados dentro de textos passaram por ajustes de compatibilidade. Ao importar ou editar arquivos antigos, o sistema tenta reconhecer melhor referencias antigas de logo, preservando a ocorrencia correta e evitando gravar a letra `L` como se fosse o nome da imagem.
+
 ### 10.6 Linhas e retangulos
 
 A paleta atual do editor permite criar:
@@ -596,7 +619,68 @@ O sistema importa arquivos `.f` usando o parser legado e converte o resultado pa
 4. Baixar o ZIP.
 5. Reabrir no ambiente que sera usado para validar compatibilidade.
 
-## 11. Como Atualizar Este Manual
+## 11. Alteracoes de 17/08/2026
+
+As ultimas alteracoes conferidas no Git em 17/08/2026 adicionaram ou ajustaram estes comportamentos de usuario:
+
+### 11.1 Expressao obrigatoria por documento
+
+Todo documento agora precisa ter uma expressao.
+
+Isso afeta:
+
+- Criacao de projeto no dashboard.
+- Adicao, duplicacao e renomeacao de documentos no editor.
+- Configuracao do documento.
+- Salvamento do layout.
+- Importacao/conversao de `.f` para JSON e gravacao de volta para `.f`.
+
+Mensagens esperadas:
+
+- **Todos os documentos precisam ter expressao.**
+- **Informe a expressao do documento.**
+- **O documento [nome] precisa ter uma expressao.**
+
+### 11.2 Editor de expressao na criacao e edicao de documentos
+
+O dashboard agora possui botao **Editor** ao lado da expressao de cada documento criado.
+
+No editor de layout, os modais de configuracao/nome de documento tambem possuem botao **Editor de expressao**.
+
+O editor auxiliar oferece atalhos para:
+
+- Funcoes: `LTRIM`, `RTRIM`, `TRIM`, `UPPER`, `LOWER`.
+- Operadores: soma, subtracao, multiplicacao, divisao e concatenacao.
+- Condicionais: `IF` e `IF + ELSE`.
+- Constantes simples: texto vazio `""` e zero `0`.
+
+### 11.3 Administrador ve projetos de todos os usuarios
+
+Usuarios com role **ADMIN** conseguem listar e acessar projetos de todos os usuarios. A tela muda o titulo para **Projetos** e exibe o dono do projeto no card.
+
+Usuarios sem role ADMIN continuam restritos aos proprios projetos.
+
+### 11.4 Campo de saida dentro do texto
+
+O controle **Largura maxima** foi removido do modal de campo de saida dentro do texto.
+
+Na pratica:
+
+- O usuario continua configurando expressao, fonte, tamanho, cor e alinhamento.
+- A pre-visualizacao do token usa limite interno.
+- Conteudos longos aparecem truncados visualmente com reticencias.
+
+### 11.5 Logotipos legados em textos
+
+Foram aplicadas correcoes para logotipos legados usados dentro de campos de texto.
+
+Ao trabalhar com layouts importados:
+
+- Referencias antigas de logo sao normalizadas com mais cuidado.
+- O sistema tenta preservar o nome/ocorrencia real da imagem.
+- O salvamento evita gravar comando de logo com ocorrencia incorreta.
+
+## 12. Como Atualizar Este Manual
 
 Sempre que uma tela mudar:
 
@@ -612,3 +696,4 @@ Sempre que uma tela mudar:
 | --- | --- |
 | 12/08/2026 | Versao inicial criada a partir da estrutura atual do `frontend`, `format-web` e `format-api`. |
 | 12/08/2026 | Corrigida a secao de recursos recentes para refletir somente telas, componentes e endpoints conferidos no desenvolvimento atual. |
+| 17/08/2026 | Incluidas mudancas do Git de hoje: expressao obrigatoria por documento, editor de expressao em criacao/edicao de documentos, visao ADMIN, ajuste de campo de saida em texto e compatibilidade de logotipos legados. |
