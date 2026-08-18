@@ -1,4 +1,4 @@
-﻿name: format
+name: format
 
 services:
   api:
@@ -8,8 +8,6 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8082:8082"
-    extra_hosts:
-      - "auth.format.local:host-gateway"
     volumes:
       - format-output:/app/Format/SYS/GERADOS
       - ./logs/format-api:/app/logs
@@ -31,8 +29,8 @@ services:
       FORMAT_ASYNC_CORE_POOL_SIZE: ${FORMAT_ASYNC_CORE_POOL_SIZE:-1}
       FORMAT_ASYNC_MAX_POOL_SIZE: ${FORMAT_ASYNC_MAX_POOL_SIZE:-2}
       FORMAT_ASYNC_QUEUE_CAPACITY: ${FORMAT_ASYNC_QUEUE_CAPACITY:-15}
-      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://auth.format.local
-      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://auth:8090/oauth2/jwks
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: ${FORMAT_AUTH_ISSUER:-http://localhost:8090}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: ${FORMAT_AUTH_JWK_SET_URI:-http://auth:8090/oauth2/jwks}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-test}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-test}
       AWS_REGION: ${AWS_REGION:-us-east-1}
@@ -53,5 +51,7 @@ networks:
 volumes:
   format-output:
     name: format-output
+
+
 
 

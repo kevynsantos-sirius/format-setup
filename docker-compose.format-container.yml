@@ -14,6 +14,8 @@ services:
       FORMAT_AUTH_ISSUER: ${FORMAT_AUTH_ISSUER:-http://auth.format.local}
       FORMAT_AUTH_WEB_CLIENT_SECRET: ${FORMAT_AUTH_WEB_CLIENT_SECRET:-format-web-secret}
       FORMAT_AUTH_API_CLIENT_SECRET: ${FORMAT_AUTH_API_CLIENT_SECRET:-format-api-secret}
+      FORMAT_AUTH_WEB_REDIRECT_URIS: ${FORMAT_AUTH_WEB_REDIRECT_URIS:-http://web.format.local/login/oauth2/code/oidc,https://web.format.local/login/oauth2/code/oidc,http://localhost:8081/login/oauth2/code/oidc,http://localhost:5173/login/oauth2/code/oidc,https://localhost:8081/login/oauth2/code/oidc,https://localhost:5173/login/oauth2/code/oidc}
+      FORMAT_AUTH_WEB_POST_LOGOUT_REDIRECT_URIS: ${FORMAT_AUTH_WEB_POST_LOGOUT_REDIRECT_URIS:-http://localhost:5173/login?logout,http://localhost:8081/login?logout,http://web.format.local/login?logout,https://web.format.local/login?logout}
       FORMAT_AUTH_SESSION_COOKIE_NAME: ${FORMAT_AUTH_SESSION_COOKIE_NAME:-FORMAT_AUTH_SESSION}
       FORMAT_AUTH_DATASOURCE_URL: ${FORMAT_AUTH_DATASOURCE_URL:-jdbc:mysql://mysql:3306/formatdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
       FORMAT_AUTH_DATASOURCE_USERNAME: ${FORMAT_AUTH_DATASOURCE_USERNAME:-format}
@@ -131,6 +133,7 @@ volumes:
     name: format-mysql-data
   localstack-data:
     name: format-localstack-data
+
 
 
 
