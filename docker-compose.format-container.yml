@@ -14,10 +14,10 @@ services:
       FORMAT_AUTH_ISSUER: ${FORMAT_AUTH_ISSUER:-http://auth.format.local}
       FORMAT_AUTH_WEB_CLIENT_SECRET: ${FORMAT_AUTH_WEB_CLIENT_SECRET:-format-web-secret}
       FORMAT_AUTH_API_CLIENT_SECRET: ${FORMAT_AUTH_API_CLIENT_SECRET:-format-api-secret}
-      FORMAT_AUTH_ADMIN_USERNAME: ${FORMAT_AUTH_ADMIN_USERNAME:-admin@format.local}
-      FORMAT_AUTH_ADMIN_PASSWORD: ${FORMAT_AUTH_ADMIN_PASSWORD:-admin123}
-      FORMAT_AUTH_DEMO_USERNAME: ${FORMAT_AUTH_DEMO_USERNAME:-demo@format.local}
-      FORMAT_AUTH_DEMO_PASSWORD: ${FORMAT_AUTH_DEMO_PASSWORD:-demo123}
+      FORMAT_AUTH_SESSION_COOKIE_NAME: ${FORMAT_AUTH_SESSION_COOKIE_NAME:-FORMAT_AUTH_SESSION}
+      FORMAT_AUTH_DATASOURCE_URL: ${FORMAT_AUTH_DATASOURCE_URL:-jdbc:mysql://mysql:3306/formatdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+      FORMAT_AUTH_DATASOURCE_USERNAME: ${FORMAT_AUTH_DATASOURCE_USERNAME:-format}
+      FORMAT_AUTH_DATASOURCE_PASSWORD: ${FORMAT_AUTH_DATASOURCE_PASSWORD:-format123}
       LOGGING_FILE_NAME: /app/logs/format-auth.log
     mem_limit: 512m
     cpus: 0.75
@@ -25,6 +25,9 @@ services:
       - ./logs/format-auth:/app/logs
     networks:
       - format-network
+    depends_on:
+      mysql:
+        condition: service_healthy
     healthcheck:
       test: ["CMD-SHELL", "curl -fsS http://localhost:8090/actuator/health >/dev/null || exit 1"]
       interval: 10s
