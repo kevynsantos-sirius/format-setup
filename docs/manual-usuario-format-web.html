@@ -52,13 +52,14 @@
       font-size: 18px;
     }
 
-    .brand span {
+    .brand-logo {
       width: 34px;
       height: 34px;
-      display: grid;
-      place-items: center;
+      object-fit: contain;
       border-radius: 8px;
-      background: var(--brand);
+      background: #fff;
+      padding: 2px;
+      flex: 0 0 auto;
     }
 
     .search {
@@ -301,7 +302,7 @@
 <body>
   <div class="app">
     <aside>
-      <div class="brand"><span>F</span> Manual Format Web</div>
+      <div class="brand"><img class="brand-logo" src="../format-web/src/main/resources/static/images/logo.png" alt="Format"> Manual Format Web</div>
       <input id="search" class="search" type="search" placeholder="Buscar tela ou acao">
       <nav id="nav">
         <button data-target="visao" class="active">Visao geral</button>
@@ -314,6 +315,7 @@
         <button data-target="erros">Erros comuns</button>
         <button data-target="recursos-recentes">Recursos recentes</button>
         <button data-target="alteracoes-20260817">Alteracoes 17/08</button>
+        <button data-target="alteracoes-20260822">Alteracoes 22/08</button>
         <button data-target="atualizacao">Como atualizar</button>
       </nav>
     </aside>
@@ -324,7 +326,7 @@
         <p>Guia inicial das telas do Format Web, criado a partir da estrutura atual do front-end React, do back-end format-web e da Format API.</p>
         <div class="meta">
           <span class="pill">Versao inicial: 12/08/2026</span>
-          <span class="pill">Ultima atualizacao: 17/08/2026</span>
+          <span class="pill">Ultima atualizacao: 22/08/2026</span>
           <span class="pill">Fonte editavel: docs/manual-usuario-format-web.md</span>
           <span class="pill">Aplicacao: Format Web</span>
         </div>
@@ -338,7 +340,7 @@
             <div class="cards">
               <div class="card"><strong>/dashboard</strong><span>Gestao de projetos: criar, importar, abrir, baixar, renomear e excluir.</span></div>
               <div class="card"><strong>/project/editor</strong><span>Editor visual de layouts, paginas, propriedades, camadas, componentes e envios.</span></div>
-              <div class="card"><strong>/processing</strong><span>Processamento de layouts e dados para geracao de PDFs.</span></div>
+              <div class="card"><strong>/processing</strong><span>Processamento de layouts e dados para preview e geracao de PDFs.</span></div>
               <div class="card"><strong>/login e /register</strong><span>Acesso local, SSO e cadastro de usuarios.</span></div>
             </div>
           </section>
@@ -386,9 +388,18 @@
               <li>Clique em <strong>Visualizar</strong> para conferir paginas e componentes.</li>
               <li>Clique em <strong>Importar e Abrir</strong>.</li>
             </ol>
+            <h3>Gerar PDF direto do projeto</h3>
+            <ol class="step-list">
+              <li>No card do projeto, clique no icone de PDF.</li>
+              <li>O sistema usa o layout salvo e tenta localizar o arquivo de dados informado no Ponto F.</li>
+              <li>O card mostra o progresso enquanto o processamento executa.</li>
+              <li>Quando houver um unico PDF gerado, o download inicia automaticamente.</li>
+            </ol>
+            <p>Se o processamento falhar, a mensagem atual retornada pela Format API aparece no topo da tela.</p>
             <div class="cards">
               <div class="card"><strong>Abrir</strong><span>Abre o projeto no editor.</span></div>
               <div class="card"><strong>Baixar ZIP</strong><span>Exporta o conteudo do projeto.</span></div>
+              <div class="card"><strong>Gerar PDF</strong><span>Processa o projeto salvo, mostra progresso no card e baixa o PDF ao concluir.</span></div>
               <div class="card"><strong>Renomear</strong><span>Altera o nome exibido no painel.</span></div>
               <div class="card"><strong>Excluir</strong><span>Remove o projeto selecionado apos confirmacao.</span></div>
             </div>
@@ -461,6 +472,13 @@
               <li>Quando o texto ultrapassa a largura do componente, o excedente e truncado visualmente no layout.</li>
               <li>No campo de saida inserido dentro de texto, o controle manual de largura maxima foi removido; a pre-visualizacao usa limite interno e reticencias para conteudo longo.</li>
             </ul>
+            <h3>Preview do layout</h3>
+            <ol class="step-list">
+              <li>Salve o layout.</li>
+              <li>Configure o arquivo de dados no Ponto F ou selecione um arquivo no preview.</li>
+              <li>Abra <strong>Pre-visualizar</strong>.</li>
+              <li>Confira campos, expressoes, textos variaveis, imagens e quebras antes da geracao final.</li>
+            </ol>
             <h3>Boas praticas</h3>
             <ol class="step-list">
               <li>Salve apos cada bloco de alteracoes.</li>
@@ -491,12 +509,13 @@
                 <tr><td><code>FAILED</code> ou <code>ERROR</code></td><td>Falha no processamento; revise a mensagem exibida.</td></tr>
               </tbody>
             </table>
-            <h3>PDFs</h3>
+            <h3>PDFs e preview</h3>
             <ol class="step-list">
               <li>Em um processo concluido, clique em <strong>Ver PDFs</strong>.</li>
-              <li>Selecione um PDF para visualizar.</li>
+              <li>Selecione um PDF para visualizar no painel de preview.</li>
               <li>Use download para salvar o arquivo.</li>
             </ol>
+            <p>O preview abre o PDF em modo de visualizacao. O download continua disponivel pela acao correspondente.</p>
           </section>
 
           <section id="ide" data-keywords="editor ide mock prototipo propriedades uploads camadas documentos">
@@ -515,7 +534,7 @@
                 <tr><td>Projetos</td><td><code>/api/list-projects</code>, <code>/api/create-project</code>, <code>/api/import-project</code>, <code>/api/download-project</code></td></tr>
                 <tr><td>Layout</td><td><code>/api/save-layout</code>, <code>/api/load-layout</code>, <code>/api/layout-versions</code>, <code>/api/rollback-layout</code></td></tr>
                 <tr><td>Assets</td><td><code>/api/project-assets</code>, <code>/api/upload-project-asset</code>, <code>/api/project-asset</code></td></tr>
-                <tr><td>Processamento</td><td><code>/api/process-format</code>, <code>/api/format/processes</code>, <code>/api/format/download/{id}</code>, <code>/api/format/preview/{id}</code></td></tr>
+                <tr><td>Processamento</td><td><code>/api/process-format</code>, <code>/api/process-project/{projectId}</code>, <code>/api/format/processes</code>, <code>/api/format/download/{id}</code>, <code>/api/format/preview/{id}</code></td></tr>
               </tbody>
             </table>
           </section>
@@ -530,6 +549,8 @@
                 <tr><td>Projeto nao aparece</td><td>Atualizar a tela e confirmar o usuario logado.</td></tr>
                 <tr><td>Imagem nao aparece</td><td>Conferir se o asset foi enviado para o projeto e se o componente aponta para o arquivo correto.</td></tr>
                 <tr><td>Processo falhou</td><td>Ler a mensagem de erro, corrigir layout/dados/recursos e reprocessar.</td></tr>
+                <tr><td>Erro de funcao/DLL ausente</td><td>Conferir a funcao informada pela Format API e ajustar a DLL ou remover a chamada inexistente no layout.</td></tr>
+                <tr><td>Geracao direta nao inicia</td><td>Verificar se o projeto possui layout salvo e arquivo de dados compativel com o nome configurado no Ponto F.</td></tr>
               </tbody>
             </table>
           </section>
@@ -579,6 +600,10 @@
             <h3>Download ZIP do projeto</h3>
             <p>Em <strong>Meus Projetos</strong>, o download chama <code>/api/download-project</code> e gera ZIP com a ultima versao do <code>.f</code> e assets dentro da pasta <code>assets/</code>.</p>
 
+            <h3>Geracao direta de PDF pelo dashboard</h3>
+            <p>O card do projeto possui acao de PDF que chama o backend sem abrir a tela de processamento. O <code>format-web</code> prepara layout, assets e arquivo de dados, encaminha para a <code>format-api</code>, exibe progresso no card e baixa o PDF quando houver um unico arquivo gerado.</p>
+            <h3>Preview e visualizacao de PDF</h3>
+            <p>O sistema diferencia preview de layout, usado antes de processar, e preview de PDF gerado, usado para visualizar o arquivo concluido. Para PDFs, <code>/api/format/preview/{id}</code> abre em modo de visualizacao e <code>/api/format/download/{id}</code> baixa o arquivo.</p>
             <h3>Compatibilidade com .f legado</h3>
             <p>Arquivos <code>.f</code> sao importados pelo parser legado e convertidos para JSON. Como algumas estruturas podem nao ter tela completa no Format Web, valide importar, conferir, salvar, baixar o ZIP e reabrir no ambiente de compatibilidade.</p>
           </section>
@@ -599,6 +624,25 @@
               <li><strong>Informe a expressao do documento.</strong></li>
               <li><strong>O documento [nome] precisa ter uma expressao.</strong></li>
             </ul>
+          </section>
+          <section id="alteracoes-20260822" data-keywords="22/08 preview pdf dashboard progresso format api ponto f erro">
+
+            <h2>Alteracoes de 22/08/2026</h2>
+
+            <p>Estas alteracoes documentam o preview e a geracao de PDF integrados ao projeto salvo.</p>
+
+            <div class="cards">
+
+              <div class="card"><strong>PDF no dashboard</strong><span>O card do projeto inicia processamento, mostra progresso e baixa o PDF ao concluir.</span></div>
+
+              <div class="card"><strong>Arquivo de dados automatico</strong><span>O backend tenta usar o arquivo informado no Ponto F quando ele esta salvo no projeto.</span></div>
+
+              <div class="card"><strong>Erro do processo atual</strong><span>A mensagem exibida ao usuario vem da execucao atual da Format API.</span></div>
+
+              <div class="card"><strong>Preview de PDF</strong><span>PDFs gerados podem ser visualizados inline antes do download.</span></div>
+
+            </div>
+
           </section>
           <section id="atualizacao" data-keywords="atualizar manual markdown html desenvolvimento historico">
             <h2>Como Atualizar</h2>

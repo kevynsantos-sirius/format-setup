@@ -1,7 +1,7 @@
 # Manual do Usuario - Format Web
 
 Versao inicial: 12/08/2026  
-Ultima atualizacao: 17/08/2026
+Ultima atualizacao: 22/08/2026
 Aplicacao: Format Web  
 Publico-alvo: usuarios que criam, importam, editam e processam layouts Format.
 
@@ -18,7 +18,7 @@ O Format Web centraliza quatro atividades principais:
 1. Acessar o sistema com conta local ou SSO.
 2. Criar, importar, abrir, baixar, renomear e excluir projetos.
 3. Editar layouts em uma area visual, com paginas, componentes, propriedades, camadas e arquivos do projeto.
-4. Processar layouts com arquivos de dados para gerar PDFs.
+4. Pre-visualizar layouts com arquivo de dados e processar layouts para gerar PDFs.
 
 As principais rotas de tela sao:
 
@@ -29,7 +29,7 @@ As principais rotas de tela sao:
 | Cadastro | `/register` | Criacao de conta local. |
 | Meus Projetos | `/dashboard` | Gestao de projetos. |
 | Editor | `/project/editor` | Edicao visual do layout. |
-| Processamento | `/processing` | Envio de layouts/dados e acompanhamento de PDFs. |
+| Processamento | `/processing` | Envio de layouts/dados, preview e acompanhamento de PDFs. |
 | Editor IDE | `/project/editor-ide` | Prototipo visual de editor em formato IDE. |
 
 ## 2. Acesso ao Sistema
@@ -145,13 +145,33 @@ Na lista de projetos, clique em **Abrir**. O sistema abre o editor com o `projec
 
 Clique no icone de download do card do projeto. O sistema baixa um ZIP com o conteudo do projeto.
 
-### 4.5 Renomear projeto
+### 4.5 Gerar PDF direto do projeto
+
+No card do projeto, clique no icone de PDF para solicitar o processamento sem sair da tela **Meus Projetos**.
+
+O sistema:
+
+1. Usa o layout `.f` salvo no projeto.
+2. Localiza automaticamente o arquivo de dados configurado no Ponto F, quando ele estiver salvo entre os assets do projeto.
+3. Envia layout, assets e arquivo de dados para a `format-api`.
+4. Mostra um painel de progresso no proprio card.
+5. Ao concluir, baixa o PDF gerado automaticamente quando houver apenas um PDF disponivel.
+
+Se o processamento falhar, a mensagem retornada pela `format-api` aparece no topo da tela. Quando a falha vem do Format legado, a mensagem pode indicar a funcao/DLL ausente ou outro erro registrado no processo atual.
+
+Observacoes:
+
+- Se o layout informar um arquivo de dados que nao esta salvo no projeto, o sistema avisa antes de iniciar o processamento.
+- Se o layout nao informar arquivo de dados e houver mais de um arquivo de dados salvo, o sistema solicita ajuste do projeto.
+- O ZIP do projeto baixado pelo botao de download continua sendo apenas uma exportacao; a geracao de PDF usa o fluxo de processamento.
+
+### 4.6 Renomear projeto
 
 1. Clique no icone **Renomear**.
 2. Informe o novo nome.
 3. Clique em **Renomear**.
 
-### 4.6 Excluir projeto
+### 4.7 Excluir projeto
 
 1. Clique no icone **Excluir**.
 2. Confirme a exclusao.
@@ -317,7 +337,21 @@ Fluxo recomendado:
 4. Abra **Campos de Entrada** para criar, alterar ou excluir campos.
 5. Relacione campos de entrada aos campos de saida ou expressoes.
 
-### 5.14 Imagens e assets do projeto
+### 5.14 Preview do layout
+
+No editor, use **Pre-visualizar** para validar o layout com um arquivo de dados antes de gerar o PDF final.
+
+Fluxo recomendado:
+
+1. Salve o layout.
+2. Configure o arquivo de dados no Ponto F ou selecione/envie um arquivo de dados no preview.
+3. Abra **Pre-visualizar**.
+4. Escolha um arquivo de dados salvo no projeto ou envie um arquivo temporario.
+5. Gere a pre-visualizacao e confira o resultado.
+
+O preview ajuda a conferir campos de entrada, expressoes, textos variaveis, imagens e quebras antes de usar a geracao final de PDF.
+
+### 5.15 Imagens e assets do projeto
 
 Clique no icone **Envios** na barra lateral ou use **Escolher dos envios** em componentes de imagem.
 
@@ -336,7 +370,7 @@ Tipos aceitos no upload do editor:
 - PDF.
 - DLL.
 
-### 5.15 Barcode e QR Code
+### 5.16 Barcode e QR Code
 
 Ao editar barcode ou QR Code:
 
@@ -346,13 +380,13 @@ Ao editar barcode ou QR Code:
 4. Para QR Code/codigos 2D, escolha o tipo: PDF417, Data Matrix ou QR Code.
 5. Confirme em **OK**.
 
-### 5.16 Funcoes do usuario e DLL
+### 5.17 Funcoes do usuario e DLL
 
 O editor possui areas para configurar funcoes do usuario, variaveis e DLL.
 
 Use esse recurso quando o layout depende de funcoes legadas ou regras externas. A DLL pode ser enviada pelo proprio editor, ficando vinculada ao projeto.
 
-### 5.17 Boas praticas no editor
+### 5.18 Boas praticas no editor
 
 - Salve o layout apos cada bloco de alteracoes.
 - Organize componentes por paginas antes de criar muitas camadas.
@@ -429,7 +463,7 @@ Use os filtros para localizar processos por:
 
 Use **Limpar filtros** para voltar a lista completa. Quando houver muitas entradas, use **Anterior** e **Proxima**.
 
-### 6.6 Ver PDFs gerados
+### 6.6 Ver PDFs gerados e preview
 
 Quando o processo estiver concluido:
 
@@ -437,6 +471,8 @@ Quando o processo estiver concluido:
 2. Selecione um PDF na lista.
 3. Visualize no painel de preview.
 4. Use a acao de download quando precisar salvar o arquivo gerado.
+
+O preview do PDF usa o endpoint de visualizacao para abrir o arquivo em modo `inline`, sem forcar download imediato. O download continua disponivel pela acao correspondente.
 
 ### 6.7 Reprocessar
 
@@ -496,7 +532,8 @@ Principais APIs usadas pelas telas:
 | Assets | `/api/project-assets` | Lista arquivos do projeto. |
 | Assets | `/api/upload-project-asset` | Envia arquivo do projeto. |
 | Assets | `/api/project-asset` | Busca ou exclui arquivo do projeto. |
-| Processamento | `/api/process-format` | Inicia processamento via Format API. |
+| Processamento | `/api/process-format` | Inicia processamento via Format API com upload manual. |
+| Processamento | `/api/process-project/{projectId}` | Gera PDF diretamente a partir de projeto salvo. |
 | Processamento | `/api/format/processes` | Lista processos. |
 | Processamento | `/api/format/process/{id}/pdfs` | Lista PDFs de um processo. |
 | Processamento | `/api/format/download/{id}` | Baixa PDF gerado. |
@@ -514,6 +551,8 @@ Principais APIs usadas pelas telas:
 | Imagem nao aparece no layout | Confirme se o asset foi enviado para o projeto e se o componente aponta para o arquivo correto. |
 | Processo falhou | Leia a mensagem na linha do processo, ajuste layout/dados/recursos e use **Reprocessar**. |
 | PDF nao apareceu | Confirme se o status esta `COMPLETED`; se estiver `FAILED`, reprocessar apos corrigir arquivos. |
+| Erro de funcao/DLL ausente | Confira a mensagem retornada pela Format API, ajuste funcoes do usuario/DLL ou remova chamadas inexistentes no layout. |
+| Geracao direta nao inicia | Verifique se o projeto possui layout salvo e arquivo de dados compatavel com o nome configurado no Ponto F. |
 
 
 ## 10. Recursos Desenvolvidos no Estado Atual
@@ -609,7 +648,24 @@ O backend monta um ZIP com:
 - A ultima versao do layout `.f`.
 - Assets do projeto dentro da pasta `assets/` do ZIP.
 
-### 10.8 Compatibilidade com arquivos `.f` legados
+### 10.8 Geracao direta de PDF pelo dashboard
+
+A tela **Meus Projetos** possui acao de geracao de PDF no card do projeto. Esse fluxo evita abrir a tela **Processamento** quando o projeto ja possui layout e arquivo de dados salvos.
+
+A integracao passa pelo `format-web`, que prepara o ZIP do layout com assets, identifica o arquivo de dados informado no Ponto F e encaminha tudo para a `format-api`. Durante a execucao, o card exibe progresso e bloqueia nova solicitacao para o mesmo projeto.
+
+Ao finalizar com sucesso, o frontend consulta os PDFs do processo e baixa automaticamente o arquivo quando a resposta contem um unico PDF. Em caso de erro, o frontend mostra a mensagem atual do processo retornada pela `format-api`.
+
+### 10.9 Preview e visualizacao de PDF
+
+O sistema possui dois tipos de preview relacionados ao processamento:
+
+- Preview de layout no editor/importacao, usado para validar o layout antes de salvar ou processar.
+- Preview de PDF gerado, usado para visualizar o PDF concluido sem baixar imediatamente.
+
+Para PDFs gerados, o endpoint `/api/format/preview/{id}` retorna o arquivo em modo de visualizacao. O endpoint `/api/format/download/{id}` continua sendo usado para baixar o arquivo.
+
+### 10.10 Compatibilidade com arquivos `.f` legados
 
 O sistema importa arquivos `.f` usando o parser legado e converte o resultado para JSON para exibicao no editor. Como o formato `.f` e binario e pode carregar estruturas que ainda nao possuem tela completa no Format Web, valide sempre o ciclo:
 
@@ -680,7 +736,27 @@ Ao trabalhar com layouts importados:
 - O sistema tenta preservar o nome/ocorrencia real da imagem.
 - O salvamento evita gravar comando de logo com ocorrencia incorreta.
 
-## 12. Como Atualizar Este Manual
+## 12. Alteracoes de 22/08/2026
+
+As alteracoes de 22/08/2026 documentam os novos fluxos de preview e geracao de PDF integrados ao projeto salvo.
+
+### 12.1 Geracao de PDF sem sair do dashboard
+
+O usuario pode clicar no icone de PDF no card do projeto para iniciar o processamento diretamente. O card mostra progresso, bloqueia cliques repetidos enquanto processa e baixa o PDF ao concluir quando houver um unico arquivo gerado.
+
+### 12.2 Uso automatico do arquivo de dados configurado
+
+Ao processar projeto salvo, o backend tenta localizar o arquivo de dados informado no Ponto F entre os assets do projeto. Isso reduz a chance de enviar dados incorretos para a `format-api`.
+
+### 12.3 Mensagem de erro do processo atual
+
+Quando a Format API falha, a mensagem exibida ao usuario vem do processo atual. O diagnostico completo continua preservado para analise tecnica.
+
+### 12.4 Preview de PDF gerado
+
+A documentacao agora diferencia download de PDF e preview inline do PDF gerado.
+
+## 13. Como Atualizar Este Manual
 
 Sempre que uma tela mudar:
 
@@ -697,3 +773,4 @@ Sempre que uma tela mudar:
 | 12/08/2026 | Versao inicial criada a partir da estrutura atual do `frontend`, `format-web` e `format-api`. |
 | 12/08/2026 | Corrigida a secao de recursos recentes para refletir somente telas, componentes e endpoints conferidos no desenvolvimento atual. |
 | 17/08/2026 | Incluidas mudancas do Git de hoje: expressao obrigatoria por documento, editor de expressao em criacao/edicao de documentos, visao ADMIN, ajuste de campo de saida em texto e compatibilidade de logotipos legados. |
+| 22/08/2026 | Documentados preview do layout/PDF, geracao direta de PDF pelo dashboard, uso automatico do arquivo de dados do Ponto F e mensagens de erro do processo atual. |
