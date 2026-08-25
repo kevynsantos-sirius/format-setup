@@ -18,6 +18,7 @@ services:
       JAVA_TOOL_OPTIONS: "-XX:+UseContainerSupport -XX:MaxRAMPercentage=60 -Xms128m -Xmx384m"
       LOG_DIR: /app/logs
       FORMAT_FRONTEND_BASE_URL: ${FORMAT_FRONTEND_BASE_URL:-http://192.168.69.225}
+      FORMAT_AUTH_LOGOUT_URI: ${FORMAT_AUTH_LOGOUT_URI:-http://localhost:8090/connect/logout}
       SPRING_WEB_CORS_ALLOWED_ORIGINS: ${SPRING_WEB_CORS_ALLOWED_ORIGINS:-http://localhost:5173,http://localhost:8081,http://localhost:8090}
       FORMAT_USER_FUNCTIONS_DEFAULT_DLL_PATH: ${FORMAT_USER_FUNCTIONS_DEFAULT_DLL_PATH:-/app/resources/Sirius32.dll}
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${MYSQL_DATABASE:-formatdb}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
