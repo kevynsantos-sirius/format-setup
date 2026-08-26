@@ -16,6 +16,8 @@ teste local:
 
 docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml up -d --build
 
+docker exec -it format-mysql mysql -u format -pformat123 formatdb
+
 
 
 
