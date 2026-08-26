@@ -40,6 +40,7 @@ services:
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-test}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-test}
       AWS_REGION: ${AWS_REGION:-us-east-1}
+      FORMAT_AWS_REGION: ${FORMAT_AWS_REGION:-us-east-1}
       AWS_S3_ENDPOINT: ${AWS_S3_ENDPOINT:-http://localstack:4566}
       AWS_S3_BUCKET: ${FORMAT_WEB_S3_BUCKET:-format-web-bucket}
       AWS_S3_AUTO_CREATE_BUCKET: ${AWS_S3_AUTO_CREATE_BUCKET:-true}
@@ -53,6 +54,7 @@ services:
 networks:
   format-network:
     name: format-network
+
 
 
 

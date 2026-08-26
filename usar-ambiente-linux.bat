@@ -30,6 +30,7 @@ set API_DOCKER_BASE_URL=http://api:8082
   echo FORMAT_API_TOKEN_URI=%AUTH_DOCKER_BASE_URL%/oauth2/token
   echo FORMAT_STORAGE_TYPE=s3
   echo AWS_REGION=us-east-1
+echo FORMAT_AWS_REGION=us-east-1
   echo AWS_ACCESS_KEY_ID=test
   echo AWS_SECRET_ACCESS_KEY=test
   echo AWS_S3_ENDPOINT=http://localstack:4566
