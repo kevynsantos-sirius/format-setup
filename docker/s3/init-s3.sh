@@ -18,11 +18,14 @@ create_bucket() {
 echo "==> Inicializando buckets S3 no LocalStack..."
 
 create_bucket format
-create_bucket format-web-bucket
-create_bucket format-api-bucket
+WEB_BUCKET="${FORMAT_WEB_S3_BUCKET:-format-web-bucket}"
+API_BUCKET="${FORMAT_API_S3_BUCKET:-format-api-bucket}"
+
+create_bucket "$WEB_BUCKET"
+create_bucket "$API_BUCKET"
 
 awslocal s3api put-bucket-cors \
-  --bucket format-web-bucket \
+  --bucket "$WEB_BUCKET" \
   --cors-configuration '{
     "CORSRules": [{
       "AllowedHeaders": ["*"],
