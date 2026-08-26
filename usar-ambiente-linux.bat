@@ -31,12 +31,17 @@ set API_DOCKER_BASE_URL=http://api:8082
   echo FORMAT_STORAGE_TYPE=s3
   echo AWS_REGION=us-east-1
 echo FORMAT_AWS_REGION=us-east-1
-  echo AWS_ACCESS_KEY_ID=test
-  echo AWS_SECRET_ACCESS_KEY=test
-  echo AWS_S3_ENDPOINT=http://localstack:4566
-  echo AWS_S3_BUCKET=format-web-bucket
+  echo FORMAT_AWS_ACCESS_KEY_ID=test
+echo AWS_ACCESS_KEY_ID=test
+  echo FORMAT_AWS_SECRET_ACCESS_KEY=test
+echo AWS_SECRET_ACCESS_KEY=test
+  echo FORMAT_AWS_S3_ENDPOINT=http://localstack:4566
+echo AWS_S3_ENDPOINT=http://localstack:4566
+  echo FORMAT_AWS_S3_BUCKET=format-web-bucket
+echo AWS_S3_BUCKET=format-web-bucket
   echo FORMAT_WEB_S3_BUCKET=format-web-bucket
-  echo AWS_S3_AUTO_CREATE_BUCKET=true
+  echo FORMAT_AWS_S3_AUTO_CREATE_BUCKET=true
+echo AWS_S3_AUTO_CREATE_BUCKET=true
 )
 
 if exist "%ROOT%frontend\" (
@@ -55,3 +60,4 @@ echo.
 echo Para outro IP/host, execute:
 echo usar-ambiente-linux.bat meu-host-ou-ip
 endlocal
+

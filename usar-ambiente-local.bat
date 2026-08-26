@@ -30,12 +30,17 @@ set API_DOCKER_BASE_URL=http://api:8082
   echo FORMAT_STORAGE_TYPE=s3
   echo AWS_REGION=us-east-1
 echo FORMAT_AWS_REGION=us-east-1
-  echo AWS_ACCESS_KEY_ID=test
-  echo AWS_SECRET_ACCESS_KEY=test
-  echo AWS_S3_ENDPOINT=http://localstack:4566
-  echo AWS_S3_BUCKET=format-web-bucket
+  echo FORMAT_AWS_ACCESS_KEY_ID=test
+echo AWS_ACCESS_KEY_ID=test
+  echo FORMAT_AWS_SECRET_ACCESS_KEY=test
+echo AWS_SECRET_ACCESS_KEY=test
+  echo FORMAT_AWS_S3_ENDPOINT=http://localstack:4566
+echo AWS_S3_ENDPOINT=http://localstack:4566
+  echo FORMAT_AWS_S3_BUCKET=format-web-bucket
+echo AWS_S3_BUCKET=format-web-bucket
   echo FORMAT_WEB_S3_BUCKET=format-web-bucket
-  echo AWS_S3_AUTO_CREATE_BUCKET=true
+  echo FORMAT_AWS_S3_AUTO_CREATE_BUCKET=true
+echo AWS_S3_AUTO_CREATE_BUCKET=true
 )
 
 if exist "%ROOT%frontend\" (
@@ -67,13 +72,19 @@ echo FORMAT_API_TOKEN_URI=%AUTH_PUBLIC_BASE_URL%/oauth2/token
 echo FORMAT_STORAGE_TYPE=s3
 echo AWS_REGION=us-east-1
 echo FORMAT_AWS_REGION=us-east-1
+echo FORMAT_AWS_ACCESS_KEY_ID=test
 echo AWS_ACCESS_KEY_ID=test
+echo FORMAT_AWS_SECRET_ACCESS_KEY=test
 echo AWS_SECRET_ACCESS_KEY=test
+echo FORMAT_AWS_S3_ENDPOINT=http://localhost:4566
 echo AWS_S3_ENDPOINT=http://localhost:4566
+echo FORMAT_AWS_S3_BUCKET=format-web-bucket
 echo AWS_S3_BUCKET=format-web-bucket
 echo FORMAT_WEB_S3_BUCKET=format-web-bucket
+echo FORMAT_AWS_S3_AUTO_CREATE_BUCKET=true
 echo AWS_S3_AUTO_CREATE_BUCKET=true
 echo SPRING_WEB_CORS_ALLOWED_ORIGINS=%PUBLIC_BASE_URL%,%WEB_LOCAL_BASE_URL%,%AUTH_PUBLIC_BASE_URL%,http://127.0.0.1:5173,http://127.0.0.1:8081
 echo LOG_DIR=%ROOT%logs\format-web
 endlocal
+
 

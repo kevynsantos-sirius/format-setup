@@ -37,12 +37,17 @@ services:
       FORMAT_API_CLIENT_SECRET: ${FORMAT_AUTH_API_CLIENT_SECRET:-format-api-secret}
       FORMAT_API_CLIENT_SCOPE: ${FORMAT_API_CLIENT_SCOPE:-format.process format.read format.admin}
       FORMAT_STORAGE_TYPE: ${FORMAT_STORAGE_TYPE:-s3}
+      FORMAT_AWS_ACCESS_KEY_ID: ${FORMAT_AWS_ACCESS_KEY_ID:-test}
       AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID:-test}
+      FORMAT_AWS_SECRET_ACCESS_KEY: ${FORMAT_AWS_SECRET_ACCESS_KEY:-test}
       AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY:-test}
       AWS_REGION: ${AWS_REGION:-us-east-1}
       FORMAT_AWS_REGION: ${FORMAT_AWS_REGION:-us-east-1}
+      FORMAT_AWS_S3_ENDPOINT: ${FORMAT_AWS_S3_ENDPOINT:-http://localstack:4566}
       AWS_S3_ENDPOINT: ${AWS_S3_ENDPOINT:-http://localstack:4566}
+      FORMAT_AWS_S3_BUCKET: ${FORMAT_AWS_S3_BUCKET:-format-web-bucket}
       AWS_S3_BUCKET: ${FORMAT_WEB_S3_BUCKET:-format-web-bucket}
+      FORMAT_AWS_S3_AUTO_CREATE_BUCKET: ${FORMAT_AWS_S3_AUTO_CREATE_BUCKET:-true}
       AWS_S3_AUTO_CREATE_BUCKET: ${AWS_S3_AUTO_CREATE_BUCKET:-true}
       AWS_S3_PATH_STYLE_ACCESS: ${AWS_S3_PATH_STYLE_ACCESS:-true}
     mem_limit: 768m
@@ -54,6 +59,7 @@ services:
 networks:
   format-network:
     name: format-network
+
 
 
 
