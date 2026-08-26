@@ -8,6 +8,10 @@ set VITE_PUBLIC_BASE_URL=http://%SERVER_HOST%:5173
 set AUTH_PUBLIC_BASE_URL=http://%SERVER_HOST%:8090
 set AUTH_DOCKER_BASE_URL=http://auth:8090
 set API_DOCKER_BASE_URL=http://api:8082
+set WEB_S3_BUCKET=%~2
+if "%WEB_S3_BUCKET%"=="" set WEB_S3_BUCKET=format-web-bucket
+set API_S3_BUCKET=%~3
+if "%API_S3_BUCKET%"=="" set API_S3_BUCKET=format-api-bucket
 
 > "%ROOT%.env" (
   echo # Gerado por usar-ambiente-linux.bat
@@ -37,9 +41,10 @@ echo AWS_ACCESS_KEY_ID=test
 echo AWS_SECRET_ACCESS_KEY=test
   echo FORMAT_AWS_S3_ENDPOINT=http://localstack:4566
 echo AWS_S3_ENDPOINT=http://localstack:4566
-  echo FORMAT_AWS_S3_BUCKET=format-web-bucket
-echo AWS_S3_BUCKET=format-web-bucket
-  echo FORMAT_WEB_S3_BUCKET=format-web-bucket
+  echo FORMAT_AWS_S3_BUCKET=%WEB_S3_BUCKET%
+echo AWS_S3_BUCKET=%WEB_S3_BUCKET%
+  echo FORMAT_WEB_S3_BUCKET=%WEB_S3_BUCKET%
+  echo FORMAT_API_S3_BUCKET=%API_S3_BUCKET%
   echo FORMAT_AWS_S3_AUTO_CREATE_BUCKET=true
 echo AWS_S3_AUTO_CREATE_BUCKET=true
 )
@@ -59,5 +64,10 @@ echo format-web Docker -^> format-api container: %API_DOCKER_BASE_URL%
 echo.
 echo Para outro IP/host, execute:
 echo usar-ambiente-linux.bat meu-host-ou-ip
+echo.
+echo Para customizar buckets no servidor Linux:
+echo usar-ambiente-linux.bat meu-host-ou-ip bucket-web bucket-api
+echo.
+echo Apos alterar buckets em ambiente ja existente, recrie localstack/web/api ou crie os buckets manualmente no LocalStack.
 endlocal
 

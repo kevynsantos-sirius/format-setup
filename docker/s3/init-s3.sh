@@ -18,7 +18,7 @@ create_bucket() {
 echo "==> Inicializando buckets S3 no LocalStack..."
 
 create_bucket format
-WEB_BUCKET="${FORMAT_WEB_S3_BUCKET:-format-web-bucket}"
+WEB_BUCKET="${FORMAT_WEB_S3_BUCKET:-${FORMAT_AWS_S3_BUCKET:-${AWS_S3_BUCKET:-format-web-bucket}}}"
 API_BUCKET="${FORMAT_API_S3_BUCKET:-format-api-bucket}"
 
 create_bucket "$WEB_BUCKET"

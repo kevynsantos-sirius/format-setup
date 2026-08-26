@@ -76,6 +76,10 @@ services:
       SERVICES: s3
       DEFAULT_REGION: ${AWS_REGION:-us-east-1}
       AWS_DEFAULT_REGION: ${AWS_REGION:-us-east-1}
+      FORMAT_WEB_S3_BUCKET: ${FORMAT_WEB_S3_BUCKET:-format-web-bucket}
+      FORMAT_AWS_S3_BUCKET: ${FORMAT_AWS_S3_BUCKET:-format-web-bucket}
+      AWS_S3_BUCKET: ${AWS_S3_BUCKET:-format-web-bucket}
+      FORMAT_API_S3_BUCKET: ${FORMAT_API_S3_BUCKET:-format-api-bucket}
       LOCALSTACK_HOST: localstack
       PERSISTENCE: "1"
       DEBUG: "0"
