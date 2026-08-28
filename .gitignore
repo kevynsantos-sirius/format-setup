@@ -1,4 +1,4 @@
-﻿# Dependencias/builds do frontend
+# Dependencias/builds do frontend
 node_modules/
 dist/
 .vite/
@@ -11,6 +11,7 @@ dist/
 .codex-build/
 .m2-repository/
 output/
+docker-data/
 run compose.txt
 maven-settings-local.xml
 *.log
@@ -36,4 +37,5 @@ format-web/
 /Typedefs.h
 /SYSKER.DDL
 /formatweb.docx
+
 

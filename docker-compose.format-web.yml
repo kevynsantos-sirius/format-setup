@@ -54,11 +54,15 @@ services:
     cpus: 1.00
     networks:
       - format-network
+    depends_on:
+      localstack:
+        condition: service_healthy
     restart: unless-stopped
 
 networks:
   format-network:
     name: format-network
+
 
 
 

@@ -80,13 +80,14 @@ services:
       FORMAT_AWS_S3_BUCKET: ${FORMAT_AWS_S3_BUCKET:-format-web-bucket}
       AWS_S3_BUCKET: ${AWS_S3_BUCKET:-format-web-bucket}
       FORMAT_API_S3_BUCKET: ${FORMAT_API_S3_BUCKET:-format-api-bucket}
+      LOCALSTACK_VOLUME_DIR: /var/lib/localstack
       LOCALSTACK_HOST: localstack
       PERSISTENCE: "1"
       DEBUG: "0"
     mem_limit: 512m
     cpus: 0.75
     volumes:
-      - localstack-data:/var/lib/localstack
+      - ./docker-data/localstack:/var/lib/localstack
       - /var/run/docker.sock:/var/run/docker.sock
       - ./docker/s3/init-s3.sh:/etc/localstack/init/ready.d/init-s3.sh:ro
       - ./docker/s3/s3-console.py:/opt/format-s3-console/s3-console-src.py:ro
@@ -135,8 +136,8 @@ networks:
 volumes:
   mysql-data:
     name: format-mysql-data
-  localstack-data:
-    name: format-localstack-data
+
+
 
 
 
