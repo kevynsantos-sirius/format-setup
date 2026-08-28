@@ -1,13 +1,10 @@
 docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-frontend.yml up -d --build
 
-docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-manager.yml down
-
-docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml up -d --build --force-recreate
+docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-frontend.yml down
 
 
 docker rm -f $(docker ps -aq) 2>/dev/null
 docker rmi -f $(docker images -aq) 2>/dev/null
-docker volume rm $(docker volume ls -q) 2>/dev/null
 docker network prune -f
 docker builder prune -a -f
 
@@ -17,6 +14,8 @@ teste local:
 docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml up -d --build
 
 docker exec -it format-mysql mysql -u format -pformat123 formatdb
+
+não executar: docker volume rm $(docker volume ls -q) 2>/dev/null
 
 
 
