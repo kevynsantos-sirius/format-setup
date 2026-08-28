@@ -1,6 +1,6 @@
-docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-frontend.yml up -d --build
-
 docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-frontend.yml down
+
+docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-frontend.yml up -d --build
 
 
 docker rm -f $(docker ps -aq) 2>/dev/null
