@@ -1,21 +1,28 @@
+[Parar todos os serviços apenas]
+
 docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-frontend.yml down
+
+[Buildar do zero]
 
 docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-frontend.yml up -d --build
 
+[Rebuildar web e front e nginx sem matar o s3 e banco de dados]
+
+docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml -f docker-compose.format-web.yml -f docker-compose.format-frontend.yml up -d --build --force-recreate --no-deps api web auth frontend nginx
+
+
+[Matar tudo do docker]:
 
 docker rm -f $(docker ps -aq) 2>/dev/null
 docker rmi -f $(docker images -aq) 2>/dev/null
+docker volume rm $(docker volume ls -q) 2>/dev/null
 docker network prune -f
 docker builder prune -a -f
 
 
-teste local:
-
-docker compose -f docker-compose.format-container.yml -f docker-compose.format-api.yml up -d --build
+[Acessar banco de dados por terminal]:
 
 docker exec -it format-mysql mysql -u format -pformat123 formatdb
-
-não executar: docker volume rm $(docker volume ls -q) 2>/dev/null
 
 
 
