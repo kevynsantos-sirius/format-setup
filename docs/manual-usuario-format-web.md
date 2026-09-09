@@ -1,7 +1,7 @@
 # Manual do Usuario - Format Web
 
 Versao inicial: 12/08/2026  
-Ultima atualizacao: 22/08/2026
+Ultima atualizacao: 08/09/2026
 Aplicacao: Format Web  
 Publico-alvo: usuarios que criam, importam, editam e processam layouts Format.
 
@@ -288,10 +288,15 @@ O painel **Camadas** mostra os componentes da pagina. Use-o para localizar e sel
 Ao editar um campo de texto:
 
 1. Abra o modal **Editar Texto**.
-2. Digite ou ajuste o conteudo.
-3. Use as opcoes de fonte, tamanho, cor, negrito, italico e alinhamento.
-4. Para inserir um campo de saida dentro do texto, use o botao **Campo de saida** e monte a expressao no **Editor de expressao**.
-5. Clique em **Salvar**.
+2. Na aba **Campo**, ajuste posicao, tamanho, unidade, orientacao e borda.
+3. Na aba **Opcoes**, ajuste alinhamento, espaco entre linhas, expressao de ocorrencia e fonte condicional.
+4. Na aba **Conteudo**, digite ou ajuste o texto e aplique fonte, tamanho, estilo e cor em trechos selecionados.
+5. Insira logo, campo de saida ou fio dentro do texto quando necessario.
+6. Clique em **Salvar**.
+
+A aba **Campo** permite usar pixels, milimetros, centimetros ou polegadas. A orientacao aceita 0, 90, 180, 270 graus ou um angulo personalizado. Quando houver borda, configure **Espessura** e **Distancia do texto** na mesma unidade escolhida para a geometria.
+
+A aba **Opcoes** concentra propriedades do texto como alinhamento, espaco simples/duplo/exato/multiplo, expressao de ocorrencia e expressao para fonte condicional. A opcao **Respeitar altura do logo** preserva o comportamento legado em textos que contem logotipos.
 
 Campos de saida podem ser inseridos como tokens no conteudo, preservando a referencia para dados do layout.
 
@@ -301,14 +306,22 @@ Comportamentos atuais do editor de texto:
 - As teclas de navegacao tratam o token como um elemento unico.
 - `Backspace` e `Delete` removem o token inteiro.
 - Um clique seleciona o token para edicao.
-- Duplo clique no token abre o **Editor de expressao** com a expressao atual.
-- O botao **Campo de saida** tambem abre o **Editor de expressao** para o token selecionado; se nao houver token selecionado, cria um novo no ponto do cursor.
+- Duplo clique no token abre o modal de campo de saida com a expressao atual.
+- O botao **Campo de saida** tambem abre o modal para o token selecionado; se nao houver token selecionado, cria um novo no ponto do cursor.
+- O conteudo do texto pode conter trechos com fonte propria, logos e fios horizontais ou verticais.
 
 ### 5.12 Campo de saida
 
 Use campo de saida para montar conteudo calculado ou baseado nos dados de entrada.
 
-O editor possui um **Editor de expressao**, com apoio para:
+O modal **Editar Campo de Saida** e dividido em abas:
+
+- **Campo**: posicao, tamanho, unidade, orientacao e expressao de ocorrencia.
+- **Fonte**: fonte, estilo, tamanho, alinhamento, CPI, cor, mascara, fonte condicional e **LF auto antes do campo**.
+- **Opcoes**: indice de sumario/caderno, justificacao com pontos ou hifens, uso de fonte, campo MICR, troca de fonte, chave de recuperacao e campo protegido.
+- **Conteudo**: expressao/conteudo do campo com acesso ao **Editor de expressao**.
+
+O editor de expressao oferece apoio para:
 
 - Campos de entrada.
 - Funcoes do usuario.
@@ -323,9 +336,31 @@ Comportamentos atuais do componente **Saida**:
 - Abrir e salvar o modal sem alterar o tamanho da fonte preserva a altura atual do componente.
 - O conteudo do campo de saida e exibido em uma unica linha no documento.
 - Quando o texto ultrapassa a largura do componente, o excedente e truncado visualmente no layout.
-- No campo de saida inserido dentro de texto, o controle manual de largura maxima foi removido. A pre-visualizacao agora usa limite interno e reticencias quando o conteudo fica longo.
+- O campo pode ser orientado em 0, 90, 180, 270 graus ou angulo personalizado.
+- Quando usado dentro de texto, o modal fica reduzido para as opcoes aplicaveis ao token; o controle manual de largura maxima nao e exibido e a pre-visualizacao usa limite interno com reticencias quando o conteudo fica longo.
 
-### 5.13 Arquivo de dados e campos de entrada
+### 5.13 Overlay
+
+Use **Configurar overlay** no painel esquerdo para definir uma imagem global de fundo ou marca d'agua.
+
+O overlay pode ser aplicado em tres modos:
+
+- **Pagina**: aplica o overlay no escopo de pagina.
+- **Documento**: aplica o overlay no escopo de documento.
+- **Nao**: desativa o overlay.
+
+Campos disponiveis:
+
+- **Ocorrencia**: expressao condicional que define quando o overlay deve ser usado, por exemplo `IF ( _ContRep =  2 )`.
+- **Numero do Overlay**: identificador do overlay usado no arquivo legado.
+- **Resolucao DPI**: resolucao usada para converter o tamanho natural da imagem para milimetros.
+- **Largura (mm)** e **Altura (mm)**: tamanho exibido no documento.
+- **Horizontal** e **Vertical**: deslocamento do overlay no documento.
+- **Arquivo de Imagem**: imagem do overlay, selecionada pelo botao **Procurar >>**.
+
+O overlay e global: mesmo que seja configurado depois que componentes ja existam no documento, ele e renderizado primeiro na visualizacao e no preview, ficando visualmente atras dos demais componentes. Ao salvar, o backend grava o overlay no `.f` e tambem mantem metadados do Format Web para preservar DPI, largura, altura, deslocamento, arquivo e ocorrencia ao recarregar o projeto.
+
+### 5.14 Arquivo de dados e campos de entrada
 
 Nas configuracoes de dados, o usuario define como o arquivo de dados sera interpretado.
 
@@ -337,7 +372,7 @@ Fluxo recomendado:
 4. Abra **Campos de Entrada** para criar, alterar ou excluir campos.
 5. Relacione campos de entrada aos campos de saida ou expressoes.
 
-### 5.14 Preview do layout
+### 5.15 Preview do layout
 
 No editor, use **Pre-visualizar** para validar o layout com um arquivo de dados antes de gerar o PDF final.
 
@@ -351,7 +386,7 @@ Fluxo recomendado:
 
 O preview ajuda a conferir campos de entrada, expressoes, textos variaveis, imagens e quebras antes de usar a geracao final de PDF.
 
-### 5.15 Imagens e assets do projeto
+### 5.16 Imagens e assets do projeto
 
 Clique no icone **Envios** na barra lateral ou use **Escolher dos envios** em componentes de imagem.
 
@@ -370,7 +405,7 @@ Tipos aceitos no upload do editor:
 - PDF.
 - DLL.
 
-### 5.16 Barcode e QR Code
+### 5.17 Barcode e QR Code
 
 Ao editar barcode ou QR Code:
 
@@ -380,13 +415,13 @@ Ao editar barcode ou QR Code:
 4. Para QR Code/codigos 2D, escolha o tipo: PDF417, Data Matrix ou QR Code.
 5. Confirme em **OK**.
 
-### 5.17 Funcoes do usuario e DLL
+### 5.18 Funcoes do usuario e DLL
 
 O editor possui areas para configurar funcoes do usuario, variaveis e DLL.
 
 Use esse recurso quando o layout depende de funcoes legadas ou regras externas. A DLL pode ser enviada pelo proprio editor, ficando vinculada ao projeto.
 
-### 5.18 Boas praticas no editor
+### 5.19 Boas praticas no editor
 
 - Salve o layout apos cada bloco de alteracoes.
 - Organize componentes por paginas antes de criar muitas camadas.
@@ -756,7 +791,25 @@ Quando a Format API falha, a mensagem exibida ao usuario vem do processo atual. 
 
 A documentacao agora diferencia download de PDF e preview inline do PDF gerado.
 
-## 13. Como Atualizar Este Manual
+## 13. Alteracoes de 08/09/2026
+
+As alteracoes de 08/09/2026 documentam melhorias recentes no editor de layout.
+
+### 13.1 Overlay global
+
+Foi incluida a configuracao de overlay no painel esquerdo do editor. O overlay funciona como fundo ou marca d'agua global, pode ser aplicado por pagina ou documento e e renderizado antes dos componentes do layout.
+
+O modal permite configurar ocorrencia condicional, numero do overlay, DPI, largura, altura, deslocamento horizontal/vertical e arquivo de imagem. Ao salvar e recarregar, o Format Web preserva tambem os metadados usados pela tela para manter o mesmo tamanho e resolucao.
+
+### 13.2 Campo texto
+
+O modal **Editar Texto** foi reorganizado em abas para separar geometria, opcoes e conteudo. Foram documentadas as opcoes de unidade, orientacao personalizada, borda, distancia do texto, espaco entre linhas, fonte condicional, respeito a altura do logo, insercao de logos, campos de saida e fios dentro do texto.
+
+### 13.3 Campo de saida
+
+O modal **Editar Campo de Saida** foi ampliado com abas de campo, fonte, opcoes e conteudo. Foram documentadas propriedades como mascara, CPI, fonte condicional, LF automatico, indice de sumario/caderno, justificacao por pontos/hifens, campo MICR, troca de fonte, chave de recuperacao, campo protegido e orientacao personalizada.
+
+## 14. Como Atualizar Este Manual
 
 Sempre que uma tela mudar:
 
@@ -774,3 +827,5 @@ Sempre que uma tela mudar:
 | 12/08/2026 | Corrigida a secao de recursos recentes para refletir somente telas, componentes e endpoints conferidos no desenvolvimento atual. |
 | 17/08/2026 | Incluidas mudancas do Git de hoje: expressao obrigatoria por documento, editor de expressao em criacao/edicao de documentos, visao ADMIN, ajuste de campo de saida em texto e compatibilidade de logotipos legados. |
 | 22/08/2026 | Documentados preview do layout/PDF, geracao direta de PDF pelo dashboard, uso automatico do arquivo de dados do Ponto F e mensagens de erro do processo atual. |
+| 08/09/2026 | Documentados overlay global, melhorias do campo texto e novo modal de campo de saida. |
+

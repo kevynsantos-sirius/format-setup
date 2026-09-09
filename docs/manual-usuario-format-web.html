@@ -302,7 +302,7 @@
 <body>
   <div class="app">
     <aside>
-      <div class="brand"><img class="brand-logo" src="../format-web/src/main/resources/static/images/logo.png" alt="Format"> Manual Format Web</div>
+      <div class="brand"><img class="brand-logo" src="/images/logo.png" alt="Format"> Manual Format Web</div>
       <input id="search" class="search" type="search" placeholder="Buscar tela ou acao">
       <nav id="nav">
         <button data-target="visao" class="active">Visao geral</button>
@@ -316,6 +316,7 @@
         <button data-target="recursos-recentes">Recursos recentes</button>
         <button data-target="alteracoes-20260817">Alteracoes 17/08</button>
         <button data-target="alteracoes-20260822">Alteracoes 22/08</button>
+        <button data-target="alteracoes-20260908">Alteracoes 08/09</button>
         <button data-target="atualizacao">Como atualizar</button>
       </nav>
     </aside>
@@ -326,7 +327,7 @@
         <p>Guia inicial das telas do Format Web, criado a partir da estrutura atual do front-end React, do back-end format-web e da Format API.</p>
         <div class="meta">
           <span class="pill">Versao inicial: 12/08/2026</span>
-          <span class="pill">Ultima atualizacao: 22/08/2026</span>
+          <span class="pill">Ultima atualizacao: 08/09/2026</span>
           <span class="pill">Fonte editavel: docs/manual-usuario-format-web.md</span>
           <span class="pill">Aplicacao: Format Web</span>
         </div>
@@ -450,28 +451,44 @@
             <h3>Editar texto</h3>
             <ol class="step-list">
               <li>Abra o modal <strong>Editar Texto</strong>.</li>
-              <li>Digite ou ajuste o conteudo e use as opcoes de fonte, tamanho, cor, negrito, italico e alinhamento.</li>
-              <li>Para inserir um campo de saida dentro do texto, use o botao <strong>Campo de saida</strong> e monte a expressao no <strong>Editor de expressao</strong>.</li>
+              <li>Na aba <strong>Campo</strong>, ajuste posicao, tamanho, unidade, orientacao e borda.</li>
+              <li>Na aba <strong>Opcoes</strong>, ajuste alinhamento, espaco entre linhas, expressao de ocorrencia e fonte condicional.</li>
+              <li>Na aba <strong>Conteudo</strong>, digite o texto e aplique fonte, tamanho, estilo e cor em trechos selecionados.</li>
+              <li>Insira logo, campo de saida ou fio dentro do texto quando necessario.</li>
               <li>Clique em <strong>Salvar</strong>.</li>
             </ol>
             <ul>
-              <li>O campo de saida inserido no texto aparece como um token visual dentro do conteudo.</li>
-              <li>As teclas de navegacao tratam o token como um elemento unico.</li>
+              <li>A unidade pode ser pixels, milimetros, centimetros ou polegadas.</li>
+              <li>A orientacao aceita 0, 90, 180, 270 graus ou angulo personalizado.</li>
+              <li>A borda possui espessura e distancia do texto.</li>
+              <li>O texto aceita espaco simples, duplo, exatamente ou multiplo.</li>
+              <li>Campos de saida dentro do texto aparecem como tokens visuais; clique para selecionar e duplo clique para editar.</li>
               <li><code>Backspace</code> e <code>Delete</code> removem o token inteiro.</li>
-              <li>Um clique seleciona o token para edicao.</li>
-              <li>Duplo clique no token abre o <strong>Editor de expressao</strong> com a expressao atual.</li>
-              <li>O botao <strong>Campo de saida</strong> tambem abre o editor para o token selecionado; se nao houver token selecionado, cria um novo no ponto do cursor.</li>
             </ul>
             <h3>Campo de saida</h3>
             <p>Use o componente <strong>Saida</strong> para montar conteudo calculado ou baseado nos dados de entrada.</p>
-            <p>O <strong>Editor de expressao</strong> oferece apoio para campos de entrada, funcoes do usuario, funcoes matematicas, constantes, condicionais e texto vazio.</p>
+            <p>O modal <strong>Editar Campo de Saida</strong> e dividido em abas.</p>
+            <div class="cards">
+              <div class="card"><strong>Campo</strong><span>Posicao, tamanho, unidade, orientacao e expressao de ocorrencia.</span></div>
+              <div class="card"><strong>Fonte</strong><span>Fonte, estilo, tamanho, alinhamento, CPI, cor, mascara, fonte condicional e LF automatico.</span></div>
+              <div class="card"><strong>Opcoes</strong><span>Indice, justificacao, uso de fonte, MICR, troca de fonte, chave de recuperacao e campo protegido.</span></div>
+              <div class="card"><strong>Conteudo</strong><span>Expressao do campo com acesso ao Editor de expressao.</span></div>
+            </div>
             <ul>
-              <li>A altura do componente acompanha o tamanho da fonte quando o tamanho da fonte for alterado no modal.</li>
-              <li>Abrir e salvar o modal sem alterar o tamanho da fonte preserva a altura atual do componente.</li>
-              <li>O conteudo do campo de saida e exibido em uma unica linha no documento.</li>
-              <li>Quando o texto ultrapassa a largura do componente, o excedente e truncado visualmente no layout.</li>
-              <li>No campo de saida inserido dentro de texto, o controle manual de largura maxima foi removido; a pre-visualizacao usa limite interno e reticencias para conteudo longo.</li>
+              <li>O editor de expressao oferece campos de entrada, funcoes, constantes, condicionais e texto vazio.</li>
+              <li>A altura acompanha mudancas de fonte quando o tamanho da fonte for alterado no modal.</li>
+              <li>Conteudo longo e truncado visualmente quando ultrapassa a largura do componente.</li>
+              <li>Quando usado dentro de texto, o modal mostra apenas as opcoes aplicaveis ao token.</li>
             </ul>
+            <h3>Overlay</h3>
+            <p>Use <strong>Configurar overlay</strong> no painel esquerdo para definir uma imagem global de fundo ou marca d'agua.</p>
+            <div class="cards">
+              <div class="card"><strong>Escopo</strong><span>Pagina, Documento ou Nao.</span></div>
+              <div class="card"><strong>Ocorrencia</strong><span>Expressao condicional, como <code>IF ( _ContRep =  2 )</code>.</span></div>
+              <div class="card"><strong>Dimensoes</strong><span>DPI, largura, altura e deslocamento horizontal/vertical.</span></div>
+              <div class="card"><strong>Imagem</strong><span>Arquivo de overlay selecionado em <strong>Procurar &gt;&gt;</strong>.</span></div>
+            </div>
+            <p>O overlay e global e e renderizado antes dos demais componentes, ficando atras do conteudo do documento. O salvamento preserva dados do <code>.f</code> e metadados do Format Web para manter DPI, tamanho, posicao, arquivo e ocorrencia ao recarregar.</p>
             <h3>Preview do layout</h3>
             <ol class="step-list">
               <li>Salve o layout.</li>
@@ -556,7 +573,7 @@
           </section>
 
 
-          <section id="recursos-recentes" data-keywords="papel formulario dados campos entrada funcoes variaveis logo assets zip fio backend endpoints legado">
+          <section id="recursos-recentes" data-keywords="papel formulario dados campos entrada funcoes variaveis logo assets zip fio backend endpoints legado overlay texto saida">
             <h2>Recursos Desenvolvidos no Estado Atual</h2>
             <p>Esta area lista apenas funcionalidades conferidas no codigo atual do front-end e do format-web.</p>
 
@@ -587,6 +604,9 @@
               <span class="tag">UPPER</span>
               <span class="tag">LOWER</span>
             </div>
+
+            <h3>Overlay global</h3>
+            <p>O editor possui <strong>Configurar overlay</strong> para definir marca d'agua ou fundo global por pagina/documento. A configuracao inclui ocorrencia, numero, DPI, largura, altura, deslocamentos e arquivo de imagem.</p>
 
             <h3>Imagens, logos e assets</h3>
             <p>O painel <strong>Envios</strong> lista, busca, envia e exclui assets do projeto. Uploads comuns ficam em <code>uploads/{nome-do-arquivo}</code>.</p>
@@ -643,6 +663,15 @@
 
             </div>
 
+          </section>
+          <section id="alteracoes-20260908" data-keywords="08/09 overlay campo texto campo saida dpi dimensoes fonte condicional micr">
+            <h2>Alteracoes de 08/09/2026</h2>
+            <p>Estas alteracoes documentam melhorias recentes no editor de layout.</p>
+            <div class="cards">
+              <div class="card"><strong>Overlay global</strong><span>Fundo ou marca d'agua por pagina/documento, renderizado antes dos componentes e salvo com DPI, tamanho e ocorrencia.</span></div>
+              <div class="card"><strong>Campo texto</strong><span>Modal em abas com geometria, orientacao personalizada, borda, espaco entre linhas, fonte condicional, logos, fios e campos de saida.</span></div>
+              <div class="card"><strong>Campo de saida</strong><span>Modal em abas com campo, fonte, opcoes e conteudo, incluindo mascara, CPI, MICR, indices e campo protegido.</span></div>
+            </div>
           </section>
           <section id="atualizacao" data-keywords="atualizar manual markdown html desenvolvimento historico">
             <h2>Como Atualizar</h2>
@@ -705,3 +734,6 @@
   </script>
 </body>
 </html>
+
+
+
