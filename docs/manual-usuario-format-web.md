@@ -1,7 +1,7 @@
 # Manual do Usuario - Format Web
 
 Versao inicial: 12/08/2026  
-Ultima atualizacao: 08/09/2026
+Ultima atualizacao: 08/10/2026
 Aplicacao: Format Web  
 Publico-alvo: usuarios que criam, importam, editam e processam layouts Format.
 
@@ -386,6 +386,8 @@ Fluxo recomendado:
 
 O preview ajuda a conferir campos de entrada, expressoes, textos variaveis, imagens e quebras antes de usar a geracao final de PDF.
 
+Atualizacao de 08/10/2026: o fluxo de preview foi revisado para refletir melhor o resultado esperado de layouts legados no Format Web. A validacao visual deve considerar tambem componentes associados a registros de detalhe e a chamada **janela detalhe**, que representa a area repetivel usada por layouts antigos para imprimir linhas de detalhe dentro do espaco disponivel.
+
 ### 5.16 Imagens e assets do projeto
 
 Clique no icone **Envios** na barra lateral ou use **Escolher dos envios** em componentes de imagem.
@@ -700,6 +702,8 @@ O sistema possui dois tipos de preview relacionados ao processamento:
 
 Para PDFs gerados, o endpoint `/api/format/preview/{id}` retorna o arquivo em modo de visualizacao. O endpoint `/api/format/download/{id}` continua sendo usado para baixar o arquivo.
 
+Nas melhorias mais recentes, o preview do layout passou a receber atencao especial para cenarios com estruturas de detalhe herdadas do legado. Ao validar um `.f` importado, confira se os campos de detalhe aparecem na regiao correta, se a area repetivel respeita o espaco disponivel da janela detalhe e se o resultado visual permanece coerente antes da geracao final do PDF.
+
 ### 10.10 Compatibilidade com arquivos `.f` legados
 
 O sistema importa arquivos `.f` usando o parser legado e converte o resultado para JSON para exibicao no editor. Como o formato `.f` e binario e pode carregar estruturas que ainda nao possuem tela completa no Format Web, valide sempre o ciclo:
@@ -809,7 +813,23 @@ O modal **Editar Texto** foi reorganizado em abas para separar geometria, opcoes
 
 O modal **Editar Campo de Saida** foi ampliado com abas de campo, fonte, opcoes e conteudo. Foram documentadas propriedades como mascara, CPI, fonte condicional, LF automatico, indice de sumario/caderno, justificacao por pontos/hifens, campo MICR, troca de fonte, chave de recuperacao, campo protegido e orientacao personalizada.
 
-## 14. Como Atualizar Este Manual
+## 14. Alteracoes de 08/10/2026
+
+As alteracoes de 08/10/2026 documentam ajustes recentes no preview, no tratamento de detalhe e no ambiente Docker.
+
+### 14.1 Melhoria no preview do layout
+
+O preview do layout deve ser usado como etapa de conferencia antes de gerar o PDF final. Em layouts importados, ele ajuda a identificar diferencas de posicionamento, imagens, expressoes e repeticoes antes do processamento definitivo.
+
+### 14.2 Janela detalhe
+
+A documentacao passa a destacar a janela detalhe como area repetivel de layouts legados. Ao validar layouts que usam registros de detalhe, confira se os campos aparecem dentro do espaco esperado e se a repeticao respeita a composicao original do `.f`.
+
+### 14.3 Ambiente Docker mais previsivel
+
+O `docker-compose.format-web.yml` agora possui healthcheck em `/api/app/config`, permitindo que outros servicos aguardem o `format-web` estar saudavel. O `docker-compose.format-container.yml` tambem passa a fazer o `format-nginx` depender do `web` saudavel quando o compose do `format-web` estiver ativo junto do ambiente.
+
+## 15. Como Atualizar Este Manual
 
 Sempre que uma tela mudar:
 
@@ -828,4 +848,5 @@ Sempre que uma tela mudar:
 | 17/08/2026 | Incluidas mudancas do Git de hoje: expressao obrigatoria por documento, editor de expressao em criacao/edicao de documentos, visao ADMIN, ajuste de campo de saida em texto e compatibilidade de logotipos legados. |
 | 22/08/2026 | Documentados preview do layout/PDF, geracao direta de PDF pelo dashboard, uso automatico do arquivo de dados do Ponto F e mensagens de erro do processo atual. |
 | 08/09/2026 | Documentados overlay global, melhorias do campo texto e novo modal de campo de saida. |
+| 08/10/2026 | Documentadas melhorias no preview, validacao da janela detalhe e healthchecks do ambiente Docker. |
 

@@ -317,6 +317,7 @@
         <button data-target="alteracoes-20260817">Alteracoes 17/08</button>
         <button data-target="alteracoes-20260822">Alteracoes 22/08</button>
         <button data-target="alteracoes-20260908">Alteracoes 08/09</button>
+        <button data-target="alteracoes-20261008">Alteracoes 08/10</button>
         <button data-target="atualizacao">Como atualizar</button>
       </nav>
     </aside>
@@ -327,7 +328,7 @@
         <p>Guia inicial das telas do Format Web, criado a partir da estrutura atual do front-end React, do back-end format-web e da Format API.</p>
         <div class="meta">
           <span class="pill">Versao inicial: 12/08/2026</span>
-          <span class="pill">Ultima atualizacao: 08/09/2026</span>
+          <span class="pill">Ultima atualizacao: 08/10/2026</span>
           <span class="pill">Fonte editavel: docs/manual-usuario-format-web.md</span>
           <span class="pill">Aplicacao: Format Web</span>
         </div>
@@ -496,6 +497,7 @@
               <li>Abra <strong>Pre-visualizar</strong>.</li>
               <li>Confira campos, expressoes, textos variaveis, imagens e quebras antes da geracao final.</li>
             </ol>
+            <p>Atualizacao de 08/10/2026: o preview deve considerar tambem componentes associados a registros de detalhe e a chamada <strong>janela detalhe</strong>, area repetivel usada por layouts antigos para imprimir linhas de detalhe dentro do espaco disponivel.</p>
             <h3>Boas praticas</h3>
             <ol class="step-list">
               <li>Salve apos cada bloco de alteracoes.</li>
@@ -624,6 +626,7 @@
             <p>O card do projeto possui acao de PDF que chama o backend sem abrir a tela de processamento. O <code>format-web</code> prepara layout, assets e arquivo de dados, encaminha para a <code>format-api</code>, exibe progresso no card e baixa o PDF quando houver um unico arquivo gerado.</p>
             <h3>Preview e visualizacao de PDF</h3>
             <p>O sistema diferencia preview de layout, usado antes de processar, e preview de PDF gerado, usado para visualizar o arquivo concluido. Para PDFs, <code>/api/format/preview/{id}</code> abre em modo de visualizacao e <code>/api/format/download/{id}</code> baixa o arquivo.</p>
+            <p>Nas melhorias mais recentes, o preview do layout passou a receber atencao especial para estruturas de detalhe herdadas do legado. Ao validar um <code>.f</code> importado, confira se os campos de detalhe aparecem na regiao correta, se a area repetivel respeita a janela detalhe e se o resultado visual permanece coerente antes da geracao final do PDF.</p>
             <h3>Compatibilidade com .f legado</h3>
             <p>Arquivos <code>.f</code> sao importados pelo parser legado e convertidos para JSON. Como algumas estruturas podem nao ter tela completa no Format Web, valide importar, conferir, salvar, baixar o ZIP e reabrir no ambiente de compatibilidade.</p>
           </section>
@@ -671,6 +674,15 @@
               <div class="card"><strong>Overlay global</strong><span>Fundo ou marca d'agua por pagina/documento, renderizado antes dos componentes e salvo com DPI, tamanho e ocorrencia.</span></div>
               <div class="card"><strong>Campo texto</strong><span>Modal em abas com geometria, orientacao personalizada, borda, espaco entre linhas, fonte condicional, logos, fios e campos de saida.</span></div>
               <div class="card"><strong>Campo de saida</strong><span>Modal em abas com campo, fonte, opcoes e conteudo, incluindo mascara, CPI, MICR, indices e campo protegido.</span></div>
+            </div>
+          </section>
+          <section id="alteracoes-20261008" data-keywords="08/10 preview detalhe janela detalhe docker healthcheck web nginx">
+            <h2>Alteracoes de 08/10/2026</h2>
+            <p>Estas alteracoes documentam ajustes recentes no preview, no tratamento de detalhe e no ambiente Docker.</p>
+            <div class="cards">
+              <div class="card"><strong>Preview do layout</strong><span>Usado para conferir posicionamento, imagens, expressoes e repeticoes antes da geracao final de PDF.</span></div>
+              <div class="card"><strong>Janela detalhe</strong><span>Area repetivel de layouts legados; valide se os campos de detalhe respeitam o espaco esperado.</span></div>
+              <div class="card"><strong>Docker</strong><span>O format-web possui healthcheck em <code>/api/app/config</code> e o Nginx pode aguardar o web saudavel no compose completo.</span></div>
             </div>
           </section>
           <section id="atualizacao" data-keywords="atualizar manual markdown html desenvolvimento historico">
