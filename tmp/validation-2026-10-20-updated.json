@@ -1,0 +1,148 @@
+{
+  "testedAt": "2026-10-20T21:23:32.873Z",
+  "status": "passed",
+  "snapshotSha256": "30a937c8c284c7614f4a4b858dfa3aa1c9ce00b8f432e1f1b01a312c1e48d2f7",
+  "documentCount": 26,
+  "componentCountIncludingBandChildren": 3168,
+  "windowCount": 146,
+  "preview": {
+    "requestedOnly": true,
+    "results": [
+      {
+        "requestedPageIndex": 0,
+        "pageIndex": 0,
+        "document": "Frente47",
+        "totalPreviewPages": 1,
+        "status": "executed"
+      },
+      {
+        "requestedPageIndex": 1,
+        "pageIndex": 1,
+        "document": "Verso50",
+        "totalPreviewPages": 2,
+        "status": "executed"
+      }
+    ],
+    "allRequestedPassed": true
+  },
+  "functionTests": [
+    {
+      "functionName": "MASCARA",
+      "status": "executed",
+      "result": "123.456.789-01",
+      "matchesExpected": true
+    }
+  ],
+  "missingStaticResourceNames": [
+    "Recurso referenciado nao informado: contatosa3.gif",
+    "Recurso referenciado nao informado: moldura03_5.gif",
+    "Recurso referenciado nao informado: moldura04.gif",
+    "Recurso referenciado nao informado: moldura05.gif",
+    "Recurso referenciado nao informado: moldura03.gif",
+    "Recurso referenciado nao informado: titulo.gif",
+    "Recurso referenciado nao informado: moldura10_5.gif",
+    "Recurso referenciado nao informado: moldura10.gif",
+    "Recurso referenciado nao informado: vdc2954.jpg",
+    "Recurso referenciado nao informado: moldura09.gif",
+    "Recurso referenciado nao informado: moldura06.gif",
+    "Recurso referenciado nao informado: moldura04_5.gif",
+    "Recurso referenciado nao informado: loteria.gif",
+    "Recurso referenciado nao informado: box10.gif",
+    "Recurso referenciado nao informado: moldura07.gif",
+    "Recurso referenciado nao informado: loteria_hsbc.gif",
+    "Recurso referenciado nao informado: titloteria.gif",
+    "Recurso referenciado nao informado: moldura15_5.gif",
+    "Recurso referenciado nao informado: moldura18.gif",
+    "Recurso referenciado nao informado: moldura08_5.gif",
+    "Recurso referenciado nao informado: moldura02.gif",
+    "Recurso referenciado nao informado: moldura29.gif",
+    "Recurso referenciado nao informado: moldura02_6.gif",
+    "Recurso referenciado nao informado: moldura01_5.gif",
+    "Recurso referenciado nao informado: moldura34.gif",
+    "Recurso referenciado nao informado: moldura28.gif",
+    "Recurso referenciado nao informado: moldura02_5.gif",
+    "Recurso referenciado nao informado: moldura15.gif",
+    "Recurso referenciado nao informado: moldura25.gif"
+  ],
+  "functionFindings": [],
+  "otherFindingCounts": {
+    "DYNAMIC_RESOURCE": 93,
+    "RESOURCE_NOT_SUPPLIED": 188
+  },
+  "executions": [
+    {
+      "service": "web",
+      "method": "GET",
+      "route": "/api/app/config",
+      "startedAt": "2026-10-20T21:23:06.931Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-20T21:23:08.3Z"
+    },
+    {
+      "service": "web",
+      "method": "POST",
+      "route": "/api/preview-layout",
+      "startedAt": "2026-10-20T21:23:08.309Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-20T21:23:13.525Z"
+    },
+    {
+      "service": "web",
+      "method": "GET",
+      "route": "/api/default-user-function-dll",
+      "startedAt": "2026-10-20T21:23:13.537Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-20T21:23:13.561Z"
+    },
+    {
+      "service": "web",
+      "method": "POST",
+      "route": "/api/layout-preview",
+      "startedAt": "2026-10-20T21:23:13.599Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-20T21:23:24.649Z"
+    },
+    {
+      "service": "web",
+      "method": "POST",
+      "route": "/api/layout-preview",
+      "startedAt": "2026-10-20T21:23:24.657Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-20T21:23:32.497Z"
+    },
+    {
+      "service": "api",
+      "method": "POST",
+      "route": "/api/user-functions/execute",
+      "startedAt": "2026-10-20T21:23:32.497Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-20T21:23:32.871Z"
+    }
+  ],
+  "completeValidationClaimed": false,
+  "modelValidation": "executed-2026-10-21-response-quality-not-approved",
+  "httpContract": {
+    "status": "passed",
+    "endpoint": "/api/pontof/diagnosticar",
+    "parsedDocuments": 26,
+    "inventoriedItems": 3168
+  },
+  "testCounts": {
+    "realRetrievalQuestions": 7,
+    "node": 18,
+    "java": 3
+  },
+  "memoryIndexes": {
+    "devChunks": 891,
+    "devFiles": 217,
+    "userFiles": 4,
+    "userChunks": 10
+  },
+  "modelValidationReport": "review/ollama-validation-2026-10-21.json"
+}

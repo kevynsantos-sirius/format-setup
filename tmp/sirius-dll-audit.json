@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-20",
+  "dllSha256": "DC4CCA27C3AE648E4773DCD86658B2DFE479DC4388400427E3E814CB96C44EC3",
+  "apiDllPath": "/app/Format/SYS/Sirius32.dll",
+  "apiDllMatchesWeb": true,
+  "nativeExports": 165,
+  "webCatalogExports": 165,
+  "apiMascara": {
+    "result": "123.456.789-01",
+    "arguments": [
+      "12345678901",
+      "999.999.999-99"
+    ]
+  },
+  "apiNumparamMascara": "2",
+  "webValidation": "Nenhum problema encontrado",
+  "testsPassed": 26,
+  "existingPreviewTestFailures": 8,
+  "commit": "234a3b9"
+}

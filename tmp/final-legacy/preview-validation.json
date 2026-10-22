@@ -1,0 +1,2471 @@
+{
+  "rereadChecks": [
+    {
+      "document": "Frente01",
+      "pointer": "/listaDocumentos/0/layout/12",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "breakline",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente01",
+      "pointer": "/listaDocumentos/0/layout/13",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Verso04",
+      "pointer": "/listaDocumentos/1/layout/12",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "campoSaida",
+        "empty",
+        "campoSaida",
+        "empty",
+        "campoSaida",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 700,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 700,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#FF0000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Verso04",
+      "pointer": "/listaDocumentos/1/layout/13",
+      "color": "#0057B8",
+      "contentTypes": [
+        "text",
+        "Logo",
+        "text",
+        "Logo",
+        "empty",
+        "breakline",
+        "breakline",
+        "text",
+        "text"
+      ],
+      "inlineColors": []
+    },
+    {
+      "document": "Frente05",
+      "pointer": "/listaDocumentos/2/layout/12",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "breakline",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente05",
+      "pointer": "/listaDocumentos/2/layout/13",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente06",
+      "pointer": "/listaDocumentos/3/layout/13",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "empty",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 4,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente06",
+      "pointer": "/listaDocumentos/3/layout/14",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "empty",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 4,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente07",
+      "pointer": "/listaDocumentos/4/layout/13",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "empty",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 4,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente07",
+      "pointer": "/listaDocumentos/4/layout/14",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "empty",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 4,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente08",
+      "pointer": "/listaDocumentos/5/layout/17",
+      "color": "#0057B8",
+      "contentTypes": [
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "breakline"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente08",
+      "pointer": "/listaDocumentos/5/layout/18",
+      "color": "#0057B8",
+      "contentTypes": "string",
+      "inlineColors": []
+    },
+    {
+      "document": "Verso09",
+      "pointer": "/listaDocumentos/6/layout/14",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "empty",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 4,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Verso09",
+      "pointer": "/listaDocumentos/6/layout/15",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "empty",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 4,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente10",
+      "pointer": "/listaDocumentos/7/layout/13",
+      "color": "#0057B8",
+      "contentTypes": "string",
+      "inlineColors": []
+    },
+    {
+      "document": "Frente10",
+      "pointer": "/listaDocumentos/7/layout/14",
+      "color": "#0057B8",
+      "contentTypes": "string",
+      "inlineColors": []
+    },
+    {
+      "document": "Verso11",
+      "pointer": "/listaDocumentos/8/layout/8",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "campoSaida",
+        "empty",
+        "campoSaida",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 700,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 700,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#FF0000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Verso11",
+      "pointer": "/listaDocumentos/8/layout/9",
+      "color": "#0057B8",
+      "contentTypes": [
+        "text",
+        "Logo",
+        "text",
+        "Logo",
+        "empty",
+        "breakline",
+        "breakline",
+        "breakline",
+        "text",
+        "text"
+      ],
+      "inlineColors": []
+    },
+    {
+      "document": "Frente12",
+      "pointer": "/listaDocumentos/9/layout/12",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "empty",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 4,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "Frente12",
+      "pointer": "/listaDocumentos/9/layout/13",
+      "color": "#0057B8",
+      "contentTypes": [
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "FontDescriptor",
+        "empty",
+        "FontDescriptor",
+        "empty",
+        "text",
+        "campoSaida",
+        "text",
+        "text",
+        "FontDescriptor",
+        "text",
+        "FontDescriptor",
+        "text",
+        "text"
+      ],
+      "inlineColors": [
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneBold",
+            "size": 12,
+            "weight": 400,
+            "color": "#0057B8",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 4,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 700,
+            "color": "#D61F21",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#D61F21",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "FontDescriptor",
+          "descriptor": {
+            "family": "NewJuneLight",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": null,
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "FrHSBC01",
+      "pointer": "/listaDocumentos/10/layout/12",
+      "color": "#0057B8",
+      "contentTypes": "string",
+      "inlineColors": []
+    },
+    {
+      "document": "FrHSBC01",
+      "pointer": "/listaDocumentos/10/layout/13",
+      "color": "#0057B8",
+      "contentTypes": [
+        "campoSaida",
+        "empty",
+        "text",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "campoSaida",
+        "empty",
+        "breakline",
+        "campoSaida",
+        "empty",
+        "breakline"
+      ],
+      "inlineColors": [
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        },
+        {
+          "type": "campoSaida",
+          "font": {
+            "family": "NewJuneLight3",
+            "size": 12,
+            "weight": 400,
+            "color": "#000000",
+            "style": "normal",
+            "textAlign": null,
+            "italico": false,
+            "sublinhado": false,
+            "tachado": false
+          }
+        }
+      ]
+    },
+    {
+      "document": "FrHSBC02",
+      "pointer": "/listaDocumentos/11/layout/13",
+      "color": "#0057B8",
+      "contentTypes": "string",
+      "inlineColors": []
+    },
+    {
+      "document": "FrHSBC02",
+      "pointer": "/listaDocumentos/11/layout/14",
+      "color": "#0057B8",
+      "contentTypes": "string",
+      "inlineColors": []
+    }
+  ],
+  "resourcesUnchanged": true,
+  "functionsUnchanged": true,
+  "pages": [
+    {
+      "requested": 0,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 0,
+        "document": "Frente01"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 0,
+        "document": "Frente01"
+      }
+    },
+    {
+      "requested": 1,
+      "before": {
+        "pageIndex": 1,
+        "documentIndex": 1,
+        "document": "Verso04"
+      },
+      "after": {
+        "pageIndex": 1,
+        "documentIndex": 1,
+        "document": "Verso04"
+      }
+    },
+    {
+      "requested": 2,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 2,
+        "document": "Frente05"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 2,
+        "document": "Frente05"
+      }
+    },
+    {
+      "requested": 3,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 3,
+        "document": "Frente06"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 3,
+        "document": "Frente06"
+      }
+    },
+    {
+      "requested": 4,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 4,
+        "document": "Frente07"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 4,
+        "document": "Frente07"
+      }
+    },
+    {
+      "requested": 5,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 5,
+        "document": "Frente08"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 5,
+        "document": "Frente08"
+      }
+    },
+    {
+      "requested": 6,
+      "before": {
+        "pageIndex": 1,
+        "documentIndex": 6,
+        "document": "Verso09"
+      },
+      "after": {
+        "pageIndex": 1,
+        "documentIndex": 6,
+        "document": "Verso09"
+      }
+    },
+    {
+      "requested": 7,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 7,
+        "document": "Frente10"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 7,
+        "document": "Frente10"
+      }
+    },
+    {
+      "requested": 8,
+      "before": {
+        "pageIndex": 1,
+        "documentIndex": 8,
+        "document": "Verso11"
+      },
+      "after": {
+        "pageIndex": 1,
+        "documentIndex": 8,
+        "document": "Verso11"
+      }
+    },
+    {
+      "requested": 9,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 9,
+        "document": "Frente12"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 9,
+        "document": "Frente12"
+      }
+    },
+    {
+      "requested": 10,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 10,
+        "document": "FrHSBC01"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 10,
+        "document": "FrHSBC01"
+      }
+    },
+    {
+      "requested": 11,
+      "before": {
+        "pageIndex": 0,
+        "documentIndex": 11,
+        "document": "FrHSBC02"
+      },
+      "after": {
+        "pageIndex": 0,
+        "documentIndex": 11,
+        "document": "FrHSBC02"
+      }
+    }
+  ],
+  "executions": [
+    {
+      "service": "web",
+      "method": "GET",
+      "route": "/api/app/config",
+      "startedAt": "2026-10-21T14:51:12.081Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T14:51:12.236Z"
+    },
+    {
+      "service": "web",
+      "method": "POST",
+      "route": "/api/layout-preview",
+      "startedAt": "2026-10-21T14:51:12.633Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T14:51:25.320Z"
+    },
+    {
+      "service": "web",
+      "method": "POST",
+      "route": "/api/layout-preview",
+      "startedAt": "2026-10-21T14:51:25.336Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T14:51:34.466Z"
+    }
+  ],
+  "status": "passed-structure-awaiting-visual-review"
+}

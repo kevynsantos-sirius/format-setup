@@ -1,0 +1,21 @@
+{
+  "status": 200,
+  "paragraphs": "Texto literal nao executa MASCARA, CARO, IF ou concatenacoes. `Caro (a)` e uma saudacao, nao a funcao CARO. Dentro de texto, somente tokens explicitos de campo de saida (nos campoSaida/outputField ou escape C legado) avaliam expressoes. Nao transformar qualquer\n\n## Texto literal, campo de saida e Sirius32",
+  "result": {
+    "model": "qwen3:0.6b",
+    "created_at": "2026-10-21T12:57:41.5498772Z",
+    "message": {
+      "role": "assistant",
+      "content": "Texto literal Caro (a) executa MASCARA da Sirius32, mas a diferença para campo de saida é que ele é uma saudação, não uma função."
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 4751025300,
+    "load_duration": 22464600,
+    "prompt_eval_count": 215,
+    "prompt_eval_cached_count": 3,
+    "prompt_eval_duration": 2265539000,
+    "eval_count": 40,
+    "eval_duration": 2385401000
+  }
+}

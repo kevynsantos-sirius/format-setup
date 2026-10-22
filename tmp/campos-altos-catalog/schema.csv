@@ -1,0 +1,40 @@
+Num_PROC     ;1;10;0
+INSCRICAO                          ;12;25;0
+ENTIDADE                           ;38;100;0
+CGCENT;139;20;0
+ENDENT;160;60;0
+NUMENT;221;10;0
+COMPLEENT               ;232;20;0
+BAIRROENT                    ;253;60;0
+CEPENT;314;10;0
+CIDADEENT;325;100;0
+UFENT;426;2;0
+NUMCUC                            ;429;10;0
+RAZAOSOCIAL                       ;440;60;0
+NOMEFANTA           ;501;60;0
+CGCCPF                             ;562;20;0
+ENDCUC                       ;583;60;0
+NUMENDCUC                     ;644;10;0
+COMPLCUC ;655;20;0
+BAIRROCUC;676;60;0
+CEPCUC                            ;737;10;0
+CIDADECUC                         ;748;60;0
+ESTADOCUC                         ;809;2;0
+MSGGUIA                      ;812;60;0
+QTD_PARCELAS                       ;873;10;0
+GUIA                               ;884;10;0
+DATA_VENCIMENTO                    ;895;10;0
+NRO_PARCELA                        ;906;15;0
+VLR_PARCELA                        ;922;25;0
+VLR_TOTAL                          ;948;25;0
+VLR_MULTA                          ;974;25;0
+VLR_JUROS                          ;1000;25;0
+VLR_CORREÇÃO                       ;1026;25;0
+VLR_DESCONTO                       ;1052;25;0
+TAXA EXPEDIENTE                    ;1078;25;0
+CODIGOBARRA                        ;1104;48;0
+QUADRA                             ;1153;10;0
+LOTE                               ;1164;10;0
+LOTEAMENTO                         ;1175;10;0
+EXERCICIO                          ;1186;60;0
+ENDEREÇ0_IMOVEL                    ;1247;100;0

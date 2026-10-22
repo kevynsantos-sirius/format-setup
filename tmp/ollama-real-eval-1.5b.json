@@ -1,0 +1,98 @@
+{
+  "testedAt": "2026-10-21T12:47:04.644Z",
+  "endpoint": "http://127.0.0.1:3217/api/perguntar",
+  "cases": [
+    {
+      "id": "literal-dll",
+      "modo": "dev",
+      "pergunta": "Texto literal Caro (a) executa MASCARA da Sirius32? Explique a diferenca para campo de saida explicito.",
+      "status": 200,
+      "seconds": 51.683,
+      "resposta": "Conclusao: Não encontrou evidencia suficiente para responder a pergunta.\n\nEvidencia usada: Nenhum arquivo ou layout atual foi fornecido.\n\nO que falta confirmar: Executar a API de diagnostico para verificar se a pergunta foi respondida corretamente.",
+      "evidencias": [
+        {
+          "id": "e79b4b4c0406ec4214d3efd54fbed1de850fda847d1707ea83ba9c3adbd456e0",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\PONTO_F_REVISAO_2026_10_20.md",
+          "chunk": 1,
+          "sourceHash": "f82eb752bcdbff8e25085a9d4a97ef3b987319c3866a8923c5d3adffa6e4b301"
+        },
+        {
+          "id": "267404babdef5064c19f128c82e085cd38a52043ffea493fff3a579ce0aca934",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\PONTO_F_REVISAO_2026_10_20.md",
+          "chunk": 2,
+          "sourceHash": "f82eb752bcdbff8e25085a9d4a97ef3b987319c3866a8923c5d3adffa6e4b301"
+        }
+      ],
+      "execucoes": []
+    },
+    {
+      "id": "detail-conditions",
+      "modo": "dev",
+      "pergunta": "Na janela LIN01, condicao geral, condicao de impressao e selecao de banda sao a mesma coisa? Sem arquivo atual, o que falta verificar?",
+      "status": 200,
+      "seconds": 29.899,
+      "resposta": "Nenhum arquivo ou layout atual foi fornecido. Nenhuma API de diagnostico foi executada.",
+      "evidencias": [
+        {
+          "id": "267404babdef5064c19f128c82e085cd38a52043ffea493fff3a579ce0aca934",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\PONTO_F_REVISAO_2026_10_20.md",
+          "chunk": 2,
+          "sourceHash": "f82eb752bcdbff8e25085a9d4a97ef3b987319c3866a8923c5d3adffa6e4b301"
+        },
+        {
+          "id": "73e93bbcd759ce2b294e8fad53428fa6f94520ac0f0e0262efe09fda7b1525dd",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\usuario\\PONTO_F_VALIDACAO_USUARIO.md",
+          "chunk": 1,
+          "sourceHash": "37c5b1deac410a82b20abf8900b53b37994e19cae352ee809193b48f6edbde26"
+        }
+      ],
+      "execucoes": []
+    },
+    {
+      "id": "preview-not-pdf",
+      "modo": "usuario",
+      "pergunta": "O preview da primeira pagina abriu e a API retornou PROCESSING. Posso afirmar que todas as paginas e o PDF final estao corretos?",
+      "status": 200,
+      "seconds": 46.778,
+      "resposta": "Preview da primeira pagina abriu e a API retornou PROCESSING. Posso afirmar que todas as paginas e o PDF final estao corretos?",
+      "evidencias": [
+        {
+          "id": "73e93bbcd759ce2b294e8fad53428fa6f94520ac0f0e0262efe09fda7b1525dd",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\usuario\\PONTO_F_VALIDACAO_USUARIO.md",
+          "chunk": 1,
+          "sourceHash": "37c5b1deac410a82b20abf8900b53b37994e19cae352ee809193b48f6edbde26"
+        },
+        {
+          "id": "0e70c4d0bf8c6700581ff6a28544959f89b0e1a20acc2371d936457caf73edc5",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\usuario\\PONTO_F_USUARIO.md",
+          "chunk": 1,
+          "sourceHash": "404e67d29c7d027bb716ec1f95cf622d2b22710988c9f87aa63c588e36daca02"
+        }
+      ],
+      "execucoes": []
+    },
+    {
+      "id": "header-placeholder",
+      "modo": "usuario",
+      "pergunta": "O cabecalho vazio mostra zeros. Devo criar um detalhe automaticamente? Como verificar sem confundir texto fixo e campo variavel?",
+      "status": 200,
+      "seconds": 39.329,
+      "resposta": "**Preview Executado:** Não há preview para verificar.\n\n**Explicação Provável:** O cabecalho vazio mostra zeros, o que sugere que o usuário está tentando criar um detalhe automaticamente. Para verificar se o detalhe foi criado corretamente, podemos verificar se o texto fixo está vazio e se o campo variável está preenchido corretamente.\n\n**Verificação Pendente:** Verificar se o texto fixo está vazio e se o campo variável está preenchido corretamente.",
+      "evidencias": [
+        {
+          "id": "73e93bbcd759ce2b294e8fad53428fa6f94520ac0f0e0262efe09fda7b1525dd",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\usuario\\PONTO_F_VALIDACAO_USUARIO.md",
+          "chunk": 1,
+          "sourceHash": "37c5b1deac410a82b20abf8900b53b37994e19cae352ee809193b48f6edbde26"
+        },
+        {
+          "id": "e2a91a08612c634e9c8faa3e76178bf75482998359035ac8c619fde2bf28b141",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\usuario\\PONTO_F_USUARIO.md",
+          "chunk": 5,
+          "sourceHash": "404e67d29c7d027bb716ec1f95cf622d2b22710988c9f87aa63c588e36daca02"
+        }
+      ],
+      "execucoes": []
+    }
+  ]
+}

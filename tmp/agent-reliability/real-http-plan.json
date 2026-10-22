@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "testedAt": "2026-10-21T13:53:55.835Z",
+  "requestOrigin": "actual-original-f-via-two-http-parses",
+  "changes": 24,
+  "documents": 12,
+  "planId": "b93b2cabf0c5611a8afcc4eaf8fc67399cf8504017188ce8c88a4220bc4b308b",
+  "resultSnapshot": "486d202e4ee14e0040499f856c261a31c09334f333313f56cde7ccb185fb3403",
+  "verification": {
+    "untouchedItemsUnchanged": true,
+    "structure": "executed",
+    "visual": "pending",
+    "nativePreview": "not-executed",
+    "binaryRoundTrip": "not-executed",
+    "finalPdf": "not-executed"
+  },
+  "alteracao": {
+    "aplicada": true,
+    "destino": "returned-json-draft",
+    "salva": false,
+    "binarioGerado": false
+  },
+  "planExecutions": [
+    {
+      "service": "web",
+      "method": "GET",
+      "route": "/api/app/config",
+      "startedAt": "2026-10-21T13:53:45.436Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T13:53:45.772Z"
+    },
+    {
+      "service": "web",
+      "method": "POST",
+      "route": "/api/preview-layout",
+      "startedAt": "2026-10-21T13:53:45.785Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T13:53:51.180Z"
+    }
+  ],
+  "applyExecutions": [
+    {
+      "service": "web",
+      "method": "GET",
+      "route": "/api/app/config",
+      "startedAt": "2026-10-21T13:53:51.802Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T13:53:51.818Z"
+    },
+    {
+      "service": "web",
+      "method": "POST",
+      "route": "/api/preview-layout",
+      "startedAt": "2026-10-21T13:53:51.824Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T13:53:55.557Z"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "caseIndex": 14,
+    "documentIndex": 3,
+    "before": [
+      true,
+      false
+    ],
+    "after": [
+      true,
+      false
+    ]
+  },
+  {
+    "caseIndex": 15,
+    "documentIndex": 4,
+    "before": [
+      true,
+      false
+    ],
+    "after": [
+      true,
+      false
+    ]
+  },
+  {
+    "caseIndex": 16,
+    "documentIndex": 6,
+    "before": [
+      true,
+      false
+    ],
+    "after": [
+      true,
+      false
+    ]
+  },
+  {
+    "caseIndex": 17,
+    "documentIndex": 9,
+    "before": [
+      true,
+      false
+    ],
+    "after": [
+      true,
+      false
+    ]
+  },
+  {
+    "caseIndex": 18,
+    "documentIndex": 5,
+    "before": [
+      true,
+      true
+    ],
+    "after": [
+      true,
+      true
+    ]
+  },
+  {
+    "caseIndex": 19,
+    "documentIndex": 7,
+    "before": [
+      false,
+      true
+    ],
+    "after": [
+      false,
+      true
+    ]
+  },
+  {
+    "caseIndex": 20,
+    "documentIndex": 11,
+    "before": [
+      false,
+      true
+    ],
+    "after": [
+      false,
+      true
+    ]
+  }
+]
