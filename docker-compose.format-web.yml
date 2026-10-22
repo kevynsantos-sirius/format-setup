@@ -11,6 +11,7 @@ services:
       - "8081:8081"
     volumes:
       - ./logs/format-web:/app/logs
+      - ./docker-data/format-web-mirror:/app/projects-mirror
       - ./Sirius32.dll:/app/resources/Sirius32.dll:ro
     environment:
       SPRING_PROFILES_ACTIVE: docker
@@ -50,6 +51,8 @@ services:
       FORMAT_AWS_S3_AUTO_CREATE_BUCKET: ${FORMAT_AWS_S3_AUTO_CREATE_BUCKET:-true}
       AWS_S3_AUTO_CREATE_BUCKET: ${AWS_S3_AUTO_CREATE_BUCKET:-true}
       AWS_S3_PATH_STYLE_ACCESS: ${AWS_S3_PATH_STYLE_ACCESS:-true}
+      FORMAT_STORAGE_S3_MIRROR_ENABLED: ${FORMAT_STORAGE_S3_MIRROR_ENABLED:-true}
+      FORMAT_STORAGE_S3_MIRROR_ROOT: ${FORMAT_STORAGE_S3_MIRROR_ROOT:-/app/projects-mirror}
     mem_limit: 768m
     cpus: 1.00
     networks:
@@ -57,6 +60,12 @@ services:
     depends_on:
       localstack:
         condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://localhost:8081/api/app/config >/dev/null || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 45s
     restart: unless-stopped
 
 networks:
