@@ -1,0 +1,18 @@
+{
+  "baseUrl": "http://localhost:11434",
+  "model": "qwen2.5-coder:0.5b",
+  "embeddingModel": "nomic-embed-text",
+  "mode": "consulta",
+  "allowMutations": false,
+  "keepAlive": "30s",
+  "think": false,
+  "options": {
+    "temperature": 0.1,
+    "num_ctx": 2048,
+    "num_predict": 220,
+    "num_thread": 2,
+    "num_gpu": 0
+  },
+  "performanceProfile": "eco",
+  "notes": "Perfil eco: 0.5B ativo apos teste de pressao de RAM com 1.5B; CPU, duas threads, contexto 2048, uma consulta por vez e retencao 30s. O modelo 1.5B continua instalado para uso futuro com mais memoria livre."
+}

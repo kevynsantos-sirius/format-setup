@@ -1,0 +1,19 @@
+{
+  "processId": "2740d79d-c579-4412-9661-c67f6b1fc3e3",
+  "status": "PROCESSING",
+  "message": "Processamento iniciado em background",
+  "timestamp": "2026-10-21T14:19:37.562925137",
+  "generatedFiles": null,
+  "process": {
+    "processId": "2740d79d-c579-4412-9661-c67f6b1fc3e3",
+    "status": "FAILED",
+    "createdAt": "2026-10-21T14:19:37.78009",
+    "completedAt": "2026-10-21T14:23:02.829879",
+    "generatedFiles": [],
+    "errorMessage": "Erro na carga da fonte windows: . Diagnostic path: /tmp/format/2740d79d-c579-4412-9661-c67f6b1fc3e3",
+    "diagnosticLog": "wine: Unhandled page fault on read access to 00000100 at address 00000100 (thread 0024), starting debugger...\n\n[FPSNT.LOG]\n\r\nID: 92592776 <01> FPSNT - ESTATISTICAS DE IMPRESSAO\tVersão do Format: 8.53N ICA ( Validade:06/2027 )\t\tOperador: ADMIN    \r\nID: 92592776 <07> Parâmetros de Execução : -nC:\\Format\\SYS\\PROCESSOS\\2740d79d-c579-4412-9661-c67f6b1fc3e3\\ApoliceVD2_P1.f -dC:\\Format\\SYS\\PROCESSOS\\2740d79d-c579-4412-9661-c67f6b1fc3e3\\data.txt -b -c- -f+ -gpC:\\Format\\SYS\\GERADOS\\2740d79d-c579-4412-9661-c67f6b1fc3e3 -h17 -x+ -pg1\r\nID: 92592776 <02> Aplicacao : C:\\Format\\SYS\\PROCESSOS\\2740d79d-c579-4412-9661-c67f6b1fc3e3\\ApoliceVD2_P1.f\r\nID: 92592776 <03> Sistema de Impressão: WINDOWS DRIVER\r\nID: 92592776 <04> Arq. de Dados : \r\nID: 92592776 <05> Inicio : Wed Oct 21 14:20:00 2026\r\nID: 92592776 <06> Intervalo : Todo o Arquivo de Dados     \r\nID: 92592776 <13> Mensagem de Erro: Erro na carga da fonte windows: .\r\n",
+    "diagnosticPath": "/tmp/format/2740d79d-c579-4412-9661-c67f6b1fc3e3",
+    "commandLine": "wine /app/Format/SYS/FormatBSP.exe -nC:\\Format\\SYS\\PROCESSOS\\2740d79d-c579-4412-9661-c67f6b1fc3e3\\ApoliceVD2_P1.f -dC:\\Format\\SYS\\PROCESSOS\\2740d79d-c579-4412-9661-c67f6b1fc3e3\\data.txt -b -c- -f+ -gpC:\\Format\\SYS\\GERADOS\\2740d79d-c579-4412-9661-c67f6b1fc3e3 -h17 -x+ -pg1",
+    "exitCode": 143
+  }
+}

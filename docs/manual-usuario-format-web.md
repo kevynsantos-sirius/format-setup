@@ -829,3 +829,17 @@ Sempre que uma tela mudar:
 | 22/08/2026 | Documentados preview do layout/PDF, geracao direta de PDF pelo dashboard, uso automatico do arquivo de dados do Ponto F e mensagens de erro do processo atual. |
 | 08/09/2026 | Documentados overlay global, melhorias do campo texto e novo modal de campo de saida. |
 
+
+
+## Chat: criar e editar com confirmação no .f (22/10/2026)
+
+Selecione um item ou descreva tipo, nome, trecho e documento. A aplicação relaciona a seleção visual ao registro nativo. Quando há repetição ou faltam dados, o chat pede esclarecimento ou apresenta opções e propriedades para preencher.
+
+Confira o contorno verde, o destino da criação e os valores antes/depois. **Aplicar e salvar nova versão** confirma o .f atual, grava e relê uma nova versão. **Cancelar** não grava. Salve ou desfaça alterações manuais pendentes antes do pedido. O arquivo anterior fica nas versões do projeto.
+
+O fluxo abrange os componentes do editor, documentos, janelas detalhe e suas bandas. Configurações compartilhadas do formulário são sinalizadas por afetarem todos os documentos. Uma fonte maior pode cortar texto; confira o preview. Recursos externos não fornecidos continuam indisponíveis. Exemplos e limites em [Chat do Format](chat-edicao-ponto-f.md).
+
+## Conferir antes de salvar
+No chat do editor, abra **Margens e verificação do layout**. As margens de composição começam em 10 mm e podem ser ajustadas para todo o projeto ou para um documento. Elas não são os deslocamentos de impressora do formato legado.
+A gravação verifica margens, sobreposições e textos estáticos no arquivo candidato relido. Erros novos impedem salvar. Avisos indicam problemas anteriores ou casos que dependem de preview, dados ou fontes; leia-os antes de confirmar a gravação. Alterar margens exige revisar novamente propostas de edição já abertas. Molduras que contêm seus textos e cruzamentos de linhas de grade são tratados como composições intencionais.
+

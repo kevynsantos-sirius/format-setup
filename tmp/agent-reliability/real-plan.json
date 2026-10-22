@@ -1,0 +1,84 @@
+{
+  "testedAt": "2026-10-21T13:51:45.689Z",
+  "status": "passed",
+  "documents": 26,
+  "elements": 3168,
+  "detailWindows": 146,
+  "changes": 24,
+  "scope": {
+    "documents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "targets": [
+      "30a937c8c284c761:/listaDocumentos/0/layout/12",
+      "30a937c8c284c761:/listaDocumentos/0/layout/13",
+      "30a937c8c284c761:/listaDocumentos/1/layout/12",
+      "30a937c8c284c761:/listaDocumentos/1/layout/13",
+      "30a937c8c284c761:/listaDocumentos/2/layout/12",
+      "30a937c8c284c761:/listaDocumentos/2/layout/13",
+      "30a937c8c284c761:/listaDocumentos/3/layout/13",
+      "30a937c8c284c761:/listaDocumentos/3/layout/14",
+      "30a937c8c284c761:/listaDocumentos/4/layout/13",
+      "30a937c8c284c761:/listaDocumentos/4/layout/14",
+      "30a937c8c284c761:/listaDocumentos/5/layout/17",
+      "30a937c8c284c761:/listaDocumentos/5/layout/18",
+      "30a937c8c284c761:/listaDocumentos/6/layout/14",
+      "30a937c8c284c761:/listaDocumentos/6/layout/15",
+      "30a937c8c284c761:/listaDocumentos/7/layout/13",
+      "30a937c8c284c761:/listaDocumentos/7/layout/14",
+      "30a937c8c284c761:/listaDocumentos/8/layout/8",
+      "30a937c8c284c761:/listaDocumentos/8/layout/9",
+      "30a937c8c284c761:/listaDocumentos/9/layout/12",
+      "30a937c8c284c761:/listaDocumentos/9/layout/13",
+      "30a937c8c284c761:/listaDocumentos/10/layout/12",
+      "30a937c8c284c761:/listaDocumentos/10/layout/13",
+      "30a937c8c284c761:/listaDocumentos/11/layout/13",
+      "30a937c8c284c761:/listaDocumentos/11/layout/14"
+    ],
+    "fields": 24
+  },
+  "sourceSnapshot": "30a937c8c284c7614f4a4b858dfa3aa1c9ce00b8f432e1f1b01a312c1e48d2f7",
+  "resultSnapshot": "bebb4881e0ba175de0a9b757bc4e124b119a6dbe1cf2925a8eb82cfdb12abd32",
+  "verification": {
+    "untouchedItemsUnchanged": true,
+    "structure": "executed",
+    "visual": "pending",
+    "nativePreview": "not-executed",
+    "binaryRoundTrip": "not-executed",
+    "finalPdf": "not-executed"
+  },
+  "originalFileUnchanged": true,
+  "appliedToReturnedDraftOnly": true,
+  "originalProjectSaved": false,
+  "executions": [
+    {
+      "service": "web",
+      "method": "GET",
+      "route": "/api/app/config",
+      "startedAt": "2026-10-21T13:51:40.138Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T13:51:40.297Z"
+    },
+    {
+      "service": "web",
+      "method": "POST",
+      "route": "/api/preview-layout",
+      "startedAt": "2026-10-21T13:51:40.303Z",
+      "status": "executed",
+      "httpStatus": 200,
+      "finishedAt": "2026-10-21T13:51:45.113Z"
+    }
+  ]
+}

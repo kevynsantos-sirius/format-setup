@@ -1,0 +1,704 @@
+{
+  "planId": "b93b2cabf0c5611a8afcc4eaf8fc67399cf8504017188ce8c88a4220bc4b308b",
+  "changes": [
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/0/layout/12",
+      "documentIndex": 0,
+      "documentName": "Frente01",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 66.20933333333332,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 3.555999999999983,
+          "right": 607.06,
+          "bottom": 66.20933333333332
+        }
+      },
+      "pointer": "/listaDocumentos/0/layout/12",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/0/layout/13",
+      "documentIndex": 0,
+      "documentName": "Frente01",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 66.20933333333332,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 3.555999999999983,
+          "right": 607.06,
+          "bottom": 66.20933333333332
+        }
+      },
+      "pointer": "/listaDocumentos/0/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/1/layout/12",
+      "documentIndex": 1,
+      "documentName": "Verso04",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 211.15866666666665,
+        "yMm": 178.98533333333333,
+        "widthMm": 175.59866666666665,
+        "heightMm": 81.28,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 211.15866666666665,
+          "top": 97.70533333333333,
+          "right": 386.7573333333333,
+          "bottom": 178.98533333333333
+        }
+      },
+      "pointer": "/listaDocumentos/1/layout/12",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/1/layout/13",
+      "documentIndex": 1,
+      "documentName": "Verso04",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 258.318,
+        "yMm": 196.85,
+        "widthMm": 80.09466666666667,
+        "heightMm": 18.541999999999998,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 258.318,
+          "top": 178.308,
+          "right": 338.41266666666667,
+          "bottom": 196.85
+        }
+      },
+      "pointer": "/listaDocumentos/1/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/2/layout/12",
+      "documentIndex": 2,
+      "documentName": "Frente05",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 66.20933333333332,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 3.555999999999983,
+          "right": 607.06,
+          "bottom": 66.20933333333332
+        }
+      },
+      "pointer": "/listaDocumentos/2/layout/12",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/2/layout/13",
+      "documentIndex": 2,
+      "documentName": "Frente05",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 66.20933333333332,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 3.555999999999983,
+          "right": 607.06,
+          "bottom": 66.20933333333332
+        }
+      },
+      "pointer": "/listaDocumentos/2/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/3/layout/13",
+      "documentIndex": 3,
+      "documentName": "Frente06",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 66.20933333333332,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 3.555999999999983,
+          "right": 607.06,
+          "bottom": 66.20933333333332
+        }
+      },
+      "pointer": "/listaDocumentos/3/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/3/layout/14",
+      "documentIndex": 3,
+      "documentName": "Frente06",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 66.20933333333332,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 3.555999999999983,
+          "right": 607.06,
+          "bottom": 66.20933333333332
+        }
+      },
+      "pointer": "/listaDocumentos/3/layout/14",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/4/layout/13",
+      "documentIndex": 4,
+      "documentName": "Frente07",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 64.51599999999999,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 1.8626666666666551,
+          "right": 607.06,
+          "bottom": 64.51599999999999
+        }
+      },
+      "pointer": "/listaDocumentos/4/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/4/layout/14",
+      "documentIndex": 4,
+      "documentName": "Frente07",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 64.51599999999999,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 1.8626666666666551,
+          "right": 607.06,
+          "bottom": 64.51599999999999
+        }
+      },
+      "pointer": "/listaDocumentos/4/layout/14",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/5/layout/17",
+      "documentIndex": 5,
+      "documentName": "Frente08",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 430.784,
+        "yMm": 291.25333333333333,
+        "widthMm": 175.93733333333333,
+        "heightMm": 31.834666666666667,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 430.784,
+          "top": 259.41866666666664,
+          "right": 606.7213333333333,
+          "bottom": 291.25333333333333
+        }
+      },
+      "pointer": "/listaDocumentos/5/layout/17",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/5/layout/18",
+      "documentIndex": 5,
+      "documentName": "Frente08",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "A inclusão de filho(s) menores de 14 (quatorze) anos destina-se apenas ao reembolso das despesas com o funeral até o limite do Capital Segurado contratado, que devem ser comprovada",
+        "xMm": 432.4773333333333,
+        "yMm": 196.85,
+        "widthMm": 171.70399999999998,
+        "heightMm": 16.42533333333333,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 432.4773333333333,
+          "top": 180.42466666666667,
+          "right": 604.1813333333333,
+          "bottom": 196.85
+        }
+      },
+      "pointer": "/listaDocumentos/5/layout/18",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/6/layout/14",
+      "documentIndex": 6,
+      "documentName": "Verso09",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 419.09999999999997,
+        "yMm": 64.51599999999999,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 419.09999999999997,
+          "top": 1.8626666666666551,
+          "right": 598.5933333333332,
+          "bottom": 64.51599999999999
+        }
+      },
+      "pointer": "/listaDocumentos/6/layout/14",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/6/layout/15",
+      "documentIndex": 6,
+      "documentName": "Verso09",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 419.09999999999997,
+        "yMm": 64.51599999999999,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 419.09999999999997,
+          "top": 1.8626666666666551,
+          "right": 598.5933333333332,
+          "bottom": 64.51599999999999
+        }
+      },
+      "pointer": "/listaDocumentos/6/layout/15",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/7/layout/13",
+      "documentIndex": 7,
+      "documentName": "Frente10",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "CERTIFICADO DE SEGURO",
+        "xMm": 575.1406666666667,
+        "yMm": 162.13666666666666,
+        "widthMm": 29.633333333333333,
+        "heightMm": 12.7,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 575.1406666666667,
+          "top": 149.43666666666667,
+          "right": 604.774,
+          "bottom": 162.13666666666666
+        }
+      },
+      "pointer": "/listaDocumentos/7/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/7/layout/14",
+      "documentIndex": 7,
+      "documentName": "Frente10",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "APÓLICE DE SEGURO",
+        "xMm": 575.1406666666667,
+        "yMm": 162.13666666666666,
+        "widthMm": 29.633333333333333,
+        "heightMm": 12.7,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 575.1406666666667,
+          "top": 149.43666666666667,
+          "right": 604.774,
+          "bottom": 162.13666666666666
+        }
+      },
+      "pointer": "/listaDocumentos/7/layout/14",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/8/layout/8",
+      "documentIndex": 8,
+      "documentName": "Verso11",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 211.15866666666665,
+        "yMm": 167.8093333333333,
+        "widthMm": 175.59866666666665,
+        "heightMm": 72.81333333333333,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 211.15866666666665,
+          "top": 94.99599999999998,
+          "right": 386.7573333333333,
+          "bottom": 167.8093333333333
+        }
+      },
+      "pointer": "/listaDocumentos/8/layout/8",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/8/layout/9",
+      "documentIndex": 8,
+      "documentName": "Verso11",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 258.318,
+        "yMm": 196.42666666666665,
+        "widthMm": 80.09466666666667,
+        "heightMm": 24.214666666666666,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 258.318,
+          "top": 172.212,
+          "right": 338.41266666666667,
+          "bottom": 196.42666666666665
+        }
+      },
+      "pointer": "/listaDocumentos/8/layout/9",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/9/layout/12",
+      "documentIndex": 9,
+      "documentName": "Frente12",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 66.20933333333332,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 3.555999999999983,
+          "right": 607.06,
+          "bottom": 66.20933333333332
+        }
+      },
+      "pointer": "/listaDocumentos/9/layout/12",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/9/layout/13",
+      "documentIndex": 9,
+      "documentName": "Frente12",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 427.5666666666666,
+        "yMm": 66.20933333333332,
+        "widthMm": 179.4933333333333,
+        "heightMm": 62.653333333333336,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 427.5666666666666,
+          "top": 3.555999999999983,
+          "right": 607.06,
+          "bottom": 66.20933333333332
+        }
+      },
+      "pointer": "/listaDocumentos/9/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/10/layout/12",
+      "documentIndex": 10,
+      "documentName": "FrHSBC01",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "CERTIFICADO DE SEGURO",
+        "xMm": 575.1406666666667,
+        "yMm": 167.64,
+        "widthMm": 29.633333333333333,
+        "heightMm": 12.7,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 575.1406666666667,
+          "top": 154.94,
+          "right": 604.774,
+          "bottom": 167.64
+        }
+      },
+      "pointer": "/listaDocumentos/10/layout/12",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/10/layout/13",
+      "documentIndex": 10,
+      "documentName": "FrHSBC01",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "",
+        "xMm": 432.562,
+        "yMm": 165.77733333333333,
+        "widthMm": 115.40066666666665,
+        "heightMm": 24.214666666666666,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 432.562,
+          "top": 141.56266666666667,
+          "right": 547.9626666666667,
+          "bottom": 165.77733333333333
+        }
+      },
+      "pointer": "/listaDocumentos/10/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/11/layout/13",
+      "documentIndex": 11,
+      "documentName": "FrHSBC02",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "CERTIFICADO DE SEGURO",
+        "xMm": 575.1406666666667,
+        "yMm": 162.13666666666666,
+        "widthMm": 29.633333333333333,
+        "heightMm": 12.7,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 575.1406666666667,
+          "top": 149.43666666666667,
+          "right": 604.774,
+          "bottom": 162.13666666666666
+        }
+      },
+      "pointer": "/listaDocumentos/11/layout/13",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    },
+    {
+      "targetId": "30a937c8c284c761:/listaDocumentos/11/layout/14",
+      "documentIndex": 11,
+      "documentName": "FrHSBC02",
+      "type": "text",
+      "name": "",
+      "bandKind": null,
+      "coordinateSpace": "document",
+      "context": {
+        "label": "APÓLICE DE SEGURO",
+        "xMm": 575.1406666666667,
+        "yMm": 162.13666666666666,
+        "widthMm": 29.633333333333333,
+        "heightMm": 12.7,
+        "orientation": 0,
+        "boundsMm": {
+          "left": 575.1406666666667,
+          "top": 149.43666666666667,
+          "right": 604.774,
+          "bottom": 162.13666666666666
+        }
+      },
+      "pointer": "/listaDocumentos/11/layout/14",
+      "property": "font/color",
+      "before": "#000000",
+      "after": "#0057B8"
+    }
+  ],
+  "scope": {
+    "documents": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "targets": [
+      "30a937c8c284c761:/listaDocumentos/0/layout/12",
+      "30a937c8c284c761:/listaDocumentos/0/layout/13",
+      "30a937c8c284c761:/listaDocumentos/1/layout/12",
+      "30a937c8c284c761:/listaDocumentos/1/layout/13",
+      "30a937c8c284c761:/listaDocumentos/2/layout/12",
+      "30a937c8c284c761:/listaDocumentos/2/layout/13",
+      "30a937c8c284c761:/listaDocumentos/3/layout/13",
+      "30a937c8c284c761:/listaDocumentos/3/layout/14",
+      "30a937c8c284c761:/listaDocumentos/4/layout/13",
+      "30a937c8c284c761:/listaDocumentos/4/layout/14",
+      "30a937c8c284c761:/listaDocumentos/5/layout/17",
+      "30a937c8c284c761:/listaDocumentos/5/layout/18",
+      "30a937c8c284c761:/listaDocumentos/6/layout/14",
+      "30a937c8c284c761:/listaDocumentos/6/layout/15",
+      "30a937c8c284c761:/listaDocumentos/7/layout/13",
+      "30a937c8c284c761:/listaDocumentos/7/layout/14",
+      "30a937c8c284c761:/listaDocumentos/8/layout/8",
+      "30a937c8c284c761:/listaDocumentos/8/layout/9",
+      "30a937c8c284c761:/listaDocumentos/9/layout/12",
+      "30a937c8c284c761:/listaDocumentos/9/layout/13",
+      "30a937c8c284c761:/listaDocumentos/10/layout/12",
+      "30a937c8c284c761:/listaDocumentos/10/layout/13",
+      "30a937c8c284c761:/listaDocumentos/11/layout/13",
+      "30a937c8c284c761:/listaDocumentos/11/layout/14"
+    ],
+    "fields": 24
+  },
+  "verification": {
+    "untouchedItemsUnchanged": true,
+    "structure": "executed",
+    "visual": "pending",
+    "nativePreview": "not-executed",
+    "binaryRoundTrip": "not-executed",
+    "finalPdf": "not-executed"
+  }
+}

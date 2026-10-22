@@ -1,0 +1,214 @@
+[
+  {
+    "name": "overflow",
+    "passed": true,
+    "elapsedMs": 7513,
+    "response": {
+      "modo": "usuario",
+      "pergunta": "A fonte Arial e o tamanho podem deixar o texto cortado no limite da caixa?",
+      "resposta": "Mudar fonte ou tamanho pode alterar as quebras de linha e cortar conteúdo sem mudar a geometria. No campo Prezado(a) de Frente43 do NovoTeste, Arial 12 gerou 1181 px em uma caixa de 1018 px no preview Web. Confira o preview e solicite separadamente um ajuste de caixa ou de fonte; não redimensionar nem mover outros itens implicitamente. Este resultado é específico da cópia e massa testadas.\n\nA fonte interna de um texto pode prevalecer sobre a fonte do campo. Alterar apenas a propriedade externa não comprova efeito visual. Confira as trocas de fonte, preserve fórmulas e tokens de imagens, e valide a gravação relendo o .f e comparando o preview. Campos calculados com fonte própria não devem ser modificados implicitamente.\n\nEsta é uma orientação baseada na memória. Nenhum arquivo atual foi inspecionado e nenhuma API de diagnóstico foi executada. Nenhuma alteração foi aplicada ou salva.",
+      "evidencias": [
+        {
+          "id": "fb676f18705fbd008069119a9aee172a02dd4e1918ce22e66b51fd1041d0e463",
+          "factId": "fonte-limite-caixa",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\regras-verificadas.json",
+          "chunk": 21,
+          "sourceHash": "fe964b2502702f1e0c9cd4ca9dc5e831d393496ccd9d530e49d4b08e5a9fa885",
+          "proofPath": "C:\\workspace\\format\\format-agent\\knowledge\\CHAT_EDICAO_E_APRENDIZADOS_2026_10_21.md",
+          "proofHash": "9d159c8849679a2be3d44388069763353b50038a3680b6d3cadca4af80a1d691"
+        },
+        {
+          "id": "2fcc7604265d7540364c66f6d322038e73ab9a3e79a44381b215ae66a4a9bd29",
+          "factId": "fonte-interna-efetiva",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\regras-verificadas.json",
+          "chunk": 17,
+          "sourceHash": "fe964b2502702f1e0c9cd4ca9dc5e831d393496ccd9d530e49d4b08e5a9fa885",
+          "proofPath": "C:\\workspace\\format\\format-agent\\knowledge\\CHAT_EDICAO_E_APRENDIZADOS_2026_10_21.md",
+          "proofHash": "9d159c8849679a2be3d44388069763353b50038a3680b6d3cadca4af80a1d691"
+        }
+      ],
+      "execucoes": [],
+      "modelo": {
+        "model": "qwen2.5-coder:0.5b",
+        "role": "evidence-ordering-only",
+        "status": "accepted",
+        "authoredFacts": false
+      },
+      "confiabilidade": {
+        "method": "verified-memory-and-observation",
+        "freeModelTextPublished": false,
+        "scope": "only-cited-rules-and-executed-checks"
+      },
+      "alteracao": {
+        "aplicada": false,
+        "salva": false
+      }
+    }
+  },
+  {
+    "name": "selection",
+    "passed": true,
+    "elapsedMs": 4144,
+    "response": {
+      "modo": "usuario",
+      "pergunta": "Como a IA do chat sabe qual alvo selecionado deve editar e destacar?",
+      "resposta": "No chat do editor, selecione um campo texto ou descreva seu início e documento. A seleção limita os candidatos. Se houver repetição, escolha um candidato; confira o campo com contorno verde e a proposta antes de aplicar. A aplicação muda o rascunho; use Salvar para gravar uma nova versão do .f. Se o documento mudou durante a revisão, refaça o pedido.\n\nEsta é uma orientação baseada na memória. Nenhum arquivo atual foi inspecionado e nenhuma API de diagnóstico foi executada. Nenhuma alteração foi aplicada ou salva.",
+      "evidencias": [
+        {
+          "id": "89b855ae3337a2326a813fb3036d834d8fe95af4cec0a32f5a7a31ee2e540b0f",
+          "factId": "chat-selecao-revisao",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\regras-verificadas.json",
+          "chunk": 16,
+          "sourceHash": "fe964b2502702f1e0c9cd4ca9dc5e831d393496ccd9d530e49d4b08e5a9fa885",
+          "proofPath": "C:\\workspace\\format\\format-agent\\knowledge\\CHAT_EDICAO_E_APRENDIZADOS_2026_10_21.md",
+          "proofHash": "9d159c8849679a2be3d44388069763353b50038a3680b6d3cadca4af80a1d691"
+        },
+        {
+          "id": "a42b9e841a7feee9054fabc9cde7dc7b9b8917c8b386ee1f2c4adb52bf72c708",
+          "factId": "identidade-alvo",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\regras-verificadas.json",
+          "chunk": 11,
+          "sourceHash": "fe964b2502702f1e0c9cd4ca9dc5e831d393496ccd9d530e49d4b08e5a9fa885",
+          "proofPath": "C:\\workspace\\format\\format-agent\\knowledge\\PONTO_F_REVISAO_2026_10_20.md",
+          "proofHash": "f82eb752bcdbff8e25085a9d4a97ef3b987319c3866a8923c5d3adffa6e4b301"
+        }
+      ],
+      "execucoes": [],
+      "modelo": {
+        "model": "qwen2.5-coder:0.5b",
+        "role": "evidence-ordering-only",
+        "status": "accepted",
+        "authoredFacts": false
+      },
+      "confiabilidade": {
+        "method": "verified-memory-and-observation",
+        "freeModelTextPublished": false,
+        "scope": "only-cited-rules-and-executed-checks"
+      },
+      "alteracao": {
+        "aplicada": false,
+        "salva": false
+      }
+    }
+  },
+  {
+    "name": "inline-font",
+    "passed": true,
+    "elapsedMs": 2648,
+    "response": {
+      "modo": "usuario",
+      "pergunta": "Por que a cor do campo texto mudou no JSON mas a fonte interna deixou sem efeito visível?",
+      "resposta": "A fonte interna de um texto pode prevalecer sobre a fonte do campo. Alterar apenas a propriedade externa não comprova efeito visual. Confira as trocas de fonte, preserve fórmulas e tokens de imagens, e valide a gravação relendo o .f e comparando o preview. Campos calculados com fonte própria não devem ser modificados implicitamente.\n\nEsta é uma orientação baseada na memória. Nenhum arquivo atual foi inspecionado e nenhuma API de diagnóstico foi executada. Nenhuma alteração foi aplicada ou salva.",
+      "evidencias": [
+        {
+          "id": "2fcc7604265d7540364c66f6d322038e73ab9a3e79a44381b215ae66a4a9bd29",
+          "factId": "fonte-interna-efetiva",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\regras-verificadas.json",
+          "chunk": 17,
+          "sourceHash": "fe964b2502702f1e0c9cd4ca9dc5e831d393496ccd9d530e49d4b08e5a9fa885",
+          "proofPath": "C:\\workspace\\format\\format-agent\\knowledge\\CHAT_EDICAO_E_APRENDIZADOS_2026_10_21.md",
+          "proofHash": "9d159c8849679a2be3d44388069763353b50038a3680b6d3cadca4af80a1d691"
+        }
+      ],
+      "execucoes": [],
+      "modelo": {
+        "model": "qwen2.5-coder:0.5b",
+        "role": "evidence-ordering-only",
+        "status": "accepted",
+        "authoredFacts": false
+      },
+      "confiabilidade": {
+        "method": "verified-memory-and-observation",
+        "freeModelTextPublished": false,
+        "scope": "only-cited-rules-and-executed-checks"
+      },
+      "alteracao": {
+        "aplicada": false,
+        "salva": false
+      }
+    }
+  },
+  {
+    "name": "prefix",
+    "passed": true,
+    "elapsedMs": 4528,
+    "response": {
+      "modo": "usuario",
+      "pergunta": "Edite o campo que contem o inicio do conteudo Prezado(a) em Arial: o trecho deve substituir o texto?",
+      "resposta": "No pedido “Edite o campo texto que contém o início do conteúdo Prezado(a) para Arial, tamanho 12”, o trecho identifica o alvo e não substitui seu conteúdo. Acrescente o documento ou selecione o campo se houver repetição. Sem correspondência, não editar outro item; pedir que o usuário confira o trecho e a seleção.\n\nA fonte interna de um texto pode prevalecer sobre a fonte do campo. Alterar apenas a propriedade externa não comprova efeito visual. Confira as trocas de fonte, preserve fórmulas e tokens de imagens, e valide a gravação relendo o .f e comparando o preview. Campos calculados com fonte própria não devem ser modificados implicitamente.\n\nEsta é uma orientação baseada na memória. Nenhum arquivo atual foi inspecionado e nenhuma API de diagnóstico foi executada. Nenhuma alteração foi aplicada ou salva.",
+      "evidencias": [
+        {
+          "id": "2cfc0e249aa98a931b580332bb5f62cff6abd0068b0b5c1363a4e03f5c59d924",
+          "factId": "trecho-localiza-nao-substitui",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\regras-verificadas.json",
+          "chunk": 18,
+          "sourceHash": "fe964b2502702f1e0c9cd4ca9dc5e831d393496ccd9d530e49d4b08e5a9fa885",
+          "proofPath": "C:\\workspace\\format\\format-agent\\knowledge\\CHAT_EDICAO_E_APRENDIZADOS_2026_10_21.md",
+          "proofHash": "9d159c8849679a2be3d44388069763353b50038a3680b6d3cadca4af80a1d691"
+        },
+        {
+          "id": "2fcc7604265d7540364c66f6d322038e73ab9a3e79a44381b215ae66a4a9bd29",
+          "factId": "fonte-interna-efetiva",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\regras-verificadas.json",
+          "chunk": 17,
+          "sourceHash": "fe964b2502702f1e0c9cd4ca9dc5e831d393496ccd9d530e49d4b08e5a9fa885",
+          "proofPath": "C:\\workspace\\format\\format-agent\\knowledge\\CHAT_EDICAO_E_APRENDIZADOS_2026_10_21.md",
+          "proofHash": "9d159c8849679a2be3d44388069763353b50038a3680b6d3cadca4af80a1d691"
+        }
+      ],
+      "execucoes": [],
+      "modelo": {
+        "model": "qwen2.5-coder:0.5b",
+        "role": "evidence-ordering-only",
+        "status": "accepted",
+        "authoredFacts": false
+      },
+      "confiabilidade": {
+        "method": "verified-memory-and-observation",
+        "freeModelTextPublished": false,
+        "scope": "only-cited-rules-and-executed-checks"
+      },
+      "alteracao": {
+        "aplicada": false,
+        "salva": false
+      }
+    }
+  },
+  {
+    "name": "native-pdf",
+    "passed": true,
+    "elapsedMs": 2612,
+    "response": {
+      "modo": "usuario",
+      "pergunta": "O PDF de capturas do preview valida o PDF nativo do FormatBSP se o original falhou na fonte?",
+      "resposta": "Na cópia NovoTeste testada, original e editado falharam no motor nativo com “Erro na carga da fonte windows” e falha de acesso no Wine. Isso não prova qual fonte falhou nem permite culpar automaticamente imagens ou DLL. Um PDF de capturas do preview Web não comprova o PDF nativo. Informe a validação parcial até conferir o artefato final.\n\nEsta é uma orientação baseada na memória. Nenhum arquivo atual foi inspecionado e nenhuma API de diagnóstico foi executada. Nenhuma alteração foi aplicada ou salva.",
+      "evidencias": [
+        {
+          "id": "9d98c96e7e35a1e7a03f26b227de8a449ddcb95a301046db55ed12c3b15849ea",
+          "factId": "pdf-nativo-baseline-fonte",
+          "path": "C:\\workspace\\format\\format-agent\\knowledge\\regras-verificadas.json",
+          "chunk": 20,
+          "sourceHash": "fe964b2502702f1e0c9cd4ca9dc5e831d393496ccd9d530e49d4b08e5a9fa885",
+          "proofPath": "C:\\workspace\\format\\format-agent\\knowledge\\CHAT_EDICAO_E_APRENDIZADOS_2026_10_21.md",
+          "proofHash": "9d159c8849679a2be3d44388069763353b50038a3680b6d3cadca4af80a1d691"
+        }
+      ],
+      "execucoes": [],
+      "modelo": {
+        "model": "qwen2.5-coder:0.5b",
+        "role": "evidence-ordering-only",
+        "status": "accepted",
+        "authoredFacts": false
+      },
+      "confiabilidade": {
+        "method": "verified-memory-and-observation",
+        "freeModelTextPublished": false,
+        "scope": "only-cited-rules-and-executed-checks"
+      },
+      "alteracao": {
+        "aplicada": false,
+        "salva": false
+      }
+    }
+  }
+]

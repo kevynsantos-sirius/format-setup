@@ -1,0 +1,1183 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/pages/IdeMockPage.jsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=ad277e98"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=ad277e98"; const React = __vite__cjsImport3_react.__esModule ? __vite__cjsImport3_react.default : __vite__cjsImport3_react; const useMemo = __vite__cjsImport3_react["useMemo"]; const useState = __vite__cjsImport3_react["useState"];
+const components = [
+  ["bi-fonts", "Campo Texto"],
+  ["bi-image", "Imagem"],
+  ["bi-upc", "Codigo de barras"],
+  ["bi-qr-code", "QR Code"],
+  ["bi-code-square", "Campo de Saida"],
+  ["bi-dash-lg", "Linha horizontal"],
+  ["bi-grip-vertical", "Linha vertical"],
+  ["bi-square", "Retangulo"]
+];
+const objects = [
+  { id: "document", icon: "bi-file-earmark-text", name: "Documento1", meta: "A4 retrato" },
+  { id: "text-client", icon: "bi-fonts", name: "txtNomeCliente", meta: "Campo Texto" },
+  { id: "barcode-policy", icon: "bi-upc", name: "barApolice", meta: "Codigo de barras" },
+  { id: "page-body", icon: "bi-layout-three-columns", name: "Corpo", meta: "Banda 42 - 240 mm" },
+  { id: "qr-copy", icon: "bi-qr-code", name: "qrAutenticacao", meta: "QR Code" },
+  { id: "footer-line", icon: "bi-dash-lg", name: "fioRodape", meta: "Linha horizontal" }
+];
+const documents = ["Documento1", "Pagina2", "ViaCliente", "ViaCorretor", "Resumo", "AnexoQR"];
+const leftActions = [
+  ["bi-grid-3x3", "Mostrar grade", "Ativo"],
+  ["bi-crosshair", "Mostrar linha do cursor", "Ativo"],
+  ["bi-file-earmark-text", "Configurar formulario", "Documento"],
+  ["bi-file-earmark-binary", "Arquivo de dados", "Entrada"],
+  ["bi-list-columns-reverse", "Campos de entrada", "Dados"],
+  ["bi-braces-asterisk", "Funcoes do usuario", "Script"],
+  ["bi-input-cursor-text", "Variaveis do usuario", "Script"]
+];
+const rightTabs = [
+  ["properties", "bi-sliders", "Propriedades"],
+  ["components", "bi-boxes", "Componentes"],
+  ["objects", "bi-layers-fill", "Objetos criados"],
+  ["pages", "bi-files", "Documentos"],
+  ["lines", "bi-square", "Linha e retangulo"]
+];
+function LeftToolPanel() {
+  return /* @__PURE__ */ jsxDEV("aside", { className: "ide-left-panel", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-panel-header", children: [
+      /* @__PURE__ */ jsxDEV("h2", { children: "Acoes" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 66,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { title: "Fechar painel", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-x-lg" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 67,
+        columnNumber: 53
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 67,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 65,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("button", { className: "ide-primary-tool", type: "button", children: [
+      /* @__PURE__ */ jsxDEV("i", { className: "bi bi-floppy" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 70,
+        columnNumber: 58
+      }, this),
+      "Salvar layout"
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 70,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "ide-panel-section", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-section-title", children: "Layout carregado" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 73,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("label", { className: "ide-field-row stacked", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "Projeto" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 75,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("select", { defaultValue: "teste04082026qrcode", "aria-label": "Projeto", children: [
+          /* @__PURE__ */ jsxDEV("option", { children: "teste04082026qrcode" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 77,
+            columnNumber: 13
+          }, this),
+          /* @__PURE__ */ jsxDEV("option", { children: "Layout homologacao" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 78,
+            columnNumber: 13
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 76,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 74,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-outline-action", type: "button", children: [
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-folder2-open" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 81,
+          columnNumber: 62
+        }, this),
+        "Carregar layout salvo"
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 81,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 72,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "ide-panel-section", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-section-title", children: "Configuracao do layout" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 85,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-action-list", children: leftActions.map(
+        ([icon, label, meta]) => /* @__PURE__ */ jsxDEV("button", { type: "button", children: [
+          /* @__PURE__ */ jsxDEV("i", { className: `bi ${icon}` }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 88,
+            columnNumber: 45
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: label }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 88,
+            columnNumber: 77
+          }, this),
+          /* @__PURE__ */ jsxDEV("small", { children: meta }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 88,
+            columnNumber: 97
+          }, this)
+        ] }, label, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 88,
+          columnNumber: 11
+        }, this)
+      ) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 86,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 84,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 64,
+    columnNumber: 5
+  }, this);
+}
+_c = LeftToolPanel;
+function ObjectList({ selectedId, onSelect }) {
+  return /* @__PURE__ */ jsxDEV("div", { className: "ide-object-list", children: objects.map(
+    (object, index) => /* @__PURE__ */ jsxDEV(
+      "button",
+      {
+        className: `ide-tree-row ${selectedId === object.id ? "is-selected" : ""}`,
+        onClick: () => onSelect(object.id),
+        style: { "--indent": index === 0 ? 0 : index <= 2 ? 1 : 2 },
+        type: "button",
+        children: [
+          /* @__PURE__ */ jsxDEV("i", { className: `bi ${object.icon}` }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 107,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("span", { children: object.name }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 108,
+            columnNumber: 11
+          }, this),
+          /* @__PURE__ */ jsxDEV("small", { children: object.meta }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 109,
+            columnNumber: 11
+          }, this)
+        ]
+      },
+      object.id,
+      true,
+      {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 100,
+        columnNumber: 7
+      },
+      this
+    )
+  ) }, void 0, false, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 98,
+    columnNumber: 5
+  }, this);
+}
+_c2 = ObjectList;
+function DocumentTabs({ activeDocument, setActiveDocument }) {
+  return /* @__PURE__ */ jsxDEV("div", { className: "ide-document-tabs", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-tab-scroll", children: documents.slice(0, 4).map(
+      (document) => /* @__PURE__ */ jsxDEV("button", { className: activeDocument === document ? "is-active" : "", onClick: () => setActiveDocument(document), type: "button", children: [
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-file-earmark-text" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 122,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: document }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 123,
+          columnNumber: 13
+        }, this),
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-x" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 124,
+          columnNumber: 13
+        }, this)
+      ] }, document, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 121,
+        columnNumber: 9
+      }, this)
+    ) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 119,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-tab-menu", children: [
+      /* @__PURE__ */ jsxDEV("button", { title: "Mais documentos", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-chevron-down" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 129,
+        columnNumber: 55
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 129,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-tab-menu-list", children: documents.map((document) => /* @__PURE__ */ jsxDEV("button", { onClick: () => setActiveDocument(document), type: "button", children: document }, document, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 131,
+        columnNumber: 40
+      }, this)) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 130,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 128,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 118,
+    columnNumber: 5
+  }, this);
+}
+_c3 = DocumentTabs;
+function PropertiesPanel({ selectedObject }) {
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-panel-header compact", children: /* @__PURE__ */ jsxDEV("h2", { children: "Propriedades" }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 141,
+      columnNumber: 49
+    }, this) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 141,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-property-subtitle", children: selectedObject.meta }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 142,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "ide-accordion-section", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-accordion-title", type: "button", children: [
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-chevron-down" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 145,
+          columnNumber: 63
+        }, this),
+        "Transformacao"
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 145,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-transform-grid illustrator-like", children: [
+        /* @__PURE__ */ jsxDEV("label", { children: [
+          /* @__PURE__ */ jsxDEV("span", { children: "W" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 147,
+            columnNumber: 18
+          }, this),
+          /* @__PURE__ */ jsxDEV("input", { defaultValue: "39,96 mm" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 147,
+            columnNumber: 32
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 147,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("label", { children: [
+          /* @__PURE__ */ jsxDEV("span", { children: "X" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 148,
+            columnNumber: 18
+          }, this),
+          /* @__PURE__ */ jsxDEV("input", { defaultValue: "94,00 mm" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 148,
+            columnNumber: 32
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 148,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("label", { children: [
+          /* @__PURE__ */ jsxDEV("span", { children: "H" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 149,
+            columnNumber: 18
+          }, this),
+          /* @__PURE__ */ jsxDEV("input", { defaultValue: "12,70 mm" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 149,
+            columnNumber: 32
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 149,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("label", { children: [
+          /* @__PURE__ */ jsxDEV("span", { children: "Y" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 150,
+            columnNumber: 18
+          }, this),
+          /* @__PURE__ */ jsxDEV("input", { defaultValue: "76,70 mm" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 150,
+            columnNumber: 32
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 150,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 146,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-icon-row", children: [
+        /* @__PURE__ */ jsxDEV("button", { title: "Rotacao", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-arrow-clockwise" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 153,
+          columnNumber: 49
+        }, this) }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 153,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("input", { defaultValue: "0 graus", "aria-label": "Rotacao" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 154,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { title: "Espelhar horizontal", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-symmetry-horizontal" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 155,
+          columnNumber: 61
+        }, this) }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 155,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("button", { title: "Espelhar vertical", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-symmetry-vertical" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 156,
+          columnNumber: 59
+        }, this) }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 156,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 152,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 144,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "ide-accordion-section", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-accordion-title", type: "button", children: [
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-chevron-down" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 161,
+          columnNumber: 63
+        }, this),
+        "Aparencia"
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 161,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("label", { className: "ide-field-row stacked", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "Fonte" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 162,
+          columnNumber: 50
+        }, this),
+        /* @__PURE__ */ jsxDEV("select", { defaultValue: "Courier New", children: [
+          /* @__PURE__ */ jsxDEV("option", { children: "Courier New" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 162,
+            columnNumber: 103
+          }, this),
+          /* @__PURE__ */ jsxDEV("option", { children: "Arial" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 162,
+            columnNumber: 131
+          }, this),
+          /* @__PURE__ */ jsxDEV("option", { children: "Times New Roman" }, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 162,
+            columnNumber: 153
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 162,
+          columnNumber: 68
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 162,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("label", { className: "ide-field-row stacked", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "Tamanho" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 163,
+          columnNumber: 50
+        }, this),
+        /* @__PURE__ */ jsxDEV("input", { defaultValue: "10 pt" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 163,
+          columnNumber: 70
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 163,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("label", { className: "ide-field-row stacked", children: [
+        /* @__PURE__ */ jsxDEV("span", { children: "Cor" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 164,
+          columnNumber: 50
+        }, this),
+        /* @__PURE__ */ jsxDEV("input", { type: "color", defaultValue: "#1f2937" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 164,
+          columnNumber: 66
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 164,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 160,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("section", { className: "ide-accordion-section", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-accordion-title", type: "button", children: [
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-chevron-down" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 168,
+          columnNumber: 63
+        }, this),
+        "Acoes"
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 168,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-wide-action", type: "button", children: [
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-copy" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 169,
+          columnNumber: 59
+        }, this),
+        "Duplicar componente"
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 169,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-wide-action danger", type: "button", children: [
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-trash" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 170,
+          columnNumber: 66
+        }, this),
+        "Remover componente"
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 170,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 167,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 140,
+    columnNumber: 5
+  }, this);
+}
+_c4 = PropertiesPanel;
+function ComponentsPanel() {
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-panel-header compact", children: /* @__PURE__ */ jsxDEV("h2", { children: "Componentes" }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 179,
+      columnNumber: 49
+    }, this) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 179,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-component-grid", children: components.map(
+      ([icon, label], index) => /* @__PURE__ */ jsxDEV("button", { className: index === 3 ? "is-active" : "", title: label, type: "button", children: [
+        /* @__PURE__ */ jsxDEV("i", { className: `bi ${icon}` }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 182,
+          columnNumber: 100
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: label }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 182,
+          columnNumber: 132
+        }, this)
+      ] }, label, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 182,
+        columnNumber: 9
+      }, this)
+    ) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 180,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 178,
+    columnNumber: 5
+  }, this);
+}
+_c5 = ComponentsPanel;
+function PagesPanel({ activeDocument, setActiveDocument }) {
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-panel-header compact", children: /* @__PURE__ */ jsxDEV("h2", { children: "Documentos" }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 192,
+      columnNumber: 49
+    }, this) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 192,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-page-actions", children: [
+      /* @__PURE__ */ jsxDEV("button", { className: "add", title: "Adicionar pagina", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-plus-square" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 193,
+        columnNumber: 104
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 193,
+        columnNumber: 41
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "copy", title: "Duplicar pagina", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-copy" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 193,
+        columnNumber: 213
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 193,
+        columnNumber: 150
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "remove", title: "Remover pagina", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-dash-square" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 193,
+        columnNumber: 316
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 193,
+        columnNumber: 252
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 193,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-page-list", children: documents.map((document) => /* @__PURE__ */ jsxDEV("button", { className: activeDocument === document ? "is-active" : "", onClick: () => setActiveDocument(document), type: "button", children: [
+      /* @__PURE__ */ jsxDEV("i", { className: "bi bi-file-earmark-text" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 195,
+        columnNumber: 178
+      }, this),
+      document
+    ] }, document, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 195,
+      columnNumber: 38
+    }, this)) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 194,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 191,
+    columnNumber: 5
+  }, this);
+}
+_c6 = PagesPanel;
+function LinesPanel() {
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-panel-header compact", children: /* @__PURE__ */ jsxDEV("h2", { children: "Linha & Retangulo" }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 204,
+      columnNumber: 49
+    }, this) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 204,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "ide-field-row stacked", children: [
+      /* @__PURE__ */ jsxDEV("span", { children: "Tipo" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 205,
+        columnNumber: 48
+      }, this),
+      /* @__PURE__ */ jsxDEV("select", { defaultValue: "FIO_MOLDURA", children: [
+        /* @__PURE__ */ jsxDEV("option", { value: "FIO_HORIZONTAL", children: "Linha horizontal" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 205,
+          columnNumber: 100
+        }, this),
+        /* @__PURE__ */ jsxDEV("option", { value: "FIO_VERTICAL", children: "Linha vertical" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 205,
+          columnNumber: 156
+        }, this),
+        /* @__PURE__ */ jsxDEV("option", { value: "FIO_MOLDURA", children: "Retangulo" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 205,
+          columnNumber: 208
+        }, this),
+        /* @__PURE__ */ jsxDEV("option", { value: "FIO_ELIPSE", children: "Elipse" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 205,
+          columnNumber: 254
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 205,
+        columnNumber: 65
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 205,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "ide-field-row stacked", children: [
+      /* @__PURE__ */ jsxDEV("span", { children: "Espessura" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 206,
+        columnNumber: 48
+      }, this),
+      /* @__PURE__ */ jsxDEV("input", { defaultValue: "0,3 mm" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 206,
+        columnNumber: 70
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 206,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("label", { className: "ide-field-row stacked", children: [
+      /* @__PURE__ */ jsxDEV("span", { children: "Cor" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 207,
+        columnNumber: 48
+      }, this),
+      /* @__PURE__ */ jsxDEV("input", { type: "color", defaultValue: "#000000" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 207,
+        columnNumber: 64
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 207,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 203,
+    columnNumber: 5
+  }, this);
+}
+_c7 = LinesPanel;
+function UploadsPanel() {
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-panel-header compact", children: /* @__PURE__ */ jsxDEV("h2", { children: "Envios" }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 215,
+      columnNumber: 49
+    }, this) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 215,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("button", { className: "ide-wide-action primary", type: "button", children: [
+      /* @__PURE__ */ jsxDEV("i", { className: "bi bi-cloud-arrow-up" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 216,
+        columnNumber: 65
+      }, this),
+      "Fazer upload de arquivos"
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 216,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("button", { className: "ide-wide-action", type: "button", children: [
+      /* @__PURE__ */ jsxDEV("i", { className: "bi bi-arrow-clockwise" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 217,
+        columnNumber: 57
+      }, this),
+      "Atualizar lista"
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 217,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-upload-empty", children: "Carregue imagens, PDFs ou arquivos de apoio usados pelos componentes." }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 218,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 214,
+    columnNumber: 5
+  }, this);
+}
+_c8 = UploadsPanel;
+function RightDock({ activePanel, setActivePanel, selectedObject, selectedId, onSelect, activeDocument, setActiveDocument }) {
+  return /* @__PURE__ */ jsxDEV("aside", { className: "ide-right-dock", children: [
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-right-content", children: [
+      activePanel === "properties" && /* @__PURE__ */ jsxDEV(PropertiesPanel, { selectedObject }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 227,
+        columnNumber: 42
+      }, this),
+      activePanel === "components" && /* @__PURE__ */ jsxDEV(ComponentsPanel, {}, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 228,
+        columnNumber: 42
+      }, this),
+      activePanel === "objects" && /* @__PURE__ */ jsxDEV(Fragment, { children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "ide-panel-header compact", children: /* @__PURE__ */ jsxDEV("h2", { children: "Elementos" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 229,
+          columnNumber: 83
+        }, this) }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 229,
+          columnNumber: 41
+        }, this),
+        /* @__PURE__ */ jsxDEV(ObjectList, { selectedId, onSelect }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 229,
+          columnNumber: 107
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 229,
+        columnNumber: 39
+      }, this),
+      activePanel === "pages" && /* @__PURE__ */ jsxDEV(PagesPanel, { activeDocument, setActiveDocument }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 230,
+        columnNumber: 37
+      }, this),
+      activePanel === "lines" && /* @__PURE__ */ jsxDEV(LinesPanel, {}, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 231,
+        columnNumber: 37
+      }, this),
+      activePanel === "uploads" && /* @__PURE__ */ jsxDEV(UploadsPanel, {}, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 232,
+        columnNumber: 39
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 226,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("nav", { className: "ide-right-icon-rail", "aria-label": "Paletas do Format", children: rightTabs.map(
+      ([id, icon, label]) => /* @__PURE__ */ jsxDEV("button", { className: activePanel === id ? "is-active" : "", onClick: () => setActivePanel(id), title: label, type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: `bi ${icon}` }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 236,
+        columnNumber: 139
+      }, this) }, id, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 236,
+        columnNumber: 9
+      }, this)
+    ) }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 234,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 225,
+    columnNumber: 5
+  }, this);
+}
+_c9 = RightDock;
+function CanvasPreview({ selectedId, activeDocument, setActiveDocument }) {
+  const selectedClass = (id) => selectedId === id ? "is-selected" : "";
+  return /* @__PURE__ */ jsxDEV("section", { className: "ide-designer-area", children: [
+    /* @__PURE__ */ jsxDEV(DocumentTabs, { activeDocument, setActiveDocument }, void 0, false, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 248,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "ide-canvas-shell", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-artboard-name", children: activeDocument }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 250,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-page", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: `ide-component ide-text-component ${selectedClass("text-client")}`, children: /* @__PURE__ */ jsxDEV("span", { children: [
+          "Nome do cliente: ",
+          "{CLIENTE_NOME}"
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 252,
+          columnNumber: 95
+        }, this) }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 252,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: `ide-component ide-barcode-component ${selectedClass("barcode-policy")}`, children: [
+          /* @__PURE__ */ jsxDEV("div", {}, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 253,
+            columnNumber: 101
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", {}, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 253,
+            columnNumber: 112
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", {}, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 253,
+            columnNumber: 123
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", {}, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 253,
+            columnNumber: 134
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", {}, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 253,
+            columnNumber: 145
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", {}, void 0, false, {
+            fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+            lineNumber: 253,
+            columnNumber: 156
+          }, this)
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 253,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: `ide-component ide-qr-component ${selectedClass("qr-copy")}`, children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-qr-code" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 254,
+          columnNumber: 89
+        }, this) }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 254,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: `ide-component ide-line-component ${selectedClass("footer-line")}` }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 255,
+          columnNumber: 11
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "ide-component ide-output-component", children: [
+          "Valor: ",
+          "{PREMIO_TOTAL}"
+        ] }, void 0, true, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 256,
+          columnNumber: 11
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 251,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 249,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 247,
+    columnNumber: 5
+  }, this);
+}
+_c0 = CanvasPreview;
+export default function IdeMockPage() {
+  _s();
+  const [selectedId, setSelectedId] = useState("qr-copy");
+  const [activePanel, setActivePanel] = useState("properties");
+  const [activeDocument, setActiveDocument] = useState("Documento1");
+  const selectedObject = useMemo(() => objects.find((object) => object.id === selectedId) || objects[0], [selectedId]);
+  return /* @__PURE__ */ jsxDEV("div", { className: "ide-mock-app", children: [
+    /* @__PURE__ */ jsxDEV("header", { className: "ide-topbar", children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-brand", children: [
+        /* @__PURE__ */ jsxDEV("img", { src: "/images/logo.png", alt: "Format Web" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 272,
+          columnNumber: 36
+        }, this),
+        /* @__PURE__ */ jsxDEV("span", { children: "Format" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 272,
+          columnNumber: 83
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 272,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-menu-button", title: "Menu", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-list" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 273,
+        columnNumber: 72
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 273,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-file-name", children: "teste04082026qrcode" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 274,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-top-select", type: "button", children: [
+        "A4 ",
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-chevron-down" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 275,
+          columnNumber: 61
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 275,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-top-select", type: "button", children: [
+        "100% ",
+        /* @__PURE__ */ jsxDEV("i", { className: "bi bi-chevron-down" }, void 0, false, {
+          fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+          lineNumber: 276,
+          columnNumber: 63
+        }, this)
+      ] }, void 0, true, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 276,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "ide-top-spacer" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 277,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { title: "Salvar", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-floppy" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 278,
+        columnNumber: 46
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 278,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { title: "Configurar formulario", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-file-earmark-text" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 279,
+        columnNumber: 61
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 279,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { title: "Desfazer", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-arrow-counterclockwise" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 280,
+        columnNumber: 48
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 280,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { title: "Refazer", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-arrow-clockwise" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 281,
+        columnNumber: 47
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 281,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { title: "Zoom menos", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-zoom-out" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 282,
+        columnNumber: 50
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 282,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { title: "Zoom mais", type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: "bi bi-zoom-in" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 283,
+        columnNumber: 49
+      }, this) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 283,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV("button", { className: "ide-share-button", type: "button", children: "Salvar" }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 284,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 271,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV("main", { className: "ide-workbench", children: [
+      /* @__PURE__ */ jsxDEV("aside", { className: "ide-tool-rail", "aria-label": "Funcoes do editor", children: [
+        ["bi-gear", "Acoes"],
+        ["bi-archive", "Layouts"],
+        ["bi-sliders", "Configuracao"],
+        ["bi-cloud-arrow-up", "Envios"],
+        ["bi-house", "Voltar ao painel"]
+      ].map(([icon, label], index) => /* @__PURE__ */ jsxDEV("button", { className: index === 0 ? "is-active" : "", title: label, type: "button", children: /* @__PURE__ */ jsxDEV("i", { className: `bi ${icon}` }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 295,
+        columnNumber: 132
+      }, this) }, label, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 295,
+        columnNumber: 41
+      }, this)) }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 288,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(LeftToolPanel, {}, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 297,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(CanvasPreview, { selectedId, activeDocument, setActiveDocument }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 298,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(RightDock, { activePanel, setActivePanel, selectedObject, selectedId, onSelect: setSelectedId, activeDocument, setActiveDocument }, void 0, false, {
+        fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+        lineNumber: 299,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+      lineNumber: 287,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx",
+    lineNumber: 270,
+    columnNumber: 5
+  }, this);
+}
+_s(IdeMockPage, "MSt1G58/ZkZKjHl/cNimRmBEOWc=");
+_c1 = IdeMockPage;
+var _c, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9, _c0, _c1;
+$RefreshReg$(_c, "LeftToolPanel");
+$RefreshReg$(_c2, "ObjectList");
+$RefreshReg$(_c3, "DocumentTabs");
+$RefreshReg$(_c4, "PropertiesPanel");
+$RefreshReg$(_c5, "ComponentsPanel");
+$RefreshReg$(_c6, "PagesPanel");
+$RefreshReg$(_c7, "LinesPanel");
+$RefreshReg$(_c8, "UploadsPanel");
+$RefreshReg$(_c9, "RightDock");
+$RefreshReg$(_c0, "CanvasPreview");
+$RefreshReg$(_c1, "IdeMockPage");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("C:/workspace/format-local/format/frontend/src/pages/IdeMockPage.jsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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LGlCQUFjLFlBQXdCLGdCQUFnQyxxQkFBdkU7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUE0RztBQUFBLE1BQzVHLHVCQUFDLGFBQVUsYUFBMEIsZ0JBQWdDLGdCQUFnQyxZQUF3QixVQUFVa0MsZUFBZSxnQkFBZ0MscUJBQXRMO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBMk47QUFBQSxTQVo3TjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBYUE7QUFBQSxPQTlCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBK0JBO0FBRUo7QUFBQ0QsR0F4Q3VCRCxhQUFXO0FBQUEsTUFBWEE7QUFBVyxJQUFBL0IsSUFBQU0sS0FBQU0sS0FBQUcsS0FBQUUsS0FBQUUsS0FBQUUsS0FBQUUsS0FBQUksS0FBQUcsS0FBQUs7QUFBQSxhQUFBbkMsSUFBQTtBQUFBLGFBQUFNLEtBQUE7QUFBQSxhQUFBTSxLQUFBO0FBQUEsYUFBQUcsS0FBQTtBQUFBLGFBQUFFLEtBQUE7QUFBQSxhQUFBRSxLQUFBO0FBQUEsYUFBQUUsS0FBQTtBQUFBLGFBQUFFLEtBQUE7QUFBQSxhQUFBSSxLQUFBO0FBQUEsYUFBQUcsS0FBQTtBQUFBLGFBQUFLLEtBQUEiLCJuYW1lcyI6WyJSZWFjdCIsInVzZU1lbW8iLCJ1c2VTdGF0ZSIsImNvbXBvbmVudHMiLCJvYmplY3RzIiwiaWQiLCJpY29uIiwibmFtZSIsIm1ldGEiLCJkb2N1bWVudHMiLCJsZWZ0QWN0aW9ucyIsInJpZ2h0VGFicyIsIkxlZnRUb29sUGFuZWwiLCJtYXAiLCJsYWJlbCIsIl9jIiwiT2JqZWN0TGlzdCIsInNlbGVjdGVkSWQiLCJvblNlbGVjdCIsIm9iamVjdCIsImluZGV4IiwiX2MyIiwiRG9jdW1lbnRUYWJzIiwiYWN0aXZlRG9jdW1lbnQiLCJzZXRBY3RpdmVEb2N1bWVudCIsInNsaWNlIiwiZG9jdW1lbnQiLCJfYzMiLCJQcm9wZXJ0aWVzUGFuZWwiLCJzZWxlY3RlZE9iamVjdCIsIl9jNCIsIkNvbXBvbmVudHNQYW5lbCIsIl9jNSIsIlBhZ2VzUGFuZWwiLCJfYzYiLCJMaW5lc1BhbmVsIiwiX2M3IiwiVXBsb2Fkc1BhbmVsIiwiX2M4IiwiUmlnaHREb2NrIiwiYWN0aXZlUGFuZWwiLCJzZXRBY3RpdmVQYW5lbCIsIl9jOSIsIkNhbnZhc1ByZXZpZXciLCJzZWxlY3RlZENsYXNzIiwiX2MwIiwiSWRlTW9ja1BhZ2UiLCJfcyIsInNldFNlbGVjdGVkSWQiLCJmaW5kIiwiX2MxIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIklkZU1vY2tQYWdlLmpzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgdXNlTWVtbywgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XHJcblxyXG5jb25zdCBjb21wb25lbnRzID0gW1xyXG4gIFsnYmktZm9udHMnLCAnQ2FtcG8gVGV4dG8nXSxcclxuICBbJ2JpLWltYWdlJywgJ0ltYWdlbSddLFxyXG4gIFsnYmktdXBjJywgJ0NvZGlnbyBkZSBiYXJyYXMnXSxcclxuICBbJ2JpLXFyLWNvZGUnLCAnUVIgQ29kZSddLFxyXG4gIFsnYmktY29kZS1zcXVhcmUnLCAnQ2FtcG8gZGUgU2FpZGEnXSxcclxuICBbJ2JpLWRhc2gtbGcnLCAnTGluaGEgaG9yaXpvbnRhbCddLFxyXG4gIFsnYmktZ3JpcC12ZXJ0aWNhbCcsICdMaW5oYSB2ZXJ0aWNhbCddLFxyXG4gIFsnYmktc3F1YXJlJywgJ1JldGFuZ3VsbyddXHJcbl07XHJcblxyXG5jb25zdCBvYmplY3RzID0gW1xyXG4gIHsgaWQ6ICdkb2N1bWVudCcsIGljb246ICdiaS1maWxlLWVhcm1hcmstdGV4dCcsIG5hbWU6ICdEb2N1bWVudG8xJywgbWV0YTogJ0E0IHJldHJhdG8nIH0sXHJcbiAgeyBpZDogJ3RleHQtY2xpZW50JywgaWNvbjogJ2JpLWZvbnRzJywgbmFtZTogJ3R4dE5vbWVDbGllbnRlJywgbWV0YTogJ0NhbXBvIFRleHRvJyB9LFxyXG4gIHsgaWQ6ICdiYXJjb2RlLXBvbGljeScsIGljb246ICdiaS11cGMnLCBuYW1lOiAnYmFyQXBvbGljZScsIG1ldGE6ICdDb2RpZ28gZGUgYmFycmFzJyB9LFxyXG4gIHsgaWQ6ICdwYWdlLWJvZHknLCBpY29uOiAnYmktbGF5b3V0LXRocmVlLWNvbHVtbnMnLCBuYW1lOiAnQ29ycG8nLCBtZXRhOiAnQmFuZGEgNDIgLSAyNDAgbW0nIH0sXHJcbiAgeyBpZDogJ3FyLWNvcHknLCBpY29uOiAnYmktcXItY29kZScsIG5hbWU6ICdxckF1dGVudGljYWNhbycsIG1ldGE6ICdRUiBDb2RlJyB9LFxyXG4gIHsgaWQ6ICdmb290ZXItbGluZScsIGljb246ICdiaS1kYXNoLWxnJywgbmFtZTogJ2Zpb1JvZGFwZScsIG1ldGE6ICdMaW5oYSBob3Jpem9udGFsJyB9XHJcbl07XHJcblxyXG5jb25zdCBkb2N1bWVudHMgPSBbJ0RvY3VtZW50bzEnLCAnUGFnaW5hMicsICdWaWFDbGllbnRlJywgJ1ZpYUNvcnJldG9yJywgJ1Jlc3VtbycsICdBbmV4b1FSJ107XHJcblxyXG5jb25zdCBsZWZ0QWN0aW9ucyA9IFtcclxuICBbJ2JpLWdyaWQtM3gzJywgJ01vc3RyYXIgZ3JhZGUnLCAnQXRpdm8nXSxcclxuICBbJ2JpLWNyb3NzaGFpcicsICdNb3N0cmFyIGxpbmhhIGRvIGN1cnNvcicsICdBdGl2byddLFxyXG4gIFsnYmktZmlsZS1lYXJtYXJrLXRleHQnLCAnQ29uZmlndXJhciBmb3JtdWxhcmlvJywgJ0RvY3VtZW50byddLFxyXG4gIFsnYmktZmlsZS1lYXJtYXJrLWJpbmFyeScsICdBcnF1aXZvIGRlIGRhZG9zJywgJ0VudHJhZGEnXSxcclxuICBbJ2JpLWxpc3QtY29sdW1ucy1yZXZlcnNlJywgJ0NhbXBvcyBkZSBlbnRyYWRhJywgJ0RhZG9zJ10sXHJcbiAgWydiaS1icmFjZXMtYXN0ZXJpc2snLCAnRnVuY29lcyBkbyB1c3VhcmlvJywgJ1NjcmlwdCddLFxyXG4gIFsnYmktaW5wdXQtY3Vyc29yLXRleHQnLCAnVmFyaWF2ZWlzIGRvIHVzdWFyaW8nLCAnU2NyaXB0J11cclxuXTtcclxuXHJcbmNvbnN0IHJpZ2h0VGFicyA9IFtcclxuICBbJ3Byb3BlcnRpZXMnLCAnYmktc2xpZGVycycsICdQcm9wcmllZGFkZXMnXSxcclxuICBbJ2NvbXBvbmVudHMnLCAnYmktYm94ZXMnLCAnQ29tcG9uZW50ZXMnXSxcclxuICBbJ29iamVjdHMnLCAnYmktbGF5ZXJzLWZpbGwnLCAnT2JqZXRvcyBjcmlhZG9zJ10sXHJcbiAgWydwYWdlcycsICdiaS1maWxlcycsICdEb2N1bWVudG9zJ10sXHJcbiAgWydsaW5lcycsICdiaS1zcXVhcmUnLCAnTGluaGEgZSByZXRhbmd1bG8nXVxyXG5dO1xyXG5cclxuZnVuY3Rpb24gTGVmdFRvb2xQYW5lbCgpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPGFzaWRlIGNsYXNzTmFtZT1cImlkZS1sZWZ0LXBhbmVsXCI+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLXBhbmVsLWhlYWRlclwiPlxyXG4gICAgICAgIDxoMj5BY29lczwvaDI+XHJcbiAgICAgICAgPGJ1dHRvbiB0aXRsZT1cIkZlY2hhciBwYWluZWxcIiB0eXBlPVwiYnV0dG9uXCI+PGkgY2xhc3NOYW1lPVwiYmkgYmkteC1sZ1wiPjwvaT48L2J1dHRvbj5cclxuICAgICAgPC9kaXY+XHJcblxyXG4gICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImlkZS1wcmltYXJ5LXRvb2xcIiB0eXBlPVwiYnV0dG9uXCI+PGkgY2xhc3NOYW1lPVwiYmkgYmktZmxvcHB5XCI+PC9pPlNhbHZhciBsYXlvdXQ8L2J1dHRvbj5cclxuXHJcbiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cImlkZS1wYW5lbC1zZWN0aW9uXCI+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtc2VjdGlvbi10aXRsZVwiPkxheW91dCBjYXJyZWdhZG88L2Rpdj5cclxuICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiaWRlLWZpZWxkLXJvdyBzdGFja2VkXCI+XHJcbiAgICAgICAgICA8c3Bhbj5Qcm9qZXRvPC9zcGFuPlxyXG4gICAgICAgICAgPHNlbGVjdCBkZWZhdWx0VmFsdWU9XCJ0ZXN0ZTA0MDgyMDI2cXJjb2RlXCIgYXJpYS1sYWJlbD1cIlByb2pldG9cIj5cclxuICAgICAgICAgICAgPG9wdGlvbj50ZXN0ZTA0MDgyMDI2cXJjb2RlPC9vcHRpb24+XHJcbiAgICAgICAgICAgIDxvcHRpb24+TGF5b3V0IGhvbW9sb2dhY2FvPC9vcHRpb24+XHJcbiAgICAgICAgICA8L3NlbGVjdD5cclxuICAgICAgICA8L2xhYmVsPlxyXG4gICAgICAgIDxidXR0b24gY2xhc3NOYW1lPVwiaWRlLW91dGxpbmUtYWN0aW9uXCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLWZvbGRlcjItb3BlblwiPjwvaT5DYXJyZWdhciBsYXlvdXQgc2Fsdm88L2J1dHRvbj5cclxuICAgICAgPC9zZWN0aW9uPlxyXG5cclxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwiaWRlLXBhbmVsLXNlY3Rpb25cIj5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS1zZWN0aW9uLXRpdGxlXCI+Q29uZmlndXJhY2FvIGRvIGxheW91dDwvZGl2PlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLWFjdGlvbi1saXN0XCI+XHJcbiAgICAgICAgICB7bGVmdEFjdGlvbnMubWFwKChbaWNvbiwgbGFiZWwsIG1ldGFdKSA9PiAoXHJcbiAgICAgICAgICAgIDxidXR0b24gdHlwZT1cImJ1dHRvblwiIGtleT17bGFiZWx9PjxpIGNsYXNzTmFtZT17YGJpICR7aWNvbn1gfT48L2k+PHNwYW4+e2xhYmVsfTwvc3Bhbj48c21hbGw+e21ldGF9PC9zbWFsbD48L2J1dHRvbj5cclxuICAgICAgICAgICkpfVxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICA8L3NlY3Rpb24+XHJcbiAgICA8L2FzaWRlPlxyXG4gICk7XHJcbn1cclxuXHJcbmZ1bmN0aW9uIE9iamVjdExpc3QoeyBzZWxlY3RlZElkLCBvblNlbGVjdCB9KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLW9iamVjdC1saXN0XCI+XHJcbiAgICAgIHtvYmplY3RzLm1hcCgob2JqZWN0LCBpbmRleCkgPT4gKFxyXG4gICAgICAgIDxidXR0b25cclxuICAgICAgICAgIGNsYXNzTmFtZT17YGlkZS10cmVlLXJvdyAke3NlbGVjdGVkSWQgPT09IG9iamVjdC5pZCA/ICdpcy1zZWxlY3RlZCcgOiAnJ31gfVxyXG4gICAgICAgICAga2V5PXtvYmplY3QuaWR9XHJcbiAgICAgICAgICBvbkNsaWNrPXsoKSA9PiBvblNlbGVjdChvYmplY3QuaWQpfVxyXG4gICAgICAgICAgc3R5bGU9e3sgJy0taW5kZW50JzogaW5kZXggPT09IDAgPyAwIDogaW5kZXggPD0gMiA/IDEgOiAyIH19XHJcbiAgICAgICAgICB0eXBlPVwiYnV0dG9uXCJcclxuICAgICAgICA+XHJcbiAgICAgICAgICA8aSBjbGFzc05hbWU9e2BiaSAke29iamVjdC5pY29ufWB9PjwvaT5cclxuICAgICAgICAgIDxzcGFuPntvYmplY3QubmFtZX08L3NwYW4+XHJcbiAgICAgICAgICA8c21hbGw+e29iamVjdC5tZXRhfTwvc21hbGw+XHJcbiAgICAgICAgPC9idXR0b24+XHJcbiAgICAgICkpfVxyXG4gICAgPC9kaXY+XHJcbiAgKTtcclxufVxyXG5cclxuZnVuY3Rpb24gRG9jdW1lbnRUYWJzKHsgYWN0aXZlRG9jdW1lbnQsIHNldEFjdGl2ZURvY3VtZW50IH0pIHtcclxuICByZXR1cm4gKFxyXG4gICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtZG9jdW1lbnQtdGFic1wiPlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS10YWItc2Nyb2xsXCI+XHJcbiAgICAgICAge2RvY3VtZW50cy5zbGljZSgwLCA0KS5tYXAoKGRvY3VtZW50KSA9PiAoXHJcbiAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT17YWN0aXZlRG9jdW1lbnQgPT09IGRvY3VtZW50ID8gJ2lzLWFjdGl2ZScgOiAnJ30gb25DbGljaz17KCkgPT4gc2V0QWN0aXZlRG9jdW1lbnQoZG9jdW1lbnQpfSB0eXBlPVwiYnV0dG9uXCIga2V5PXtkb2N1bWVudH0+XHJcbiAgICAgICAgICAgIDxpIGNsYXNzTmFtZT1cImJpIGJpLWZpbGUtZWFybWFyay10ZXh0XCI+PC9pPlxyXG4gICAgICAgICAgICA8c3Bhbj57ZG9jdW1lbnR9PC9zcGFuPlxyXG4gICAgICAgICAgICA8aSBjbGFzc05hbWU9XCJiaSBiaS14XCI+PC9pPlxyXG4gICAgICAgICAgPC9idXR0b24+XHJcbiAgICAgICAgKSl9XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS10YWItbWVudVwiPlxyXG4gICAgICAgIDxidXR0b24gdGl0bGU9XCJNYWlzIGRvY3VtZW50b3NcIiB0eXBlPVwiYnV0dG9uXCI+PGkgY2xhc3NOYW1lPVwiYmkgYmktY2hldnJvbi1kb3duXCI+PC9pPjwvYnV0dG9uPlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLXRhYi1tZW51LWxpc3RcIj5cclxuICAgICAgICAgIHtkb2N1bWVudHMubWFwKChkb2N1bWVudCkgPT4gPGJ1dHRvbiBvbkNsaWNrPXsoKSA9PiBzZXRBY3RpdmVEb2N1bWVudChkb2N1bWVudCl9IHR5cGU9XCJidXR0b25cIiBrZXk9e2RvY3VtZW50fT57ZG9jdW1lbnR9PC9idXR0b24+KX1cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgPC9kaXY+XHJcbiAgICA8L2Rpdj5cclxuICApO1xyXG59XHJcblxyXG5mdW5jdGlvbiBQcm9wZXJ0aWVzUGFuZWwoeyBzZWxlY3RlZE9iamVjdCB9KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDw+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLXBhbmVsLWhlYWRlciBjb21wYWN0XCI+PGgyPlByb3ByaWVkYWRlczwvaDI+PC9kaXY+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLXByb3BlcnR5LXN1YnRpdGxlXCI+e3NlbGVjdGVkT2JqZWN0Lm1ldGF9PC9kaXY+XHJcblxyXG4gICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJpZGUtYWNjb3JkaW9uLXNlY3Rpb25cIj5cclxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImlkZS1hY2NvcmRpb24tdGl0bGVcIiB0eXBlPVwiYnV0dG9uXCI+PGkgY2xhc3NOYW1lPVwiYmkgYmktY2hldnJvbi1kb3duXCI+PC9pPlRyYW5zZm9ybWFjYW88L2J1dHRvbj5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS10cmFuc2Zvcm0tZ3JpZCBpbGx1c3RyYXRvci1saWtlXCI+XHJcbiAgICAgICAgICA8bGFiZWw+PHNwYW4+Vzwvc3Bhbj48aW5wdXQgZGVmYXVsdFZhbHVlPVwiMzksOTYgbW1cIiAvPjwvbGFiZWw+XHJcbiAgICAgICAgICA8bGFiZWw+PHNwYW4+WDwvc3Bhbj48aW5wdXQgZGVmYXVsdFZhbHVlPVwiOTQsMDAgbW1cIiAvPjwvbGFiZWw+XHJcbiAgICAgICAgICA8bGFiZWw+PHNwYW4+SDwvc3Bhbj48aW5wdXQgZGVmYXVsdFZhbHVlPVwiMTIsNzAgbW1cIiAvPjwvbGFiZWw+XHJcbiAgICAgICAgICA8bGFiZWw+PHNwYW4+WTwvc3Bhbj48aW5wdXQgZGVmYXVsdFZhbHVlPVwiNzYsNzAgbW1cIiAvPjwvbGFiZWw+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtaWNvbi1yb3dcIj5cclxuICAgICAgICAgIDxidXR0b24gdGl0bGU9XCJSb3RhY2FvXCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLWFycm93LWNsb2Nrd2lzZVwiPjwvaT48L2J1dHRvbj5cclxuICAgICAgICAgIDxpbnB1dCBkZWZhdWx0VmFsdWU9XCIwIGdyYXVzXCIgYXJpYS1sYWJlbD1cIlJvdGFjYW9cIiAvPlxyXG4gICAgICAgICAgPGJ1dHRvbiB0aXRsZT1cIkVzcGVsaGFyIGhvcml6b250YWxcIiB0eXBlPVwiYnV0dG9uXCI+PGkgY2xhc3NOYW1lPVwiYmkgYmktc3ltbWV0cnktaG9yaXpvbnRhbFwiPjwvaT48L2J1dHRvbj5cclxuICAgICAgICAgIDxidXR0b24gdGl0bGU9XCJFc3BlbGhhciB2ZXJ0aWNhbFwiIHR5cGU9XCJidXR0b25cIj48aSBjbGFzc05hbWU9XCJiaSBiaS1zeW1tZXRyeS12ZXJ0aWNhbFwiPjwvaT48L2J1dHRvbj5cclxuICAgICAgICA8L2Rpdj5cclxuICAgICAgPC9zZWN0aW9uPlxyXG5cclxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwiaWRlLWFjY29yZGlvbi1zZWN0aW9uXCI+XHJcbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJpZGUtYWNjb3JkaW9uLXRpdGxlXCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLWNoZXZyb24tZG93blwiPjwvaT5BcGFyZW5jaWE8L2J1dHRvbj5cclxuICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiaWRlLWZpZWxkLXJvdyBzdGFja2VkXCI+PHNwYW4+Rm9udGU8L3NwYW4+PHNlbGVjdCBkZWZhdWx0VmFsdWU9XCJDb3VyaWVyIE5ld1wiPjxvcHRpb24+Q291cmllciBOZXc8L29wdGlvbj48b3B0aW9uPkFyaWFsPC9vcHRpb24+PG9wdGlvbj5UaW1lcyBOZXcgUm9tYW48L29wdGlvbj48L3NlbGVjdD48L2xhYmVsPlxyXG4gICAgICAgIDxsYWJlbCBjbGFzc05hbWU9XCJpZGUtZmllbGQtcm93IHN0YWNrZWRcIj48c3Bhbj5UYW1hbmhvPC9zcGFuPjxpbnB1dCBkZWZhdWx0VmFsdWU9XCIxMCBwdFwiIC8+PC9sYWJlbD5cclxuICAgICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiaWRlLWZpZWxkLXJvdyBzdGFja2VkXCI+PHNwYW4+Q29yPC9zcGFuPjxpbnB1dCB0eXBlPVwiY29sb3JcIiBkZWZhdWx0VmFsdWU9XCIjMWYyOTM3XCIgLz48L2xhYmVsPlxyXG4gICAgICA8L3NlY3Rpb24+XHJcblxyXG4gICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJpZGUtYWNjb3JkaW9uLXNlY3Rpb25cIj5cclxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImlkZS1hY2NvcmRpb24tdGl0bGVcIiB0eXBlPVwiYnV0dG9uXCI+PGkgY2xhc3NOYW1lPVwiYmkgYmktY2hldnJvbi1kb3duXCI+PC9pPkFjb2VzPC9idXR0b24+XHJcbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJpZGUtd2lkZS1hY3Rpb25cIiB0eXBlPVwiYnV0dG9uXCI+PGkgY2xhc3NOYW1lPVwiYmkgYmktY29weVwiPjwvaT5EdXBsaWNhciBjb21wb25lbnRlPC9idXR0b24+XHJcbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJpZGUtd2lkZS1hY3Rpb24gZGFuZ2VyXCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLXRyYXNoXCI+PC9pPlJlbW92ZXIgY29tcG9uZW50ZTwvYnV0dG9uPlxyXG4gICAgICA8L3NlY3Rpb24+XHJcbiAgICA8Lz5cclxuICApO1xyXG59XHJcblxyXG5mdW5jdGlvbiBDb21wb25lbnRzUGFuZWwoKSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDw+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLXBhbmVsLWhlYWRlciBjb21wYWN0XCI+PGgyPkNvbXBvbmVudGVzPC9oMj48L2Rpdj5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtY29tcG9uZW50LWdyaWRcIj5cclxuICAgICAgICB7Y29tcG9uZW50cy5tYXAoKFtpY29uLCBsYWJlbF0sIGluZGV4KSA9PiAoXHJcbiAgICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT17aW5kZXggPT09IDMgPyAnaXMtYWN0aXZlJyA6ICcnfSB0aXRsZT17bGFiZWx9IHR5cGU9XCJidXR0b25cIiBrZXk9e2xhYmVsfT48aSBjbGFzc05hbWU9e2BiaSAke2ljb259YH0+PC9pPjxzcGFuPntsYWJlbH08L3NwYW4+PC9idXR0b24+XHJcbiAgICAgICAgKSl9XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgPC8+XHJcbiAgKTtcclxufVxyXG5cclxuZnVuY3Rpb24gUGFnZXNQYW5lbCh7IGFjdGl2ZURvY3VtZW50LCBzZXRBY3RpdmVEb2N1bWVudCB9KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDw+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLXBhbmVsLWhlYWRlciBjb21wYWN0XCI+PGgyPkRvY3VtZW50b3M8L2gyPjwvZGl2PlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS1wYWdlLWFjdGlvbnNcIj48YnV0dG9uIGNsYXNzTmFtZT1cImFkZFwiIHRpdGxlPVwiQWRpY2lvbmFyIHBhZ2luYVwiIHR5cGU9XCJidXR0b25cIj48aSBjbGFzc05hbWU9XCJiaSBiaS1wbHVzLXNxdWFyZVwiPjwvaT48L2J1dHRvbj48YnV0dG9uIGNsYXNzTmFtZT1cImNvcHlcIiB0aXRsZT1cIkR1cGxpY2FyIHBhZ2luYVwiIHR5cGU9XCJidXR0b25cIj48aSBjbGFzc05hbWU9XCJiaSBiaS1jb3B5XCI+PC9pPjwvYnV0dG9uPjxidXR0b24gY2xhc3NOYW1lPVwicmVtb3ZlXCIgdGl0bGU9XCJSZW1vdmVyIHBhZ2luYVwiIHR5cGU9XCJidXR0b25cIj48aSBjbGFzc05hbWU9XCJiaSBiaS1kYXNoLXNxdWFyZVwiPjwvaT48L2J1dHRvbj48L2Rpdj5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtcGFnZS1saXN0XCI+XHJcbiAgICAgICAge2RvY3VtZW50cy5tYXAoKGRvY3VtZW50KSA9PiA8YnV0dG9uIGNsYXNzTmFtZT17YWN0aXZlRG9jdW1lbnQgPT09IGRvY3VtZW50ID8gJ2lzLWFjdGl2ZScgOiAnJ30gb25DbGljaz17KCkgPT4gc2V0QWN0aXZlRG9jdW1lbnQoZG9jdW1lbnQpfSB0eXBlPVwiYnV0dG9uXCIga2V5PXtkb2N1bWVudH0+PGkgY2xhc3NOYW1lPVwiYmkgYmktZmlsZS1lYXJtYXJrLXRleHRcIj48L2k+e2RvY3VtZW50fTwvYnV0dG9uPil9XHJcbiAgICAgIDwvZGl2PlxyXG4gICAgPC8+XHJcbiAgKTtcclxufVxyXG5cclxuZnVuY3Rpb24gTGluZXNQYW5lbCgpIHtcclxuICByZXR1cm4gKFxyXG4gICAgPD5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtcGFuZWwtaGVhZGVyIGNvbXBhY3RcIj48aDI+TGluaGEgJiBSZXRhbmd1bG88L2gyPjwvZGl2PlxyXG4gICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiaWRlLWZpZWxkLXJvdyBzdGFja2VkXCI+PHNwYW4+VGlwbzwvc3Bhbj48c2VsZWN0IGRlZmF1bHRWYWx1ZT1cIkZJT19NT0xEVVJBXCI+PG9wdGlvbiB2YWx1ZT1cIkZJT19IT1JJWk9OVEFMXCI+TGluaGEgaG9yaXpvbnRhbDwvb3B0aW9uPjxvcHRpb24gdmFsdWU9XCJGSU9fVkVSVElDQUxcIj5MaW5oYSB2ZXJ0aWNhbDwvb3B0aW9uPjxvcHRpb24gdmFsdWU9XCJGSU9fTU9MRFVSQVwiPlJldGFuZ3Vsbzwvb3B0aW9uPjxvcHRpb24gdmFsdWU9XCJGSU9fRUxJUFNFXCI+RWxpcHNlPC9vcHRpb24+PC9zZWxlY3Q+PC9sYWJlbD5cclxuICAgICAgPGxhYmVsIGNsYXNzTmFtZT1cImlkZS1maWVsZC1yb3cgc3RhY2tlZFwiPjxzcGFuPkVzcGVzc3VyYTwvc3Bhbj48aW5wdXQgZGVmYXVsdFZhbHVlPVwiMCwzIG1tXCIgLz48L2xhYmVsPlxyXG4gICAgICA8bGFiZWwgY2xhc3NOYW1lPVwiaWRlLWZpZWxkLXJvdyBzdGFja2VkXCI+PHNwYW4+Q29yPC9zcGFuPjxpbnB1dCB0eXBlPVwiY29sb3JcIiBkZWZhdWx0VmFsdWU9XCIjMDAwMDAwXCIgLz48L2xhYmVsPlxyXG4gICAgPC8+XHJcbiAgKTtcclxufVxyXG5cclxuZnVuY3Rpb24gVXBsb2Fkc1BhbmVsKCkge1xyXG4gIHJldHVybiAoXHJcbiAgICA8PlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS1wYW5lbC1oZWFkZXIgY29tcGFjdFwiPjxoMj5FbnZpb3M8L2gyPjwvZGl2PlxyXG4gICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImlkZS13aWRlLWFjdGlvbiBwcmltYXJ5XCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLWNsb3VkLWFycm93LXVwXCI+PC9pPkZhemVyIHVwbG9hZCBkZSBhcnF1aXZvczwvYnV0dG9uPlxyXG4gICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImlkZS13aWRlLWFjdGlvblwiIHR5cGU9XCJidXR0b25cIj48aSBjbGFzc05hbWU9XCJiaSBiaS1hcnJvdy1jbG9ja3dpc2VcIj48L2k+QXR1YWxpemFyIGxpc3RhPC9idXR0b24+XHJcbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLXVwbG9hZC1lbXB0eVwiPkNhcnJlZ3VlIGltYWdlbnMsIFBERnMgb3UgYXJxdWl2b3MgZGUgYXBvaW8gdXNhZG9zIHBlbG9zIGNvbXBvbmVudGVzLjwvZGl2PlxyXG4gICAgPC8+XHJcbiAgKTtcclxufVxyXG5cclxuZnVuY3Rpb24gUmlnaHREb2NrKHsgYWN0aXZlUGFuZWwsIHNldEFjdGl2ZVBhbmVsLCBzZWxlY3RlZE9iamVjdCwgc2VsZWN0ZWRJZCwgb25TZWxlY3QsIGFjdGl2ZURvY3VtZW50LCBzZXRBY3RpdmVEb2N1bWVudCB9KSB7XHJcbiAgcmV0dXJuIChcclxuICAgIDxhc2lkZSBjbGFzc05hbWU9XCJpZGUtcmlnaHQtZG9ja1wiPlxyXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS1yaWdodC1jb250ZW50XCI+XHJcbiAgICAgICAge2FjdGl2ZVBhbmVsID09PSAncHJvcGVydGllcycgJiYgPFByb3BlcnRpZXNQYW5lbCBzZWxlY3RlZE9iamVjdD17c2VsZWN0ZWRPYmplY3R9IC8+fVxyXG4gICAgICAgIHthY3RpdmVQYW5lbCA9PT0gJ2NvbXBvbmVudHMnICYmIDxDb21wb25lbnRzUGFuZWwgLz59XHJcbiAgICAgICAge2FjdGl2ZVBhbmVsID09PSAnb2JqZWN0cycgJiYgPD48ZGl2IGNsYXNzTmFtZT1cImlkZS1wYW5lbC1oZWFkZXIgY29tcGFjdFwiPjxoMj5FbGVtZW50b3M8L2gyPjwvZGl2PjxPYmplY3RMaXN0IHNlbGVjdGVkSWQ9e3NlbGVjdGVkSWR9IG9uU2VsZWN0PXtvblNlbGVjdH0gLz48Lz59XHJcbiAgICAgICAge2FjdGl2ZVBhbmVsID09PSAncGFnZXMnICYmIDxQYWdlc1BhbmVsIGFjdGl2ZURvY3VtZW50PXthY3RpdmVEb2N1bWVudH0gc2V0QWN0aXZlRG9jdW1lbnQ9e3NldEFjdGl2ZURvY3VtZW50fSAvPn1cclxuICAgICAgICB7YWN0aXZlUGFuZWwgPT09ICdsaW5lcycgJiYgPExpbmVzUGFuZWwgLz59XHJcbiAgICAgICAge2FjdGl2ZVBhbmVsID09PSAndXBsb2FkcycgJiYgPFVwbG9hZHNQYW5lbCAvPn1cclxuICAgICAgPC9kaXY+XHJcbiAgICAgIDxuYXYgY2xhc3NOYW1lPVwiaWRlLXJpZ2h0LWljb24tcmFpbFwiIGFyaWEtbGFiZWw9XCJQYWxldGFzIGRvIEZvcm1hdFwiPlxyXG4gICAgICAgIHtyaWdodFRhYnMubWFwKChbaWQsIGljb24sIGxhYmVsXSkgPT4gKFxyXG4gICAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9e2FjdGl2ZVBhbmVsID09PSBpZCA/ICdpcy1hY3RpdmUnIDogJyd9IG9uQ2xpY2s9eygpID0+IHNldEFjdGl2ZVBhbmVsKGlkKX0gdGl0bGU9e2xhYmVsfSB0eXBlPVwiYnV0dG9uXCIga2V5PXtpZH0+PGkgY2xhc3NOYW1lPXtgYmkgJHtpY29ufWB9PjwvaT48L2J1dHRvbj5cclxuICAgICAgICApKX1cclxuICAgICAgPC9uYXY+XHJcbiAgICA8L2FzaWRlPlxyXG4gICk7XHJcbn1cclxuXHJcbmZ1bmN0aW9uIENhbnZhc1ByZXZpZXcoeyBzZWxlY3RlZElkLCBhY3RpdmVEb2N1bWVudCwgc2V0QWN0aXZlRG9jdW1lbnQgfSkge1xyXG4gIGNvbnN0IHNlbGVjdGVkQ2xhc3MgPSAoaWQpID0+IHNlbGVjdGVkSWQgPT09IGlkID8gJ2lzLXNlbGVjdGVkJyA6ICcnO1xyXG5cclxuICByZXR1cm4gKFxyXG4gICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwiaWRlLWRlc2lnbmVyLWFyZWFcIj5cclxuICAgICAgPERvY3VtZW50VGFicyBhY3RpdmVEb2N1bWVudD17YWN0aXZlRG9jdW1lbnR9IHNldEFjdGl2ZURvY3VtZW50PXtzZXRBY3RpdmVEb2N1bWVudH0gLz5cclxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtY2FudmFzLXNoZWxsXCI+XHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtYXJ0Ym9hcmQtbmFtZVwiPnthY3RpdmVEb2N1bWVudH08L2Rpdj5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS1wYWdlXCI+XHJcbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17YGlkZS1jb21wb25lbnQgaWRlLXRleHQtY29tcG9uZW50ICR7c2VsZWN0ZWRDbGFzcygndGV4dC1jbGllbnQnKX1gfT48c3Bhbj5Ob21lIGRvIGNsaWVudGU6IHsne0NMSUVOVEVfTk9NRX0nfTwvc3Bhbj48L2Rpdj5cclxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgaWRlLWNvbXBvbmVudCBpZGUtYmFyY29kZS1jb21wb25lbnQgJHtzZWxlY3RlZENsYXNzKCdiYXJjb2RlLXBvbGljeScpfWB9PjxkaXY+PC9kaXY+PGRpdj48L2Rpdj48ZGl2PjwvZGl2PjxkaXY+PC9kaXY+PGRpdj48L2Rpdj48ZGl2PjwvZGl2PjwvZGl2PlxyXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2BpZGUtY29tcG9uZW50IGlkZS1xci1jb21wb25lbnQgJHtzZWxlY3RlZENsYXNzKCdxci1jb3B5Jyl9YH0+PGkgY2xhc3NOYW1lPVwiYmkgYmktcXItY29kZVwiPjwvaT48L2Rpdj5cclxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgaWRlLWNvbXBvbmVudCBpZGUtbGluZS1jb21wb25lbnQgJHtzZWxlY3RlZENsYXNzKCdmb290ZXItbGluZScpfWB9PjwvZGl2PlxyXG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpZGUtY29tcG9uZW50IGlkZS1vdXRwdXQtY29tcG9uZW50XCI+VmFsb3I6IHsne1BSRU1JT19UT1RBTH0nfTwvZGl2PlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgICA8L2Rpdj5cclxuICAgIDwvc2VjdGlvbj5cclxuICApO1xyXG59XHJcblxyXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBJZGVNb2NrUGFnZSgpIHtcclxuICBjb25zdCBbc2VsZWN0ZWRJZCwgc2V0U2VsZWN0ZWRJZF0gPSB1c2VTdGF0ZSgncXItY29weScpO1xyXG4gIGNvbnN0IFthY3RpdmVQYW5lbCwgc2V0QWN0aXZlUGFuZWxdID0gdXNlU3RhdGUoJ3Byb3BlcnRpZXMnKTtcclxuICBjb25zdCBbYWN0aXZlRG9jdW1lbnQsIHNldEFjdGl2ZURvY3VtZW50XSA9IHVzZVN0YXRlKCdEb2N1bWVudG8xJyk7XHJcbiAgY29uc3Qgc2VsZWN0ZWRPYmplY3QgPSB1c2VNZW1vKCgpID0+IG9iamVjdHMuZmluZCgob2JqZWN0KSA9PiBvYmplY3QuaWQgPT09IHNlbGVjdGVkSWQpIHx8IG9iamVjdHNbMF0sIFtzZWxlY3RlZElkXSk7XHJcblxyXG4gIHJldHVybiAoXHJcbiAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS1tb2NrLWFwcFwiPlxyXG4gICAgICA8aGVhZGVyIGNsYXNzTmFtZT1cImlkZS10b3BiYXJcIj5cclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImlkZS1icmFuZFwiPjxpbWcgc3JjPVwiL2ltYWdlcy9sb2dvLnBuZ1wiIGFsdD1cIkZvcm1hdCBXZWJcIiAvPjxzcGFuPkZvcm1hdDwvc3Bhbj48L2Rpdj5cclxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImlkZS1tZW51LWJ1dHRvblwiIHRpdGxlPVwiTWVudVwiIHR5cGU9XCJidXR0b25cIj48aSBjbGFzc05hbWU9XCJiaSBiaS1saXN0XCI+PC9pPjwvYnV0dG9uPlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLWZpbGUtbmFtZVwiPnRlc3RlMDQwODIwMjZxcmNvZGU8L2Rpdj5cclxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImlkZS10b3Atc2VsZWN0XCIgdHlwZT1cImJ1dHRvblwiPkE0IDxpIGNsYXNzTmFtZT1cImJpIGJpLWNoZXZyb24tZG93blwiPjwvaT48L2J1dHRvbj5cclxuICAgICAgICA8YnV0dG9uIGNsYXNzTmFtZT1cImlkZS10b3Atc2VsZWN0XCIgdHlwZT1cImJ1dHRvblwiPjEwMCUgPGkgY2xhc3NOYW1lPVwiYmkgYmktY2hldnJvbi1kb3duXCI+PC9pPjwvYnV0dG9uPlxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaWRlLXRvcC1zcGFjZXJcIj48L2Rpdj5cclxuICAgICAgICA8YnV0dG9uIHRpdGxlPVwiU2FsdmFyXCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLWZsb3BweVwiPjwvaT48L2J1dHRvbj5cclxuICAgICAgICA8YnV0dG9uIHRpdGxlPVwiQ29uZmlndXJhciBmb3JtdWxhcmlvXCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLWZpbGUtZWFybWFyay10ZXh0XCI+PC9pPjwvYnV0dG9uPlxyXG4gICAgICAgIDxidXR0b24gdGl0bGU9XCJEZXNmYXplclwiIHR5cGU9XCJidXR0b25cIj48aSBjbGFzc05hbWU9XCJiaSBiaS1hcnJvdy1jb3VudGVyY2xvY2t3aXNlXCI+PC9pPjwvYnV0dG9uPlxyXG4gICAgICAgIDxidXR0b24gdGl0bGU9XCJSZWZhemVyXCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLWFycm93LWNsb2Nrd2lzZVwiPjwvaT48L2J1dHRvbj5cclxuICAgICAgICA8YnV0dG9uIHRpdGxlPVwiWm9vbSBtZW5vc1wiIHR5cGU9XCJidXR0b25cIj48aSBjbGFzc05hbWU9XCJiaSBiaS16b29tLW91dFwiPjwvaT48L2J1dHRvbj5cclxuICAgICAgICA8YnV0dG9uIHRpdGxlPVwiWm9vbSBtYWlzXCIgdHlwZT1cImJ1dHRvblwiPjxpIGNsYXNzTmFtZT1cImJpIGJpLXpvb20taW5cIj48L2k+PC9idXR0b24+XHJcbiAgICAgICAgPGJ1dHRvbiBjbGFzc05hbWU9XCJpZGUtc2hhcmUtYnV0dG9uXCIgdHlwZT1cImJ1dHRvblwiPlNhbHZhcjwvYnV0dG9uPlxyXG4gICAgICA8L2hlYWRlcj5cclxuXHJcbiAgICAgIDxtYWluIGNsYXNzTmFtZT1cImlkZS13b3JrYmVuY2hcIj5cclxuICAgICAgICA8YXNpZGUgY2xhc3NOYW1lPVwiaWRlLXRvb2wtcmFpbFwiIGFyaWEtbGFiZWw9XCJGdW5jb2VzIGRvIGVkaXRvclwiPlxyXG4gICAgICAgICAge1tcclxuICAgICAgICAgICAgWydiaS1nZWFyJywgJ0Fjb2VzJ10sXHJcbiAgICAgICAgICAgIFsnYmktYXJjaGl2ZScsICdMYXlvdXRzJ10sXHJcbiAgICAgICAgICAgIFsnYmktc2xpZGVycycsICdDb25maWd1cmFjYW8nXSxcclxuICAgICAgICAgICAgWydiaS1jbG91ZC1hcnJvdy11cCcsICdFbnZpb3MnXSxcclxuICAgICAgICAgICAgWydiaS1ob3VzZScsICdWb2x0YXIgYW8gcGFpbmVsJ11cclxuICAgICAgICAgIF0ubWFwKChbaWNvbiwgbGFiZWxdLCBpbmRleCkgPT4gPGJ1dHRvbiBjbGFzc05hbWU9e2luZGV4ID09PSAwID8gJ2lzLWFjdGl2ZScgOiAnJ30gdGl0bGU9e2xhYmVsfSB0eXBlPVwiYnV0dG9uXCIga2V5PXtsYWJlbH0+PGkgY2xhc3NOYW1lPXtgYmkgJHtpY29ufWB9PjwvaT48L2J1dHRvbj4pfVxyXG4gICAgICAgIDwvYXNpZGU+XHJcbiAgICAgICAgPExlZnRUb29sUGFuZWwgLz5cclxuICAgICAgICA8Q2FudmFzUHJldmlldyBzZWxlY3RlZElkPXtzZWxlY3RlZElkfSBhY3RpdmVEb2N1bWVudD17YWN0aXZlRG9jdW1lbnR9IHNldEFjdGl2ZURvY3VtZW50PXtzZXRBY3RpdmVEb2N1bWVudH0gLz5cclxuICAgICAgICA8UmlnaHREb2NrIGFjdGl2ZVBhbmVsPXthY3RpdmVQYW5lbH0gc2V0QWN0aXZlUGFuZWw9e3NldEFjdGl2ZVBhbmVsfSBzZWxlY3RlZE9iamVjdD17c2VsZWN0ZWRPYmplY3R9IHNlbGVjdGVkSWQ9e3NlbGVjdGVkSWR9IG9uU2VsZWN0PXtzZXRTZWxlY3RlZElkfSBhY3RpdmVEb2N1bWVudD17YWN0aXZlRG9jdW1lbnR9IHNldEFjdGl2ZURvY3VtZW50PXtzZXRBY3RpdmVEb2N1bWVudH0gLz5cclxuICAgICAgPC9tYWluPlxyXG4gICAgPC9kaXY+XHJcbiAgKTtcclxufVxyXG5cclxuXHJcblxyXG5cclxuXHJcblxyXG4iXSwiZmlsZSI6IkM6L3dvcmtzcGFjZS9mb3JtYXQtbG9jYWwvZm9ybWF0L2Zyb250ZW5kL3NyYy9wYWdlcy9JZGVNb2NrUGFnZS5qc3gifQ==

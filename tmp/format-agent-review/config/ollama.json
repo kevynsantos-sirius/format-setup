@@ -1,0 +1,15 @@
+{
+  "baseUrl": "http://localhost:11434",
+  "model": "qwen2.5-coder:1.5b",
+  "embeddingModel": "nomic-embed-text",
+  "mode": "consulta",
+  "allowMutations": false,
+  "options": {
+    "temperature": 0.1,
+    "num_ctx": 2048,
+    "num_predict": 220,
+    "num_thread": 2
+  },
+  "performanceProfile": "eco",
+  "notes": "Perfil eco para reduzir travamentos: contexto menor, resposta menor e limite de threads."
+}
