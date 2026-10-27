@@ -11,7 +11,7 @@ services:
       - "8081:8081"
     volumes:
       - ./logs/format-web:/app/logs
-      - ./docker-data/format-web-mirror:/app/projects-mirror
+      - ${FORMAT_WEB_MIRROR_BIND:-./docker-data/format-web-mirror}:/app/projects-mirror
       - ./Sirius32.dll:/app/resources/Sirius32.dll:ro
     environment:
       SPRING_PROFILES_ACTIVE: docker
