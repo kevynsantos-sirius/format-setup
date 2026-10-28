@@ -1,0 +1,2 @@
+FROM format-api:before-jars-20261027
+COPY target/format-api-1.0.0.1.jar /app/format-api/target/format-api.jar

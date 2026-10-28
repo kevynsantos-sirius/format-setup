@@ -1,0 +1,78 @@
+{
+  "model": "qwen2.5-coder:1.5b",
+  "sources": [
+    {
+      "path": "C:\\workspace\\format\\format-agent\\knowledge\\usuario",
+      "name": "memoria-usuario-revisada"
+    },
+    {
+      "path": "C:/workspace/format/format-agent/knowledge/novoteste-catalogo",
+      "name": "catalogo-novoteste-sanitizado"
+    },
+    {
+      "path": "C:/workspace/format/format-agent/knowledge/campos-altos-catalogo",
+      "name": "catalogo-campos-altos-sanitizado"
+    }
+  ],
+  "includeExtensions": [
+    ".md",
+    ".java",
+    ".js"
+  ],
+  "excludeDirectories": [
+    ".git",
+    ".codex-build",
+    ".m2-repository",
+    "node_modules",
+    "target",
+    "dist",
+    "build",
+    "logs",
+    "data",
+    "tmp",
+    "projects",
+    "projects-mirror",
+    "docker-data",
+    ".settings",
+    "context"
+  ],
+  "focusTerms": [
+    "Ponto F",
+    "PontoF",
+    "layout",
+    "usuario",
+    "tela",
+    "projeto",
+    "documento",
+    "pagina",
+    "canvas",
+    "componente",
+    "campo",
+    "expressao",
+    "validacao",
+    "preview",
+    "salvar layout",
+    "gerar PDF",
+    "imagem",
+    "logo",
+    "codigo de barras",
+    "QR Code",
+    "overlay",
+    "formulario",
+    "arquivo de dados",
+    "campo de saida"
+  ],
+  "maxFileBytes": 1500000,
+  "chunkSize": 1800,
+  "chunkOverlap": 180,
+  "maxChunksInPrompt": 3,
+  "preferredPathTerms": [
+    "PONTO_F_USUARIO.md",
+    "ACOES_PERMITIDAS_USUARIO.md"
+  ],
+  "excludePathContains": [
+    "application.properties",
+    ".env"
+  ],
+  "maxContextChars": 4200
+}

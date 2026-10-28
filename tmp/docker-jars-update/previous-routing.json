@@ -1,0 +1,3 @@
+{
+  "NGINX_WEB_UPSTREAM": "http://host.docker.internal:8081"
+}

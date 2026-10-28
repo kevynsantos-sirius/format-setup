@@ -1,0 +1,15 @@
+{
+  "managerEmbeddedMatches": true,
+  "artifacts": [
+    {
+      "path": "format-manager/target/jformat-manager-1.0.0.jar",
+      "size": 159543,
+      "sha256": "26949f4ff3ed8ee9feee46ab83ca87a87344aeff651be72048c6e3392b3e08a7"
+    },
+    {
+      "path": "format-web/target/format-web-0.0.1-SNAPSHOT.jar",
+      "size": 85056685,
+      "sha256": "cdb0e8340242f8249deeb76d22c9e5e940302ca0218e6a9baf736f35c8a9d7e2"
+    }
+  ]
+}

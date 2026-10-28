@@ -1,0 +1,254 @@
+{
+  "model": "qwen2.5-coder:1.5b",
+  "sources": [
+    {
+      "path": "C:\\workspace\\format\\format-agent\\knowledge",
+      "name": "memoria-tecnica-revisada"
+    },
+    {
+      "path": "C:\\workspace\\format-local\\format\\format-web\\src\\main\\java",
+      "name": "format-web-atual"
+    },
+    {
+      "path": "C:\\workspace\\format-local\\format\\format-api\\src\\main\\java",
+      "name": "format-api-atual"
+    },
+    {
+      "path": "C:\\workspace\\format-local\\format\\format-manager\\src\\main\\java",
+      "name": "format-manager-atual"
+    },
+    {
+      "path": "C:\\workspace\\format-local\\format\\frontend\\src\\editor\\detailBands.js",
+      "name": "frontend-atual"
+    },
+    {
+      "path": "C:\\workspace\\format-local\\format\\frontend\\src\\editor\\componentRotation.js",
+      "name": "geometria-atual"
+    },
+    {
+      "path": "C:\\workspace\\format-local\\format\\docs\\manual-usuario-format-web.md",
+      "name": "manual-atual"
+    },
+    {
+      "path": "C:/workspace/format-local/format/frontend/src/editor/aiEditPlan.js",
+      "name": "edicao-chat-revisavel"
+    },
+    {
+      "path": "C:/workspace/format-local/format/frontend/src/editor/aiEditorBridge.js",
+      "name": "selecao-editor-chat"
+    },
+    {
+      "path": "C:/workspace/format-local/format/frontend/src/components/AiChat.jsx",
+      "name": "interface-chat"
+    },
+    {
+      "path": "C:/workspace/format-local/format/frontend/src/editor/generalAiBridge.js",
+      "name": "identidade-visual-nativa"
+    },
+    {
+      "path": "C:/workspace/format-local/format/frontend/src/components/AiTargetForm.jsx",
+      "name": "esclarecimento-propriedades"
+    },
+    {
+      "path": "C:/workspace/format-local/format/format-web/src/main/java/com/totaldocs/format/web/util/NativeEditor.java",
+      "name": "contrato-nativo-geral"
+    },
+    {
+      "path": "C:/workspace/format-local/format/format-web/src/main/java/com/totaldocs/format/web/controller/api/NativeEditorApiController.java",
+      "name": "apis-nativas-revisadas"
+    },
+    {
+      "path": "C:/workspace/format/format-agent/api/editor-intents.js",
+      "name": "interpretacao-geral"
+    },
+    {
+      "path": "C:/workspace/format/format-agent/api/format-tools.js",
+      "name": "ferramentas-nativas"
+    },
+    {
+      "path": "C:/workspace/format-local/format/frontend/src/editor/aiPresentation.js",
+      "name": "rotulos-e-valores-do-chat"
+    },
+    {
+      "name": "margens-e-validacao-do-layout",
+      "path": "C:/workspace/format-local/format/frontend/src/components/LayoutPreflightPanel.jsx"
+    },
+    {
+      "name": "dashboard-listagem-e-historico-chat",
+      "path": "C:/workspace/format-local/format/frontend/src/pages/DashboardPage.jsx"
+    },
+    {
+      "path": "C:/workspace/format/format-agent/api/editor-properties.js",
+      "name": "resolucao-propriedades-esclarecimento-minimo"
+    },
+    {
+      "path": "C:/workspace/format-local/format/frontend/src/editor/aiChatHistory.js",
+      "name": "historico-persistente-aiChatHistory.js"
+    },
+    {
+      "path": "C:/workspace/format-local/format/frontend/src/components/useAiChatHistory.js",
+      "name": "historico-persistente-useAiChatHistory.js"
+    },
+    {
+      "path": "C:/workspace/format-local/format/format-web/src/main/java/com/totaldocs/format/web/controller/api/AiChatHistoryApiController.java",
+      "name": "historico-persistente-AiChatHistoryApiController.java"
+    },
+    {
+      "path": "C:/workspace/format-local/format/format-web/src/main/java/com/totaldocs/format/web/service/AiChatHistoryService.java",
+      "name": "historico-persistente-AiChatHistoryService.java"
+    },
+    {
+      "path": "C:/workspace/format/format-agent/api/conversation-context.js",
+      "name": "contexto-conversacional-e-validacao-nativa"
+    },
+    {
+      "path": "C:/workspace/format-local/format/format-web/src/main/java/com/totaldocs/format/web/service/AiConversationContextService.java",
+      "name": "contexto-conversacional-e-validacao-nativa"
+    }
+  ],
+  "includeExtensions": [
+    ".md",
+    ".java",
+    ".js",
+    ".jsx"
+  ],
+  "excludeDirectories": [
+    ".git",
+    ".codex-build",
+    ".m2-repository",
+    "node_modules",
+    "target",
+    "dist",
+    "build",
+    "logs",
+    "data",
+    "tmp",
+    "projects",
+    "projects-mirror",
+    "docker-data",
+    ".settings",
+    "context"
+  ],
+  "focusTerms": [
+    "PontoF",
+    "Ponto F",
+    "pontof",
+    "PontoFLer",
+    "PontoFGravar",
+    "PontoFTojson",
+    "AplicacaoPontoF",
+    "Documento",
+    "layout",
+    "formato legado",
+    ".f",
+    "convertFromPontoF",
+    "convertToPontoF",
+    "save-layout",
+    "load-layout",
+    "salvar",
+    "gravar",
+    "carregar",
+    "ler",
+    "ollama",
+    "allowMutations",
+    "consulta",
+    "baseUrl",
+    "model",
+    "canvas",
+    "painel",
+    "paleta",
+    "componentes",
+    "propriedades",
+    "camadas",
+    "paginas",
+    "envios",
+    "overlay",
+    "formulario",
+    "papel",
+    "dashboard",
+    "processing",
+    "editor visual",
+    "Salvar layout",
+    "Configurar overlay",
+    "Configurar formulario",
+    "Campo de saida",
+    "Editar Texto",
+    "EditorPage",
+    "DashboardPage",
+    "validatePontoFButton",
+    "saveButton",
+    "previewButton",
+    "data-type",
+    "campoSaida",
+    "blocoEnderecamento",
+    "detalhe",
+    "FIO_ELIPSE",
+    "FIO_MOLDURA",
+    "FIO_HORIZONTAL",
+    "editorController",
+    "AiChatApiController",
+    "LayoutApiController",
+    "CampoTexto",
+    "CampoFio",
+    "tipoFio",
+    "createComponentElement",
+    "renderLayout",
+    "renderEditorLayers",
+    "persistLayoutPayload",
+    "data-index",
+    "Formpor",
+    "Formeng",
+    "Form_tf1",
+    "FORMSYM",
+    "Defines",
+    "ObjFPS",
+    "Typedefs",
+    "Ajuda",
+    "Manual",
+    "Desktop",
+    "Campo",
+    "Texto",
+    "Formulario",
+    "Arquivo",
+    "Registro",
+    "Funcao",
+    "Variavel",
+    "Codigo de barras",
+    "Imagem",
+    "Logo"
+  ],
+  "maxFileBytes": 1500000,
+  "chunkSize": 1800,
+  "chunkOverlap": 180,
+  "maxChunksInPrompt": 3,
+  "preferredPathTerms": [
+    "PONTO_F_BASE.md",
+    "PONTO_F_UI.md",
+    "PONTO_F_FRONTEND_REAL.md",
+    "manual-usuario-format-web.md",
+    "Form_tf1.c",
+    "FORMSYM.C",
+    "Defines.h",
+    "ObjFPS_Old.h",
+    "Typedefs.h",
+    "Formpor",
+    "EditorPage.jsx",
+    "DashboardPage.jsx",
+    "main.jsx",
+    "ollama.json",
+    "manual-usuario-format-web.html",
+    "PontoFTojson.java",
+    "AiChatApiController.java",
+    "LayoutApiController.java",
+    "editorController.js",
+    "ProjectService.java",
+    "ProjectServiceTest.java",
+    "ANALISE_FLUXO_SALVAMENTO.md",
+    "RESUMO_IMPLEMENTACAO_COMPATIBILIDADE.md"
+  ],
+  "excludePathContains": [
+    "application.properties",
+    ".env"
+  ],
+  "maxContextChars": 4200
+}
