@@ -127,6 +127,8 @@ services:
     depends_on:
       auth:
         condition: service_healthy
+      web:
+        condition: service_healthy
     restart: unless-stopped
 networks:
   format-network:

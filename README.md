@@ -30,6 +30,12 @@ npm run dev
 
 Em desenvolvimento local, o Vite pode rodar em `http://localhost:5173`. No Linux/runtime, rode `npm run build` e acesse pelo Nginx em `http://192.168.69.225` ou `http://web.format.local`; o Nginx serve `frontend/dist` e proxia `/api`, OAuth e Swagger para o `format-web`.
 
+## Atualizacoes recentes
+
+- O manual em `docs/` foi atualizado em 08/10/2026 para documentar as melhorias no preview do layout e a validacao da janela detalhe em layouts legados.
+- O preview deve ser usado para conferir posicionamento, imagens, expressoes e repeticoes de detalhe antes da geracao final de PDF.
+- O `docker-compose.format-web.yml` possui healthcheck em `/api/app/config`; quando usado junto do ambiente completo, o Nginx pode aguardar o `format-web` ficar saudavel antes de iniciar como dependencia.
+
 ## Compose separados
 
 - Infra/Auth/MySQL/LocalStack: `docker-compose.format-container.yml`
@@ -75,6 +81,14 @@ Use esse modo quando quiser hot reload do React. Para runtime/servidor sem Vite,
 ## Execucao sem recriar containers existentes
 
 O `docker compose up -d --build` compara a definicao atual dos compose com os containers existentes. Se detectar mudanca de configuracao, imagem ou binds relevantes, ele pode recriar o container. O healthcheck do LocalStack valida se o S3 esta saudavel, mas nao impede recriacao.
+
+Quando o `format-web` roda em Docker pelo `docker-compose.format-web.yml`, o healthcheck consulta:
+
+```text
+http://localhost:8081/api/app/config
+```
+
+Esse endpoint confirma que o backend web esta respondendo antes de servicos dependentes seguirem o fluxo normal do compose.
 
 Para criar apenas o que estiver faltando e preservar containers ja existentes, use:
 
